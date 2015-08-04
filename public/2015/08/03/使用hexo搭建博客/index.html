@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="hexo," />
 
 
 
@@ -37,15 +37,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Cinus">
-<meta property="og:url" content="http://Cinus.me/index.html">
+<meta name="description" content="在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想，我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
+整体">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用hexo搭建博客">
+<meta property="og:url" content="http://Cinus.me/2015/08/03/使用hexo搭建博客/index.html">
 <meta property="og:site_name" content="Cinus">
-<meta property="og:description">
+<meta property="og:description" content="在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想，我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
+整体">
+<meta property="og:updated_time" content="2015-08-04T02:32:24.751Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cinus">
-<meta name="twitter:description">
+<meta name="twitter:title" content="使用hexo搭建博客">
+<meta name="twitter:description" content="在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想，我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
+整体">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -55,7 +59,7 @@
   };
 </script>
 
-  <title> Cinus </title>
+  <title> 使用hexo搭建博客 | Cinus </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
@@ -73,9 +77,7 @@
 
 
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -166,9 +168,9 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div id="content" class="content"> 
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -179,9 +181,7 @@
           
           
             
-              <a class="post-title-link" href="/2015/08/03/使用hexo搭建博客/" itemprop="url">
-                使用hexo搭建博客
-              </a>
+              使用hexo搭建博客
             
           
         </h1>
@@ -209,8 +209,7 @@
       
 
       
-        
-          <span itemprop="articleBody"><p>在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想，我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。<br>现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。</p>
+        <span itemprop="articleBody"><p>在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想，我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。<br>现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。</p>
 <h1 id="整体思路">整体思路</h1><p>在本机使用hexo生成网站，使用git hook 推送到vps上，直接使用nginx来部署网站。<br>这个做法避免了在vps上安装nodejs和hexo(vps 性能堪忧)，至于缺点，暂时没找到…</p>
 <h1 id="本机配置（linux）">本机配置（linux）</h1><p>详细使用请访问<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo</a></p>
 <h2 id="安装node-js">安装<a href="https://nodejs.org/" target="_blank" rel="external">node.js</a></h2><h3 id="For_ArchLinus:">For ArchLinus:</h3><pre><code>$ sudo pacman -S <span class="built_in">npm</span> nodejs
@@ -302,101 +301,52 @@ $ git push Cinus<span class="class">.me</span> master
 <h1 id="后话">后话</h1><p>我采用的方式是在本地写好博客，使用hexo g生成网站文件，然后把整个项目push到vps上，vps上的git hooks 在运行post-receive这个脚本将public目录下的文件复制到/var/www/html/public下，也就是nginx的根目录。<br>现在还有图片等资源未规划，以上的post-receive脚本可能需要更改。<br>有什么问题或本博客有错误的地方欢迎与我联系</p>
 <pre><code>xyCinus<span class="annotation">@gmail</span>.com
 </code></pre></span>
-        
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
+        </div>
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/08/03/hello-world/" rel="next">Hello blog</a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-      
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/08/03/hello-world/" itemprop="url">
-                Hello blog
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-08-03T20:45:05+08:00" content="2015-08-03">
-            2015-08-03
-          </time>
-        </span>
-
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-</span>
-        
+    <div class="post-spread">
       
     </div>
+  </div>
 
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
  </div>
 
         
 
+        
+          <div class="comments" id="comments">
+            
+          </div>
         
       </div>
 
@@ -413,6 +363,15 @@ $ git push Cinus<span class="class">.me</span> master
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
       
 
       <section class="site-overview">
@@ -599,6 +558,17 @@ $ git push Cinus<span class="class">.me</span> master
       </section>
 
       
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#整体思路"><span class="nav-number">1.</span> <span class="nav-text">整体思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本机配置（linux）"><span class="nav-number">2.</span> <span class="nav-text">本机配置（linux）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装node-js"><span class="nav-number">2.1.</span> <span class="nav-text">安装node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#For_ArchLinus:"><span class="nav-number">2.1.1.</span> <span class="nav-text">For ArchLinus:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#For_Debian:"><span class="nav-number">2.1.2.</span> <span class="nav-text">For Debian:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">2.2.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本机git配置"><span class="nav-number">2.3.</span> <span class="nav-text">本机git配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git安装"><span class="nav-number">2.3.1.</span> <span class="nav-text">git安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#For_ArchLinux"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">For ArchLinux</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Debian"><span class="nav-number">2.3.1.2.</span> <span class="nav-text">For Debian</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Centos"><span class="nav-number">2.3.1.3.</span> <span class="nav-text">For Centos</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git简单配置"><span class="nav-number">2.3.2.</span> <span class="nav-text">git简单配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用git来控制blog版本"><span class="nav-number">2.3.3.</span> <span class="nav-text">使用git来控制blog版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为该blog仓库设置远程仓库"><span class="nav-number">2.3.4.</span> <span class="nav-text">为该blog仓库设置远程仓库</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vps配置"><span class="nav-number">3.</span> <span class="nav-text">vps配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#nginx配置"><span class="nav-number">3.1.</span> <span class="nav-text">nginx配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx安装"><span class="nav-number">3.1.1.</span> <span class="nav-text">nginx安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Debian："><span class="nav-number">3.1.1.1.</span> <span class="nav-text">For Debian：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Centos："><span class="nav-number">3.1.1.2.</span> <span class="nav-text">For Centos：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx配置-1"><span class="nav-number">3.1.2.</span> <span class="nav-text">nginx配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#将nginx的根目录改为/var/www/html/public"><span class="nav-number">3.1.2.1.</span> <span class="nav-text">将nginx的根目录改为/var/www/html/public</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启动nginx"><span class="nav-number">3.1.2.2.</span> <span class="nav-text">启动nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置nginx开机启动"><span class="nav-number">3.1.2.3.</span> <span class="nav-text">设置nginx开机启动</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git设置"><span class="nav-number">3.2.</span> <span class="nav-text">git设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git安装-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">git安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#For_ArchLinus"><span class="nav-number">3.2.1.1.</span> <span class="nav-text">For ArchLinus</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Debian-1"><span class="nav-number">3.2.1.2.</span> <span class="nav-text">For Debian</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Centos-1"><span class="nav-number">3.2.1.3.</span> <span class="nav-text">For Centos</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git_hook_设置"><span class="nav-number">3.2.2.</span> <span class="nav-text">git hook 设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本机配置"><span class="nav-number">4.</span> <span class="nav-text">本机配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后话"><span class="nav-number">5.</span> <span class="nav-text">后话</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
 
     </div>
   </aside>
@@ -640,13 +610,13 @@ $ git push Cinus<span class="class">.me</span> master
   
   
   
-  
-  
+    
+    
 
   
 
 
-
+  
   
   <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
   <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
@@ -665,6 +635,165 @@ $ git push Cinus<span class="class">.me</span> master
   <script type="text/javascript" src="/js/nav-toggle.js"></script>
 
   
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -677,13 +806,6 @@ $ git push Cinus<span class="class">.me</span> master
   
 
   
-  
-  
-
-  
-
-
-
   
 
   
