@@ -62,7 +62,9 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: http://hexo.io/plugins/
-theme: next
+theme: jacman 
+stylus:
+        compress:true
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html

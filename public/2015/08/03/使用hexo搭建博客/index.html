@@ -1,43 +1,17 @@
-<!doctype html>
-<html class="theme-next use-motion ">
+
+ <!DOCTYPE HTML>
+<html lang="default">
 <head>
+  <meta charset="UTF-8">
   
+    <title>使用hexo搭建博客 | Cinus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="CXY">
+    
 
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
-
-
-
-  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
-
-
-
-
-  <meta name="keywords" content="hexo," />
-
-
-
-
-
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
-
-
-<meta name="description" content="在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想，我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
+    
+    <meta name="description" content="在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想，我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
 整体">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用hexo搭建博客">
@@ -51,165 +25,85 @@
 <meta name="twitter:description" content="在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想，我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
 整体">
 
-
-<script type="text/javascript" id="hexo.configuration">
-  var CONFIG = {
-    scheme: '',
-    sidebar: 'post'
-  };
-</script>
-
-  <title> 使用hexo搭建博客 | Cinus </title>
+    
+    <link rel="alternative" href="/atom.xml" title="Cinus" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
-
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
-  
-
-
-
-  <div class="container one-column page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><h1 class="site-meta">
-  <span class="logo-line-before"><i></i></span>
-  <a href="/" class="brand" rel="start">
-      <span class="logo">
-        <i class="icon-next-logo"></i>
-      </span>
-      <span class="site-title">Cinus</span>
-  </a>
-  <span class="logo-line-after"><i></i></span>
-</h1>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Cinus" title="Cinus"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Cinus">Cinus</a></h1>
+				<h2 class="blog-motto">CXY&#39;s Blog</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:Cinus.me">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
 </div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu ">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            <i class="menu-item-icon icon-next-home"></i> <br />
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            <i class="menu-item-icon icon-next-categories"></i> <br />
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            <i class="menu-item-icon icon-next-about"></i> <br />
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            <i class="menu-item-icon icon-next-archives"></i> <br />
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            <i class="menu-item-icon icon-next-tags"></i> <br />
-            标签
-          </a>
-        </li>
-      
-
-      
-      
-        <li class="menu-item menu-item-search">
-          <a href="#" class="st-search-show-outputs">
-            <i class="menu-item-icon icon-next-search"></i> <br />
-            搜索
-          </a>
-        </li>
-      
-    </ul>
-  
-
-  
-</nav>
-
- </div>
     </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div id="content" class="content"> 
-
-  <div id="posts" class="posts-expand">
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
     
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              使用hexo搭建博客
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-08-03T22:59:25+08:00" content="2015-08-03">
-            2015-08-03
-          </time>
-        </span>
-
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        <span itemprop="articleBody"><p>在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想，我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。<br>现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。</p>
+      <a href="/2015/08/03/使用hexo搭建博客/" title="使用hexo搭建博客" itemprop="url">使用hexo搭建博客</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="CXY" target="_blank" itemprop="author">CXY</a>
+		
+  <p class="article-time">
+    <time datetime="2015-08-03T14:59:25.000Z" itemprop="datePublished"> Published 2015-08-03</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#整体思路"><span class="toc-number">1.</span> <span class="toc-text">整体思路</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#本机配置（linux）"><span class="toc-number">2.</span> <span class="toc-text">本机配置（linux）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装node-js"><span class="toc-number">2.1.</span> <span class="toc-text">安装node.js</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#For_ArchLinus:"><span class="toc-number">2.1.1.</span> <span class="toc-text">For ArchLinus:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#For_Debian:"><span class="toc-number">2.1.2.</span> <span class="toc-text">For Debian:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo"><span class="toc-number">2.2.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本机git配置"><span class="toc-number">2.3.</span> <span class="toc-text">本机git配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git安装"><span class="toc-number">2.3.1.</span> <span class="toc-text">git安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#For_ArchLinux"><span class="toc-number">2.3.1.1.</span> <span class="toc-text">For ArchLinux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#For_Debian"><span class="toc-number">2.3.1.2.</span> <span class="toc-text">For Debian</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#For_Centos"><span class="toc-number">2.3.1.3.</span> <span class="toc-text">For Centos</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git简单配置"><span class="toc-number">2.3.2.</span> <span class="toc-text">git简单配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用git来控制blog版本"><span class="toc-number">2.3.3.</span> <span class="toc-text">使用git来控制blog版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为该blog仓库设置远程仓库"><span class="toc-number">2.3.4.</span> <span class="toc-text">为该blog仓库设置远程仓库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vps配置"><span class="toc-number">3.</span> <span class="toc-text">vps配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#nginx配置"><span class="toc-number">3.1.</span> <span class="toc-text">nginx配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nginx安装"><span class="toc-number">3.1.1.</span> <span class="toc-text">nginx安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#For_Debian："><span class="toc-number">3.1.1.1.</span> <span class="toc-text">For Debian：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#For_Centos："><span class="toc-number">3.1.1.2.</span> <span class="toc-text">For Centos：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nginx配置-1"><span class="toc-number">3.1.2.</span> <span class="toc-text">nginx配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#将nginx的根目录改为/var/www/html/public"><span class="toc-number">3.1.2.1.</span> <span class="toc-text">将nginx的根目录改为/var/www/html/public</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#启动nginx"><span class="toc-number">3.1.2.2.</span> <span class="toc-text">启动nginx</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置nginx开机启动"><span class="toc-number">3.1.2.3.</span> <span class="toc-text">设置nginx开机启动</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git设置"><span class="toc-number">3.2.</span> <span class="toc-text">git设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git安装-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">git安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#For_ArchLinus"><span class="toc-number">3.2.1.1.</span> <span class="toc-text">For ArchLinus</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#For_Debian-1"><span class="toc-number">3.2.1.2.</span> <span class="toc-text">For Debian</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#For_Centos-1"><span class="toc-number">3.2.1.3.</span> <span class="toc-text">For Centos</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git_hook_设置"><span class="toc-number">3.2.2.</span> <span class="toc-text">git hook 设置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#本机配置"><span class="toc-number">4.</span> <span class="toc-text">本机配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#后话"><span class="toc-number">5.</span> <span class="toc-text">后话</span></a></li></ol>
+		
+		</div>
+		
+		<p>在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想，我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。<br>现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。</p>
 <h1 id="整体思路">整体思路</h1><p>在本机使用hexo生成网站，使用git hook 推送到vps上，直接使用nginx来部署网站。<br>这个做法避免了在vps上安装nodejs和hexo(vps 性能堪忧)，至于缺点，暂时没找到…</p>
 <h1 id="本机配置（linux）">本机配置（linux）</h1><p>详细使用请访问<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo</a></p>
 <h2 id="安装node-js">安装<a href="https://nodejs.org/" target="_blank" rel="external">node.js</a></h2><h3 id="For_ArchLinus:">For ArchLinus:</h3><pre><code>$ sudo pacman -S <span class="built_in">npm</span> nodejs
@@ -300,523 +194,339 @@ $ git push Cinus<span class="class">.me</span> master
 </code></pre><p>此时使用域名或ip访问你的vps应该就能看到你的blog的雏形了。</p>
 <h1 id="后话">后话</h1><p>我采用的方式是在本地写好博客，使用hexo g生成网站文件，然后把整个项目push到vps上，vps上的git hooks 在运行post-receive这个脚本将public目录下的文件复制到/var/www/html/public下，也就是nginx的根目录。<br>现在还有图片等资源未规划，以上的post-receive脚本可能需要更改。<br>有什么问题或本博客有错误的地方欢迎与我联系</p>
 <pre><code>xyCinus<span class="annotation">@gmail</span>.com
-</code></pre></span>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/08/03/hello-world/" rel="next">Hello blog</a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
+</code></pre>  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
 
 
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
- </div>
-
-        
-
-        
-          <div class="comments" id="comments">
-            
-          </div>
-        
-      </div>
-
-      
+  <div class="article-tags">
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <span></span> <a href="/tags/hexo/">hexo</a>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
+</div>
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://Cinus.me/2015/08/03/使用hexo搭建博客/" data-title="使用hexo搭建博客 | Cinus" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#整体思路"><span class="toc-number">1.</span> <span class="toc-text">整体思路</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#本机配置（linux）"><span class="toc-number">2.</span> <span class="toc-text">本机配置（linux）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装node-js"><span class="toc-number">2.1.</span> <span class="toc-text">安装node.js</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#For_ArchLinus:"><span class="toc-number">2.1.1.</span> <span class="toc-text">For ArchLinus:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#For_Debian:"><span class="toc-number">2.1.2.</span> <span class="toc-text">For Debian:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo"><span class="toc-number">2.2.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本机git配置"><span class="toc-number">2.3.</span> <span class="toc-text">本机git配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git安装"><span class="toc-number">2.3.1.</span> <span class="toc-text">git安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#For_ArchLinux"><span class="toc-number">2.3.1.1.</span> <span class="toc-text">For ArchLinux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#For_Debian"><span class="toc-number">2.3.1.2.</span> <span class="toc-text">For Debian</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#For_Centos"><span class="toc-number">2.3.1.3.</span> <span class="toc-text">For Centos</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git简单配置"><span class="toc-number">2.3.2.</span> <span class="toc-text">git简单配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用git来控制blog版本"><span class="toc-number">2.3.3.</span> <span class="toc-text">使用git来控制blog版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为该blog仓库设置远程仓库"><span class="toc-number">2.3.4.</span> <span class="toc-text">为该blog仓库设置远程仓库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vps配置"><span class="toc-number">3.</span> <span class="toc-text">vps配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#nginx配置"><span class="toc-number">3.1.</span> <span class="toc-text">nginx配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nginx安装"><span class="toc-number">3.1.1.</span> <span class="toc-text">nginx安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#For_Debian："><span class="toc-number">3.1.1.1.</span> <span class="toc-text">For Debian：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#For_Centos："><span class="toc-number">3.1.1.2.</span> <span class="toc-text">For Centos：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nginx配置-1"><span class="toc-number">3.1.2.</span> <span class="toc-text">nginx配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#将nginx的根目录改为/var/www/html/public"><span class="toc-number">3.1.2.1.</span> <span class="toc-text">将nginx的根目录改为/var/www/html/public</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#启动nginx"><span class="toc-number">3.1.2.2.</span> <span class="toc-text">启动nginx</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置nginx开机启动"><span class="toc-number">3.1.2.3.</span> <span class="toc-text">设置nginx开机启动</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git设置"><span class="toc-number">3.2.</span> <span class="toc-text">git设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git安装-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">git安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#For_ArchLinus"><span class="toc-number">3.2.1.1.</span> <span class="toc-text">For ArchLinus</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#For_Debian-1"><span class="toc-number">3.2.1.2.</span> <span class="toc-text">For Debian</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#For_Centos-1"><span class="toc-number">3.2.1.3.</span> <span class="toc-text">For Centos</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git_hook_设置"><span class="toc-number">3.2.2.</span> <span class="toc-text">git hook 设置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#本机配置"><span class="toc-number">4.</span> <span class="toc-text">本机配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#后话"><span class="toc-number">5.</span> <span class="toc-text">后话</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://coolshell.cn/" target="_blank" title="CoolShell">CoolShell</a>
+            
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
+        
+          <li>
+            
+            	<a href="https://linuxtoy.org/" target="_blank" title="LinuxToy">LinuxToy</a>
+            
           </li>
-        </ul>
-      
-
-      <section class="site-overview">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="CXY" itemprop="image"/>
-          <p class="site-author-name" itemprop="name">CXY</p>
-        </div>
-        <p class="site-description motion-element" itemprop="description"></p>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">2</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
-
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">分类</span>
-              </a>
-          </div>
-
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">标签</span>
-              </a>
-          </div>
-
-        </nav>
-
         
-
-        <div class="links-of-author motion-element">
-          
+          <li>
             
-              <span class="links-of-author-item">
-                <a href="g" target="_blank">0</a>
-              </span>
+            	<a href="http://lilydjwg.is-programmer.com/" target="_blank" title="依云Blog">依云Blog</a>
             
-              <span class="links-of-author-item">
-                <a href="i" target="_blank">1</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="t" target="_blank">2</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="h" target="_blank">3</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="u" target="_blank">4</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="b" target="_blank">5</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href=":" target="_blank">6</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="h" target="_blank">7</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="t" target="_blank">8</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="t" target="_blank">9</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="p" target="_blank">10</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="s" target="_blank">11</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href=":" target="_blank">12</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="/" target="_blank">13</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="/" target="_blank">14</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="g" target="_blank">15</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="i" target="_blank">16</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="t" target="_blank">17</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="h" target="_blank">18</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="u" target="_blank">19</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="b" target="_blank">20</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="." target="_blank">21</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="c" target="_blank">22</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="o" target="_blank">23</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="m" target="_blank">24</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="/" target="_blank">25</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="C" target="_blank">26</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="h" target="_blank">27</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="e" target="_blank">28</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="n" target="_blank">29</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="X" target="_blank">30</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="i" target="_blank">31</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="y" target="_blank">32</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="u" target="_blank">33</a>
-              </span>
-            
-          
-        </div>
-
+          </li>
         
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
         
+    </ul>
+</div>
 
-        <div class="links-of-author motion-element">
-          
-        </div>
+  
 
-      </section>
 
-      
-        <section class="post-toc-wrap sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator"></div>
-          <div class="post-toc">
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#整体思路"><span class="nav-number">1.</span> <span class="nav-text">整体思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本机配置（linux）"><span class="nav-number">2.</span> <span class="nav-text">本机配置（linux）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装node-js"><span class="nav-number">2.1.</span> <span class="nav-text">安装node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#For_ArchLinus:"><span class="nav-number">2.1.1.</span> <span class="nav-text">For ArchLinus:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#For_Debian:"><span class="nav-number">2.1.2.</span> <span class="nav-text">For Debian:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">2.2.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本机git配置"><span class="nav-number">2.3.</span> <span class="nav-text">本机git配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git安装"><span class="nav-number">2.3.1.</span> <span class="nav-text">git安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#For_ArchLinux"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">For ArchLinux</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Debian"><span class="nav-number">2.3.1.2.</span> <span class="nav-text">For Debian</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Centos"><span class="nav-number">2.3.1.3.</span> <span class="nav-text">For Centos</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git简单配置"><span class="nav-number">2.3.2.</span> <span class="nav-text">git简单配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用git来控制blog版本"><span class="nav-number">2.3.3.</span> <span class="nav-text">使用git来控制blog版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为该blog仓库设置远程仓库"><span class="nav-number">2.3.4.</span> <span class="nav-text">为该blog仓库设置远程仓库</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vps配置"><span class="nav-number">3.</span> <span class="nav-text">vps配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#nginx配置"><span class="nav-number">3.1.</span> <span class="nav-text">nginx配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx安装"><span class="nav-number">3.1.1.</span> <span class="nav-text">nginx安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Debian："><span class="nav-number">3.1.1.1.</span> <span class="nav-text">For Debian：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Centos："><span class="nav-number">3.1.1.2.</span> <span class="nav-text">For Centos：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx配置-1"><span class="nav-number">3.1.2.</span> <span class="nav-text">nginx配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#将nginx的根目录改为/var/www/html/public"><span class="nav-number">3.1.2.1.</span> <span class="nav-text">将nginx的根目录改为/var/www/html/public</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启动nginx"><span class="nav-number">3.1.2.2.</span> <span class="nav-text">启动nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置nginx开机启动"><span class="nav-number">3.1.2.3.</span> <span class="nav-text">设置nginx开机启动</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git设置"><span class="nav-number">3.2.</span> <span class="nav-text">git设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git安装-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">git安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#For_ArchLinus"><span class="nav-number">3.2.1.1.</span> <span class="nav-text">For ArchLinus</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Debian-1"><span class="nav-number">3.2.1.2.</span> <span class="nav-text">For Debian</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Centos-1"><span class="nav-number">3.2.1.3.</span> <span class="nav-text">For Centos</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git_hook_设置"><span class="nav-number">3.2.2.</span> <span class="nav-text">git hook 设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本机配置"><span class="nav-number">4.</span> <span class="nav-text">本机配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后话"><span class="nav-number">5.</span> <span class="nav-text">后话</span></a></li></ol></div>
-            
-          </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
-        </section>
-      
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
 
+</aside>
+</div>
     </div>
-  </aside>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m CXY <br/>
+			This is my blog ^_^</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/ChenXiyu" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
 
-
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner"> <div class="copyright" >
-  
-  &copy; &nbsp; 
-  <span itemprop="copyrightYear">2015</span>
-  <span class="with-love">
-    <i class="icon-next-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">CXY</span>
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="CXY">CXY</a>
+		
+		
+		</p>
 </div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT
-  </a>
-</div>
-
-
- </div>
-    </footer>
-
-    <div class="back-to-top"></div>
-  </div>
-
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  
-  
-    
-    
-
-  
-
-
-  
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
-  
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
-
-
-
-  <script type="text/javascript" src="/js/nav-toggle.js"></script>
-
-  
-  
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
-
-
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 0.4 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
   });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
 </script>
 
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    var $tocContent = $('.post-toc-content');
-    if (isDesktop() && CONFIG.sidebar === 'post') {
-      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-        displaySidebar();
-      }
-    }
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
   });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
 </script>
 
 
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      if (CONFIG.sidebar === 'always') {
-        displaySidebar();
-      }
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
     });
-  </script>
-
-  
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/lazyload.js"></script>
-  <script type="text/javascript">
-    $(function () {
-      $("#posts").find('img').lazyload({
-        placeholder: "/images/loading.gif",
-        effect: "fadeIn"
-      });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
     });
-  </script>
-</body>
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-65939202-1', 'Cinus.me');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
 </html>
