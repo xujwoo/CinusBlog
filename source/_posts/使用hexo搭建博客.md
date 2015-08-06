@@ -6,9 +6,11 @@ tags:
 - 架站
 categories:
 - 技术
+
 ---
 
-在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想，我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。
+在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.  
+我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。  
 现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
 
 # 整体思路
@@ -22,10 +24,13 @@ categories:
 ## 安装[node.js](https://nodejs.org/)
 
 ### For ArchLinus:
+
 	$ sudo pacman -S npm nodejs
 ### For Debian:
+
 	$ sudo apt-get install nodejs
 ## 安装hexo
+
 	$ npm install hexo-cli -g
 	$ mkdir blog #创建一个目录作为博客的目录
 	$ cd blog
@@ -48,10 +53,13 @@ categories:
 表示git未安装，你需要安装git：
 
 #### For ArchLinux
+
 	$ sudo pacman -S git
-#### For Debian 
+#### For Debian
+
 	$ sudo apt-get install git-core
 #### For Centos
+
 	$ sudo yum install git-core
 再次执行:
 
@@ -69,6 +77,7 @@ categories:
 	$ git config --list
 查看配置信息。
 ### 使用git来控制blog版本
+
 	$ cd ~/blog
 	$ git init
 	$ git add .
@@ -87,11 +96,14 @@ vps的配置主要有两个方面：
 ## nginx配置
 ### nginx安装
 #### For Debian：
+
     $ sudo apt-get install nginx
 #### For Centos：
+
     $ sudo yum install nginx
 ### nginx配置
 #### 将nginx的根目录改为/var/www/html/public
+
     $ vim /etc/nginx/sites-available/default
 将
 
@@ -105,6 +117,7 @@ vps的配置主要有两个方面：
 
     $ sudo systemctl start nginx
 #### 设置nginx开机启动
+
     $ sudo systemctl enable nginx
 
 ## git设置
@@ -117,10 +130,13 @@ vps的配置主要有两个方面：
 	git：command not found
 表示git未安装，你需要安装git：
 #### For ArchLinus
+
 	$ sudo pacman -S git
 #### For Debian 
+
 	$ sudo apt-get install git-core
 #### For Centos
+
 	$ sudo yum install git-core
 接下来是配置git hook，git hook 的使用我还不是太熟悉，但是按照这个步骤下来是没有问题的。
 ### git hook 设置
@@ -134,16 +150,18 @@ vps的配置主要有两个方面：
     # vim post-receive
 输入一下内容:
 
-    #!/bin/bash -l
-    GIT_REPO=$HOME/repos/Cinus.me.git
-    TMP_GIT_CLONE=$HOME/tmp/git/Cinus.me
-    PUBLIC_WWW=/var/www/html/public
+```bash
+#!/bin/bash -l
+GIT_REPO=$HOME/repos/Cinus.me.git
+TMP_GIT_CLONE=$HOME/tmp/git/Cinus.me
+PUBLIC_WWW=/var/www/html/public
 
-    rm -rf ${TMP_GIT_CLONE}
-    git clone $GIT_REPO $TMP_GIT_CLONE
-    rm -rf ${PUBLIC_WWW}/*
-    cp -rf ${TMP_GIT_CLONE}/public ${PUBLIC_WWW}
-    exit
+rm -rf ${TMP_GIT_CLONE}
+git clone $GIT_REPO $TMP_GIT_CLONE
+rm -rf ${PUBLIC_WWW}/*
+cp -rf ${TMP_GIT_CLONE}/public ${PUBLIC_WWW}
+exit
+```
 保存退出，为post-receive添加执行权限
 
     # chmod u+x post-receive
