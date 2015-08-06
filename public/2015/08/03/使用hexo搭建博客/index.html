@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="Cinus">
 <meta property="og:description" content="在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
 整体">
-<meta property="og:updated_time" content="2015-08-06T03:09:32.121Z">
+<meta property="og:updated_time" content="2015-08-06T17:31:17.655Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo搭建博客">
 <meta name="twitter:description" content="在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
@@ -183,9 +183,8 @@
 <pre><code>$ git remote add Cinus<span class="class">.me</span> ssh:<span class="comment">//root@YourVpsIp:YourSSHPort/root/repos/Cinus.me.git</span>
 $ git push Cinus<span class="class">.me</span> master
 </code></pre><p>此时使用域名或ip访问你的vps应该就能看到你的blog的雏形了。</p>
-<h1 id="后话">后话</h1><p>我采用的方式是在本地写好博客，使用hexo g生成网站文件，然后把整个项目push到vps上，vps上的git hooks 在运行post-receive这个脚本将public目录下的文件复制到/var/www/html/public下，也就是nginx的根目录。<br>现在还有图片等资源未规划，以上的post-receive脚本可能需要更改。<br>有什么问题或本博客有错误的地方欢迎与我联系</p>
-<pre><code>xyCinus<span class="annotation">@gmail</span>.com
-</code></pre>  
+<h1 id="后话">后话</h1><p>我采用的方式是在本地写好博客，使用hexo g生成网站文件，然后把整个项目push到vps上，vps上的git hooks 在运行post-receive这个脚本将public目录下的文件复制到/var/www/html/public下，也就是nginx的根目录。<br>现在还有图片等资源未规划，以上的post-receive脚本可能需要更改。<br>有什么问题或本博客有错误的地方欢迎与我联系<br><a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#x78;&#x79;&#67;&#x69;&#110;&#117;&#x73;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;">&#x78;&#x79;&#67;&#x69;&#110;&#117;&#x73;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;</a></p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -218,6 +217,19 @@ $ git push Cinus<span class="class">.me</span> master
    	       
 	</article>
 	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/08/06/健身日记/" title="健身日记">
+  <strong>上一篇：</strong><br/>
+  <span>
+  健身日记</span>
+</a>
+</div>
+
+
+</nav>
+
 	
 
 </div>  
@@ -246,6 +258,14 @@ $ git push Cinus<span class="class">.me</span> master
 		<ul class="clearfix">
 		
 			
+				<li><a href="/tags/健身/" title="健身">健身<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/日记/" title="日记">日记<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
@@ -255,6 +275,10 @@ $ git push Cinus<span class="class">.me</span> master
 		
 			
 				<li><a href="/tags/架站/" title="架站">架站<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -376,6 +400,11 @@ $(document).ready(function(){
   $(window).scroll(function(){
     o.css("top",Math.max(80,260-$(this).scrollTop()));
   });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
   
   $(window).resize(function(){
     getSize(); 
@@ -526,6 +555,35 @@ ga('send', 'pageview');
 
 <!-- MathJax Begin -->
 <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
 <!-- MathJax End -->

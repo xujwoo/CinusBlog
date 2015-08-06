@@ -1,0 +1,560 @@
+
+ <!DOCTYPE HTML>
+<html lang="default">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Markdown语法 | Cinus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="CXY">
+    
+
+    
+    <meta name="description" content="整理一下Markdown的语法，用这玩意儿写blog有点意思。
+Markdown介绍Markdown是一种轻量级标记语言,它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。它避免了我直接写html文档。这是我很喜欢的，而且hexo的markdown解释其生成的html其显示效果还是很不错的。github的README支持markdown还有很多写作网站">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown语法">
+<meta property="og:url" content="http://Cinus.me/2015/08/06/Markdown语法/index.html">
+<meta property="og:site_name" content="Cinus">
+<meta property="og:description" content="整理一下Markdown的语法，用这玩意儿写blog有点意思。
+Markdown介绍Markdown是一种轻量级标记语言,它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。它避免了我直接写html文档。这是我很喜欢的，而且hexo的markdown解释其生成的html其显示效果还是很不错的。github的README支持markdown还有很多写作网站">
+<meta property="og:image" content="http://Cinus.me/2015/08/06/Markdown语法/1.png">
+<meta property="og:image" content="http://Cinus.me/2015/08/06/Markdown语法/2.png">
+<meta property="og:image" content="http://Cinus.me/2015/08/06/Markdown语法/3.png">
+<meta property="og:updated_time" content="2015-08-06T17:24:23.247Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Markdown语法">
+<meta name="twitter:description" content="整理一下Markdown的语法，用这玩意儿写blog有点意思。
+Markdown介绍Markdown是一种轻量级标记语言,它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。它避免了我直接写html文档。这是我很喜欢的，而且hexo的markdown解释其生成的html其显示效果还是很不错的。github的README支持markdown还有很多写作网站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Cinus" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/archlinux-wm-awesome.svg">
+    <link rel="apple-touch-icon-precomposed" href="/img/archlinux-wm-awesome.svg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/archlinux-wm-awesome.svg" alt="Cinus" title="Cinus"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Cinus">Cinus</a></h1>
+				<h2 class="blog-motto">CXY&#39;s Blog</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:Cinus.me">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/08/06/Markdown语法/" title="Markdown语法" itemprop="url">Markdown语法</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="CXY" target="_blank" itemprop="author">CXY</a>
+		
+  <p class="article-time">
+    <time datetime="2015-08-06T12:41:05.000Z" itemprop="datePublished"> Published 2015-08-06</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Markdown介绍"><span class="toc-number">1.</span> <span class="toc-text">Markdown介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#标题"><span class="toc-number">2.</span> <span class="toc-text">标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用#为文章设置多级标题(类Atx)"><span class="toc-number">2.1.</span> <span class="toc-text">使用#为文章设置多级标题(类Atx)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用=和-为文章设置大小标题(类Setext)"><span class="toc-number">2.2.</span> <span class="toc-text">使用=和-为文章设置大小标题(类Setext)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分割线"><span class="toc-number">3.</span> <span class="toc-text">分割线</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#引用"><span class="toc-number">4.</span> <span class="toc-text">引用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#文字引用"><span class="toc-number">4.1.</span> <span class="toc-text">文字引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用>引用文字"><span class="toc-number">4.1.1.</span> <span class="toc-text">使用>引用文字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用hexo插件Block_Quote"><span class="toc-number">4.1.2.</span> <span class="toc-text">使用hexo插件Block Quote</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#醒目引文Pullquote"><span class="toc-number">4.1.3.</span> <span class="toc-text">醒目引文Pullquote</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码引用"><span class="toc-number">4.2.</span> <span class="toc-text">代码引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#`(反引号)引用一小段代码"><span class="toc-number">4.2.1.</span> <span class="toc-text">`(反引号)引用一小段代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用缩进来引用代码段"><span class="toc-number">4.2.2.</span> <span class="toc-text">利用缩进来引用代码段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用hexo支持的插件codeblock"><span class="toc-number">4.2.3.</span> <span class="toc-text">使用hexo支持的插件codeblock</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用3个或以上的反引号来引用代码块"><span class="toc-number">4.2.4.</span> <span class="toc-text">使用3个或以上的反引号来引用代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引用gist"><span class="toc-number">4.2.5.</span> <span class="toc-text">引用gist</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用网页"><span class="toc-number">4.3.</span> <span class="toc-text">引用网页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片引用"><span class="toc-number">4.4.</span> <span class="toc-text">图片引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#直接引用"><span class="toc-number">4.4.1.</span> <span class="toc-text">直接引用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#使用Image"><span class="toc-number">4.4.1.1.</span> <span class="toc-text">使用Image</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#引用图片资源"><span class="toc-number">4.4.1.2.</span> <span class="toc-text">引用图片资源</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#间接引用"><span class="toc-number">4.4.2.</span> <span class="toc-text">间接引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链接"><span class="toc-number">4.5.</span> <span class="toc-text">链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#视频引用"><span class="toc-number">4.6.</span> <span class="toc-text">视频引用</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<p>整理一下Markdown的语法，用这玩意儿写blog有点意思。</p>
+<h1 id="Markdown介绍"><strong><a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank" rel="external">Markdown介绍</a></strong></h1><p><strong>Markdown</strong>是一种轻量级标记语言,它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。<br>它避免了我直接写html文档。这是我很喜欢的，而且hexo的markdown解释其生成的html其显示效果还是很不错的。<br><a href="https://github.com" target="_blank" rel="external">github</a>的README支持markdown还有很多写作网站也支持markdown，例如<a href="http://www.jianshu.com/" target="_blank" rel="external">简书</a>等。<br>现在markdown用处非常多，光用来写博客就值得我学习它了。</p>
+<h1 id="标题"><strong>标题</strong></h1><h2 id="使用#为文章设置多级标题(类Atx)">使用<strong>#</strong>为文章设置多级标题(类<a href="http://www.aaronsw.com/2002/atx/" target="_blank" rel="external">Atx</a>)</h2><figure class="highlight vala"><figcaption><span>Head_example1.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># 一级标题  </span></span><br><span class="line"><span class="preprocessor">## 二级标题  </span></span><br><span class="line"><span class="preprocessor">### 三级标题</span></span><br><span class="line"><span class="preprocessor">#### 四级标题</span></span><br></pre></td></tr></table></figure>
+<p>依次类推,最多6个#代表6级标题,其效果如下图所示：<br><img src="/2015/08/06/Markdown语法/1.png" alt="使用#为文章设置多级标题" title="使用#为文章设置多级标题"></p>
+<h2 id="使用=和-为文章设置大小标题(类Setext)">使用<strong>=</strong>和<strong>-</strong>为文章设置大小标题(类<a href="http://docutils.sourceforge.net/mirror/setext.html" target="_blank" rel="external">Setext</a>)</h2><p>利用<strong>=</strong>（最高阶标题）和<strong>-</strong>（第二阶标题）来标识标题：<br><figure class="highlight asciidoc"><figcaption><span>Head_example2.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="header">This is an H1</span><br><span class="line">=============</span></span><br><span class="line"><span class="header">this is an H2</span><br><span class="line">-------------</span></span><br></pre></td></tr></table></figure><br>任何数量的=和-效果都一样，其效果为：<br><img src="/2015/08/06/Markdown语法/2.png" alt="使用=和-为文章设置大小标题" title="使用=和-为文章设置大小标题"></p>
+<h1 id="分割线"><strong>分割线</strong></h1><p>使用三个以上的<strong>星号</strong>,<strong>减号</strong>,<strong>下划线</strong>来建立分割线，行内不要写其他东西，<strong>星号</strong>或<strong>减号</strong>间可以加入空格。<br><figure class="highlight gherkin"><figcaption><span>分割线example.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line">_____</span><br><span class="line">-----</span><br><span class="line"><span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span></span><br><span class="line">- - - -</span><br></pre></td></tr></table></figure><br>效果为：<br><img src="/2015/08/06/Markdown语法/3.png" alt="分割线示例" title="分割线示例"></p>
+<h1 id="引用"><strong>引用</strong></h1><h2 id="文字引用">文字引用</h2><h3 id="使用&gt;引用文字">使用<strong>&gt;</strong>引用文字</h3><p>该引用方法是借鉴与email中的引用方式，在需要引用的行或段前加上&gt;可以建立引用区块来引用该行的文字,引用可以嵌套。<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;hello  </span><br><span class="line">world</span><br><span class="line"><span class="prompt">&gt;&gt;</span>hello world</span><br></pre></td></tr></table></figure></p>
+<p>产生的效果为：</p>
+<blockquote>
+<p>hello<br>world</p>
+<blockquote>
+<p>hello world</p>
+</blockquote>
+</blockquote>
+<h3 id="使用hexo插件Block_Quote">使用hexo插件<a href="https://hexo.io/zh-cn/docs/tag-plugins.html#Block_Quote" target="_blank" rel="external">Block Quote</a></h3><p>该插件支持插入引言，可包含作者、来源和标题。通用格式为：<br><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote <span class="comment">[author<span class="comment">[, source]</span>]</span> <span class="comment">[link]</span> <span class="comment">[source_link_title]</span> %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>示例：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote David Levithan, Wide Awake %&#125;</span><br><span class="line"><span class="operator"><span class="keyword">Do</span> <span class="keyword">not</span> just seek happiness <span class="keyword">for</span> yourself. Seek happiness <span class="keyword">for</span> all. <span class="keyword">Through</span> kindness. <span class="keyword">Through</span> mercy.</span><br><span class="line">&#123;% endblockquote %&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>效果为：<br><blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote></p>
+<h3 id="醒目引文Pullquote">醒目引文<a href="https://hexo.io/zh-cn/docs/tag-plugins.html#Pull_Quote" target="_blank" rel="external">Pullquote</a></h3><p>没整明白这是干嘛用的，翻译也好奇怪<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% pullquote [<span class="class"><span class="keyword">class</span>] %&#125;</span></span><br><span class="line">I'm content <span class="keyword">in</span> pullquote</span><br><span class="line">Me too.</span><br><span class="line">&#123;% endpullquote %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>效果是：<br><blockquote class="pullquote [class]"><p>I’m content in pullquote<br>Me too.</p>
+</blockquote></p>
+<h2 id="代码引用">代码引用</h2><p>作为程序员的博客，怎么能没有代码引用？</p>
+<h3 id="`(反引号)引用一小段代码">`(反引号)引用一小段代码</h3><p>在语句中应用一段代码或命令可以使用反引号<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code:`<span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span>`</span></span><br></pre></td></tr></table></figure><br>效果类似与：</p>
+<p>code:<code>#include&lt;iostream&gt;</code></p>
+<h3 id="利用缩进来引用代码段">利用缩进来引用代码段</h3><p>使用4个空格或者一个tab的缩进能产生一个引用框来引用需要显示的代码<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/type.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc , <span class="keyword">char</span>* argv[])</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>产生效果如下：</p>
+<pre><code><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span>
+<span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;sys/type.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;
+<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc , <span class="keyword">char</span>* argv[])</span></span>{
+    <span class="keyword">int</span> i;
+    <span class="keyword">return</span> <span class="number">0</span>;
+}
+</code></pre><p><code>注意</code>:代码的顶上一行要是空行，不然不是这种效果。</p>
+<h3 id="使用hexo支持的插件codeblock">使用hexo支持的插件<a href="https://hexo.io/zh-cn/docs/tag-plugins.html#Code_Block" target="_blank" rel="external">codeblock</a></h3><p>通用语法为：<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template_tag">&#123;% codeblock [title] [lang:<span class="keyword">language</span>] [<span class="keyword">url</span>] [link text] %&#125;</span><span class="xml"></span><br><span class="line">code snippet</span><br><span class="line"></span><span class="template_tag">&#123;% endcodeblock %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
+<p>示例:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock example.sh lang:bash http://cinus.me/ <span class="string">"Cinus's link"</span> %&#125;</span><br><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"hello world"</span></span><br><span class="line"><span class="built_in">exit</span> <span class="number">0</span>;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>显示结果为：<br><figure class="highlight bash"><figcaption><span>example.sh</span><a href="http://cinus.me/">Cinus's link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"hello world"</span></span><br><span class="line"><span class="built_in">exit</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure></p>
+<h3 id="使用3个或以上的反引号来引用代码块">使用3个或以上的反引号来引用代码块</h3><p>hexo 解析后的效果和使用缩进来引用代码块的效果一样<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">```</span><br></pre></td></tr></table></figure></p>
+<p>显示为：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="引用gist">引用<a href="https://gist.github.com" target="_blank" rel="external">gist</a></h3><p>通用语法为：<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">&#123;% gist gist_id <span class="collection">[filename]</span> %&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>示例:</p>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="var_expand">% gist ChenXiyu/51daf79a8de15adcfb19  testfile.cpp %</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>效果：<br><script src="//gist.github.com/ChenXiyu/51daf79a8de15adcfb19.js?file="></script></p>
+<h2 id="引用网页">引用网页</h2><p>使用hexo插件<a href="https://hexo.io/zh-cn/docs/tag-plugins.html#iframe" target="_blank" rel="external">iframe</a><br>通用语法：<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">&#123;% iframe url <span class="collection">[width]</span> <span class="collection">[height]</span> %&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>示例：<br><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="expression">&#123;% <span class="variable">iframe</span> <span class="variable">http</span>:/<span class="end-block">/cinus.me</span><span class="end-block">/ </span>920 400 %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
+<p>效果为：<br><iframe src="http://cinus.me/" width="920" height="400" frameborder="0" allowfullscreen></iframe></p>
+<h2 id="图片引用">图片引用</h2><h3 id="直接引用">直接引用</h3><h4 id="使用Image">使用<a href="https://hexo.io/zh-cn/docs/tag-plugins.html#Image" target="_blank" rel="external">Image</a></h4><p>通用语法：<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">&#123;% img <span class="collection">[class names]</span> /path/to/image <span class="collection">[width]</span> <span class="collection">[height]</span> <span class="collection">[title text <span class="collection">[alt text]</span>]</span> %&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>示例：<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">&#123;% img &#125;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="引用图片资源">引用图片资源</h4><h3 id="间接引用">间接引用</h3><h2 id="链接">链接</h2><h2 id="视频引用">视频引用</h2>  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Markdown/">Markdown</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://Cinus.me/2015/08/06/Markdown语法/" data-title="Markdown语法 | Cinus" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/08/06/健身日记/"  title="健身日记">
+ <strong>下一篇：</strong><br/> 
+ <span>健身日记
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/技术/" title="技术">技术<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/健身/" title="健身">健身<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/日记/" title="日记">日记<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/架站/" title="架站">架站<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://lilydjwg.is-programmer.com/" target="_blank" title="依云Blog">依云Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://coolshell.cn/" target="_blank" title="CoolShell">CoolShell</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://linuxtoy.org/" target="_blank" title="LinuxToy">LinuxToy</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wangkai.club" target="_blank" title="紫凯茗檬">紫凯茗檬</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m CXY <br/>
+			This is my blog ^_^</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/ChenXiyu" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="CXY">CXY</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-65939202-1', 'Cinus.me');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

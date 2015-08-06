@@ -175,5 +175,4 @@ exit
 我采用的方式是在本地写好博客，使用hexo g生成网站文件，然后把整个项目push到vps上，vps上的git hooks 在运行post-receive这个脚本将public目录下的文件复制到/var/www/html/public下，也就是nginx的根目录。
 现在还有图片等资源未规划，以上的post-receive脚本可能需要更改。
 有什么问题或本博客有错误的地方欢迎与我联系
-
-    xyCinus@gmail.com
+<xyCinus@gmail.com>
