@@ -176,6 +176,17 @@ int main(){
 ```
 效果：
 {% gist ChenXiyu/51daf79a8de15adcfb19  testfile.cpp %}
+### 引用source中的代码文件（[Include code](https://hexo.io/zh-cn/docs/tag-plugins.html#Include_Code))
+hexo 提供的插件，用于插入`source`文件夹内的代码文件。
+语法：
+```
+{% include_code [title] [lang:language] path/to/file %}
+```
+```
+{% include_code server.cc lang:cpp server.cc %}
+```
+{% include_code server.cc lang:cpp server.cc %}
+`测试未成功`。
 ## 引用网页
 使用hexo插件[iframe](https://hexo.io/zh-cn/docs/tag-plugins.html#iframe)
 通用语法：
@@ -190,8 +201,31 @@ int main(){
 效果为：
 {% iframe http://cinus.me/ 920 400 %}
 ## 图片引用
-### 直接引用
-#### 使用[Image](https://hexo.io/zh-cn/docs/tag-plugins.html#Image)
+### 使用标准MD语法引用图片
+#### 行内式
+通用语法：
+```
+![Alt text](/path/to/img.jpg [Optional title])
+```
+示例：
+```
+![test Picture](https://upload.wikimedia.org/wikipedia/commons/5/57/SADF-44Parachute-Gecko-001.jpg)
+```
+![test Picture](https://upload.wikimedia.org/wikipedia/commons/5/57/SADF-44Parachute-Gecko-001.jpg)
+#### 参考式
+语法：
+```
+![Alt text][id]
+**[id]是图片参考的名称**
+[id]: url/to/image  "Optional title attribute"
+```
+示例：
+```
+![test Picture2][1]
+[1]:https://c1.staticflickr.com/9/8199/8161648094_2b436fa1a0_b.jpg "测试图片"
+```
+![test Picture2][1]
+### 使用[Image](https://hexo.io/zh-cn/docs/tag-plugins.html#Image)插件
 通用语法：
 ```
 {% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
@@ -199,11 +233,93 @@ int main(){
 ```
 示例：
 ```
-{% img }
+{% img https://grahamlesliemccallum.files.wordpress.com/2013/09/sadf-buffel-anti-mine-troop-carrier-sadf-military.jpg %}
 ```
-#### 引用图片资源
-
-### 间接引用
+{% img https://grahamlesliemccallum.files.wordpress.com/2013/09/sadf-buffel-anti-mine-troop-carrier-sadf-military.jpg %}
+### 引用本地图片资源
+以上的图片引用都是引用网络资源，按理说引用本地的资源也是可行的，但是我测试本地资源没有通过过，hexo提供了引用本地资源的方式。要使用这种方式引用本地资源，先要在你的hexo中设置打开`post_asset_folder`。
+编辑顶层的`_config.yml`将
+```
+post_asset_folder: false
+```
+改为：
+```
+post_asset_folder: true
+```
+这样，使用`hexo new post postName`的时候就会在_post下生成一个与postName同名的目录，可以将你需要使用的资源文件放在这个目录下，在文章中调用。
+调用语法：
+```
+{% asset_img imgName [title] %}
+```
+实例:
+```
+{% asset_img testImg.jpg testTitle %}
+```
+效果:
+{% asset_img testImg.jpg testTitle %}
+`注意`:要将图片资源放入文章对应的文件夹中。
 ## 链接
-## 视频引用
+和图片引用类似，链接的引用也支持行内式，和参考式。对于电子邮件等还支持自动链接，hexo还支持link插件。
+### 行内式
+语法为：
+```
+[link's name](URL "title")
+```
+示例：
+```
+[Cinus's Blog](http://Cinus.me/ "hello Blog" )
+```
+产生如下效果：
+[Cinus's Blog](http://Cinus.me/ "My Blog")
+链接本机资源可以使用相对路径：
+```
+[About me](/about/)
+```
+[About me](/about/ "about me")
+### 参考式
+参考式的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记
+```
+[Link's name][id]
+----some content-------
+[id]:URL
+```
+示例
+```
+[Cinus's Blog][2]
+----some content-------
+[2]:http://cinus.me/
+```
+[Cinus's Blog][2]
 
+```
+[about me][3]
+----some content-------
+[3]:/about/
+```
+[about me][3]
+### 自动链接
+Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。例如：
+```
+
+<xyCinus@gmail.com>
+```
+`注意前一行为空`,将会产生：
+
+<xyCinus@gmail.com>
+### [Link](https://hexo.io/zh-cn/docs/tag-plugins.html#Link)插件
+在文章中插入链接，并自动给外部链接添加 target="_blank" 属性
+```
+{% link text url [external] [title] %}
+```
+示例
+```
+{% link test_link http://Cinus.me/ Cinus %}
+```
+{% link Cinus http://Cinus.me/ testLink %}
+## 视频引用
+### YouTube
+
+
+[1]:https://c1.staticflickr.com/9/8199/8161648094_2b436fa1a0_b.jpg "测试图片"
+[2]:http://cinus.me/
+[3]:/about/
