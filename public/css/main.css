@@ -643,7 +643,7 @@ td {
   border-color: #ccc;
   border-width: 1px 0;
   background: #1d1f21;
-  padding: 15px 40px 15px 15px;
+  padding: 15px 10px 15px 15px;
 }
 .post .gist .gist-file {
   border: none;
@@ -674,7 +674,7 @@ td {
   text-shadow: 0 0;
   padding: 0;
   margin-top: 1em;
-  margin-left: 40px;
+  margin-left: 10px;
 }
 .post .gist .gist-file .gist-meta a {
   color: color-link;
@@ -752,20 +752,20 @@ body {
   width: 960px;
 }
 .one-column .header-inner {
-  width: 700px;
+  width: 960px;
 }
 .main {
-  padding-bottom: 150px;
+  padding-bottom: 100px;
 }
 .main-inner {
   margin: 0 auto;
   width: 960px;
 }
 .one-column .main-inner {
-  width: 700px;
+  width: 960px;
 }
 .main-inner .content {
-  width: 700px;
+  width: 960px;
 }
 .footer {
   position: absolute;
@@ -779,7 +779,7 @@ body {
   width: 960px;
 }
 .one-column .footer-inner {
-  width: 700px;
+  width: 960px;
 }
 .headband {
   height: 3px;
@@ -1055,7 +1055,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8338f2;
+  background: #21ffff;
 }
 .sidebar-nav {
   margin: 0;

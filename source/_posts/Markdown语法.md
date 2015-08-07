@@ -2,7 +2,7 @@ title: Markdown语法
 date: 2015-08-06 20:41:05
 tags:
 - Markdown
-categoried:
+categories:
 - 文档
 
 ---
