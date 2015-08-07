@@ -1,17 +1,45 @@
-
- <!DOCTYPE HTML>
-<html lang="default">
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
 <head>
-  <meta charset="UTF-8">
   
-    <title>Markdown语法 | Cinus</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-    
-    <meta name="author" content="CXY">
-    
 
-    
-    <meta name="description" content="整理一下Markdown的语法，用这玩意儿写blog有点意思。
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+
+
+  <meta name="keywords" content="Markdown," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Cinus" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="整理一下Markdown的语法，用这玩意儿写blog有点意思。
 Markdown介绍Markdown是一种轻量级标记语言,它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。它避免了我直接写html文档。这是我很喜欢的，而且hexo的markdown解释其生成的html其显示效果还是很不错的。github的README支持markdown还有很多写作网站">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Markdown语法">
@@ -26,91 +54,164 @@ Markdown介绍Markdown是一种轻量级标记语言,它允许人们“使用易
 <meta property="og:image" content="https://c1.staticflickr.com/9/8199/8161648094_2b436fa1a0_b.jpg">
 <meta property="og:image" content="https://grahamlesliemccallum.files.wordpress.com/2013/09/sadf-buffel-anti-mine-troop-carrier-sadf-military.jpg">
 <meta property="og:image" content="http://Cinus.me/2015/08/06/Markdown语法/testImg.jpg">
-<meta property="og:updated_time" content="2015-08-07T04:23:03.615Z">
+<meta property="og:updated_time" content="2015-08-07T10:11:45.141Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown语法">
 <meta name="twitter:description" content="整理一下Markdown的语法，用这玩意儿写blog有点意思。
 Markdown介绍Markdown是一种轻量级标记语言,它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。它避免了我直接写html文档。这是我很喜欢的，而且hexo的markdown解释其生成的html其显示效果还是很不错的。github的README支持markdown还有很多写作网站">
 
-    
-    <link rel="alternative" href="/atom.xml" title="Cinus" type="application/atom+xml">
-    
-    
-    <link rel="icon" href="/img/favicon.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/archlinux-wm-awesome.svg">
-    <link rel="apple-touch-icon-precomposed" href="/img/archlinux-wm-awesome.svg">
-    
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> Markdown语法 | Cinus </title>
 </head>
 
-  <body>
-    <header>
-      
-<div>
-		
-			<div id="imglogo">
-				<a href="/"><img src="/img/archlinux-wm-awesome.svg" alt="Cinus" title="Cinus"/></a>
-			</div>
-			
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="Cinus">Cinus</a></h1>
-				<h2 class="blog-motto">CXY&#39;s Blog</h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					<ul>
-					 
-						<li><a href="/">Home</a></li>
-					
-						<li><a href="/archives">Archives</a></li>
-					
-						<li><a href="/about">About</a></li>
-					
-					<li>
- 					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
-						<input type="hidden" name="q" value="site:Cinus.me">
-					</form>
-					
-					</li>
-				</ul>
-			</nav>			
-</div>
-    </header>
-    <div id="container">
-      <div id="main" class="post" itemscope itemprop="blogPost">
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
   
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">Cinus</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            Tags
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
     
-      <a href="/2015/08/06/Markdown语法/" title="Markdown语法" itemprop="url">Markdown语法</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="CXY" target="_blank" itemprop="author">CXY</a>
-		
-  <p class="article-time">
-    <time datetime="2015-08-06T12:41:05.000Z" itemprop="datePublished"> Published 2015-08-06</time>
-    
-  </p>
-</header>
-	<div class="article-content">
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
-		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Markdown介绍"><span class="toc-number">1.</span> <span class="toc-text">Markdown介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#标题"><span class="toc-number">2.</span> <span class="toc-text">标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用#为文章设置多级标题(类Atx)"><span class="toc-number">2.1.</span> <span class="toc-text">使用#为文章设置多级标题(类Atx)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用=和-为文章设置大小标题(类Setext)"><span class="toc-number">2.2.</span> <span class="toc-text">使用=和-为文章设置大小标题(类Setext)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分割线"><span class="toc-number">3.</span> <span class="toc-text">分割线</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#引用"><span class="toc-number">4.</span> <span class="toc-text">引用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#文字引用"><span class="toc-number">4.1.</span> <span class="toc-text">文字引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用>引用文字"><span class="toc-number">4.1.1.</span> <span class="toc-text">使用>引用文字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用hexo插件Block_Quote"><span class="toc-number">4.1.2.</span> <span class="toc-text">使用hexo插件Block Quote</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#醒目引文Pullquote"><span class="toc-number">4.1.3.</span> <span class="toc-text">醒目引文Pullquote</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码引用"><span class="toc-number">4.2.</span> <span class="toc-text">代码引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#`(反引号)引用一小段代码"><span class="toc-number">4.2.1.</span> <span class="toc-text">`(反引号)引用一小段代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用缩进来引用代码段"><span class="toc-number">4.2.2.</span> <span class="toc-text">利用缩进来引用代码段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用hexo支持的插件codeblock"><span class="toc-number">4.2.3.</span> <span class="toc-text">使用hexo支持的插件codeblock</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用3个或以上的反引号来引用代码块"><span class="toc-number">4.2.4.</span> <span class="toc-text">使用3个或以上的反引号来引用代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引用gist"><span class="toc-number">4.2.5.</span> <span class="toc-text">引用gist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引用source中的代码文件（Include_code)"><span class="toc-number">4.2.6.</span> <span class="toc-text">引用source中的代码文件（Include code)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用网页"><span class="toc-number">4.3.</span> <span class="toc-text">引用网页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片引用"><span class="toc-number">4.4.</span> <span class="toc-text">图片引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用标准MD语法引用图片"><span class="toc-number">4.4.1.</span> <span class="toc-text">使用标准MD语法引用图片</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#行内式"><span class="toc-number">4.4.1.1.</span> <span class="toc-text">行内式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参考式"><span class="toc-number">4.4.1.2.</span> <span class="toc-text">参考式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用Image插件"><span class="toc-number">4.4.2.</span> <span class="toc-text">使用Image插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引用本地图片资源"><span class="toc-number">4.4.3.</span> <span class="toc-text">引用本地图片资源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链接"><span class="toc-number">4.5.</span> <span class="toc-text">链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#行内式-1"><span class="toc-number">4.5.1.</span> <span class="toc-text">行内式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考式-1"><span class="toc-number">4.5.2.</span> <span class="toc-text">参考式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自动链接"><span class="toc-number">4.5.3.</span> <span class="toc-text">自动链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Link插件"><span class="toc-number">4.5.4.</span> <span class="toc-text">Link插件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#视频引用"><span class="toc-number">4.6.</span> <span class="toc-text">视频引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#YouTube"><span class="toc-number">4.6.1.</span> <span class="toc-text">YouTube</span></a></li></ol></li></ol></li></ol>
-		
-		</div>
-		
-		<p>整理一下Markdown的语法，用这玩意儿写blog有点意思。</p>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Markdown语法
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-08-06T20:41:05+08:00" content="2015-08-06">
+            2015-08-06
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>整理一下Markdown的语法，用这玩意儿写blog有点意思。</p>
 <h1 id="Markdown介绍"><strong><a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank" rel="external">Markdown介绍</a></strong></h1><p><strong>Markdown</strong>是一种轻量级标记语言,它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。<br>它避免了我直接写html文档。这是我很喜欢的，而且hexo的markdown解释其生成的html其显示效果还是很不错的。<br><a href="https://github.com" target="_blank" rel="external">github</a>的README支持markdown还有很多写作网站也支持markdown，例如<a href="http://www.jianshu.com/" target="_blank" rel="external">简书</a>等。<br>现在markdown用处非常多，光用来写博客就值得我学习它了。</p>
 <h1 id="标题"><strong>标题</strong></h1><h2 id="使用#为文章设置多级标题(类Atx)">使用<strong>#</strong>为文章设置多级标题(类<a href="http://www.aaronsw.com/2002/atx/" target="_blank" rel="external">Atx</a>)</h2><figure class="highlight vala"><figcaption><span>Head_example1.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># 一级标题  </span></span><br><span class="line"><span class="preprocessor">## 二级标题  </span></span><br><span class="line"><span class="preprocessor">### 三级标题</span></span><br><span class="line"><span class="preprocessor">#### 四级标题</span></span><br></pre></td></tr></table></figure>
 <p>依次类推,最多6个#代表6级标题,其效果如下图所示：<br><img src="/2015/08/06/Markdown语法/1.png" alt="使用#为文章设置多级标题" title="使用#为文章设置多级标题"></p>
@@ -185,412 +286,463 @@ Markdown介绍Markdown是一种轻量级标记语言,它允许人们“使用易
 <p><a href="/about/">about me</a></p>
 <h3 id="自动链接">自动链接</h3><p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。例如：<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;xyCinus@gmail.com&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p><code>注意前一行为空</code>,将会产生：</p>
-<p><a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#x78;&#121;&#x43;&#105;&#110;&#117;&#115;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x78;&#121;&#x43;&#105;&#110;&#117;&#115;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a></p>
+<p><a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#120;&#x79;&#x43;&#x69;&#110;&#x75;&#115;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#109;">&#120;&#x79;&#x43;&#x69;&#110;&#x75;&#115;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#109;</a></p>
 <h3 id="Link插件"><a href="https://hexo.io/zh-cn/docs/tag-plugins.html#Link" target="_blank" rel="external">Link</a>插件</h3><p>在文章中插入链接，并自动给外部链接添加 target=”_blank” 属性<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">&#123;% link text url <span class="collection">[external]</span> <span class="collection">[title]</span> %&#125;</span></span><br></pre></td></tr></table></figure></p>
 <p>示例<br><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="expression">&#123;% <span class="variable">link</span> <span class="variable">test</span>_<span class="variable">link</span> <span class="variable">http</span>:/<span class="end-block">/Cinus.me</span><span class="end-block">/ Cinus </span>%&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
 <a href="http://Cinus.me/" title="testLink">Cinus</a>
-<h2 id="视频引用">视频引用</h2><h3 id="YouTube">YouTube</h3>  
-	</div>
-		<footer class="article-footer clearfix">
-<div class="article-catetags">
+<h2 id="视频引用">视频引用</h2><h3 id="YouTube">YouTube</h3><p>插入YouTube视频<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="preprocessor">%</span> youtube video_id <span class="preprocessor">%</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>测试：<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="preprocessor">%</span> youtube aC<span class="number">6</span>FAIuWQbk <span class="preprocessor">%</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="video-container"><iframe src="//www.youtube.com/embed/aC6FAIuWQbk" frameborder="0" allowfullscreen></iframe></div>
+<h3 id="vimeo">vimeo</h3><p>插入vimeo视频<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="preprocessor">%</span> vimeo vimeoid <span class="preprocessor">%</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="preprocessor">%</span> vimeo <span class="number">130279788</span> <span class="preprocessor">%</span>&#125;</span><br></pre></td></tr></table></figure>
+<div class="video-container"><iframe src="//player.vimeo.com/video/130279788" frameborder="0" allowfullscreen></iframe></div>
+<h1 id="强调">强调</h1><p>Markdown 使用星号（*）和底线（_）作为标记强调字词的符号<br>使用一个星号或者下划线包围的文字将被显示成斜体，使用两个星号或者下划线包围的文字将显示成粗体。<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">*</span>你好<span class="keyword">*</span></span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span>你好<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line">_hello_</span><br><span class="line">__hello__</span><br><span class="line"><span class="keyword">*</span>__hello world__<span class="keyword">*</span></span><br></pre></td></tr></table></figure></p>
+<p><em>你好</em><br><strong>你好</strong><br><em>hello</em><br><strong>hello</strong><br><em><strong>hello world</strong></em></p>
+<h1 id="列表">列表</h1><p>MarkDown 支持有序列表和无需列表。</p>
+<h2 id="有序列表">有序列表</h2><p>使用数字加一个英文句点，不管数字是不是有序的，最后生成的列表都是按1,2,3…数字排列的。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3.</span> Bird</span><br><span class="line"><span class="number">2.</span> McHale</span><br><span class="line"><span class="number">4.</span> Parish</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>Bird</li>
+<li>McHale</li>
+<li>Parish</li>
+</ol>
+<p><code>注意</code>:Markdown不在乎你前面写的什么数字,但是建议按照顺序写数字，也许以后markdown会改变特性呢？<br>有时候在文章里面会出现数字+句点+空格的情况，但是我们并不是想让他们变成列表，比如这样：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1994</span>. What <span class="tag">a</span> great year.</span><br></pre></td></tr></table></figure></p>
+<p>如果直接写就会出现这种情况。</p>
+<ol>
+<li>What a great year.</li>
+</ol>
+<p>我们需要这样写：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1994</span>\. What <span class="tag">a</span> great year.</span><br></pre></td></tr></table></figure></p>
+<p>1994. What a great year.</p>
+<h2 id="无序列表">无序列表</h2><p>使用星号，加号或者减号作为列表标记<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">* </span>Red</span><br><span class="line"><span class="bullet">* </span>Green</span><br><span class="line"><span class="bullet">* </span>Blue</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>Red</li>
+<li>Green</li>
+<li>Blue</li>
+</ul>
+<p>效果等同于使用减号或加号。<code>注意</code>：星号，加号，减号与文字之间要有空格。</p>
+<h2 id="列表嵌套">列表嵌套</h2><p>无序列表可以嵌套使用<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+ <span class="number">1</span></span><br><span class="line"> * <span class="number">1.1</span></span><br><span class="line"> * <span class="number">1.2</span></span><br><span class="line">+ <span class="number">2</span></span><br><span class="line"> - <span class="number">2.1</span></span><br><span class="line"> - <span class="number">2.2</span></span><br><span class="line">+ <span class="number">3</span></span><br><span class="line"> - <span class="number">3.1</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>1<ul>
+<li>1.1</li>
+<li>1.2</li>
+</ul>
+</li>
+<li>2<ul>
+<li>2.1</li>
+<li>2.2</li>
+</ul>
+</li>
+<li>3<ul>
+<li>3.1</li>
+</ul>
+</li>
+</ul>
+<h1 id="反斜线转义">反斜线转义</h1><p>Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号,使用\加特殊字符可以将其转义为正常字符输出。Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<blockquote>
+<p>\   反斜线<br>`   反引号<br>*   星号<br>_   底线<br>{}  花括号<br>[]  方括号<br>()  括弧<br>#   井字号<br>+   加号<br>-   减号<br>.   英文句点<br>!   惊叹号</p>
+</blockquote>
+<h1 id="OVER">OVER</h1><p>Markdown语法整理得差不多了，如果还有补充或者有错误欢迎与我联系</p>
+<p><a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#x78;&#x79;&#x43;&#105;&#110;&#x75;&#115;&#x40;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">&#x78;&#x79;&#x43;&#105;&#110;&#x75;&#115;&#x40;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;</a></p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Markdown/" rel="tag">#Markdown</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/08/06/健身日记/" rel="next">健身日记</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
 
 
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Markdown/">Markdown</a>
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
-</div>
+ </div>
 
+        
 
+        
+          <div class="comments" id="comments">
+            
+          </div>
+        
+      </div>
 
-	<div class="article-share" id="share">
-	
-	  <div data-url="http://Cinus.me/2015/08/06/Markdown语法/" data-title="Markdown语法 | Cinus" data-tsina="null" class="share clearfix">
-	  </div>
-	
-	</div>
-
-
-</footer>
-
-   	       
-	</article>
-	
-<nav class="article-nav clearfix">
- 
-
-<div class="next">
-<a href="/2015/08/06/健身日记/"  title="健身日记">
- <strong>下一篇：</strong><br/> 
- <span>健身日记
-</span>
-</a>
-</div>
-
-</nav>
-
-	
-
-</div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
-<aside class="clearfix">
-
+      
   
-<div class="categorieslist">
-	<p class="asidetitle">Categories</p>
-		<ul>
-		
-		  
-			<li><a href="/categories/技术/" title="技术">技术<sup>1</sup></a></li>
-		  
-		
-		</ul>
-</div>
-
-
-  
-<div class="tagslist">
-	<p class="asidetitle">Tags</p>
-		<ul class="clearfix">
-		
-			
-				<li><a href="/tags/健身/" title="健身">健身<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/日记/" title="日记">日记<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Linux/" title="Linux">Linux<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/架站/" title="架站">架站<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>1</sup></a></li>
-			
-		
-		</ul>
-</div>
-
-
-  <div class="linkslist">
-  <p class="asidetitle">Links</p>
-    <ul>
-        
-          <li>
-            
-            	<a href="http://lilydjwg.is-programmer.com/" target="_blank" title="依云Blog">依云Blog</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://coolshell.cn/" target="_blank" title="CoolShell">CoolShell</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="https://linuxtoy.org/" target="_blank" title="LinuxToy">LinuxToy</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://wangkai.club" target="_blank" title="紫凯茗檬">紫凯茗檬</a>
-            
-          </li>
-        
-    </ul>
-</div>
-
-  
-
-
-  <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
-</div>
-
-</aside>
-</div>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
-    <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<section class="info">
-		<p> Hello ,I&#39;m CXY <br/>
-			This is my blog ^_^</p>
-	</section>
-	 
-	<div class="social-font" class="clearfix">
-		
-		
-		<a href="https://github.com/ChenXiyu" target="_blank" class="icon-github" title="github"></a>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	</div>
-			
-		
+  </div>
 
-		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
-		
-		<a href="/about" target="_blank" title="CXY">CXY</a>
-		
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.0.3.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
 
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
-  
-        getSize();
-        if (myWidth >= 1024) {
-          c.click();
-        }
-  
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else{
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table Of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/author.jpg" alt="CXY" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">CXY</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">This is my world</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-name">categories</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">tags</span>
+              </a>
+          </div>
+
+        </nav>
+
         
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ChenXiyu" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/CinusXy" target="_blank">Twitter</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Markdown介绍"><span class="nav-number">1.</span> <span class="nav-text">Markdown介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标题"><span class="nav-number">2.</span> <span class="nav-text">标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用#为文章设置多级标题(类Atx)"><span class="nav-number">2.1.</span> <span class="nav-text">使用#为文章设置多级标题(类Atx)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用=和-为文章设置大小标题(类Setext)"><span class="nav-number">2.2.</span> <span class="nav-text">使用=和-为文章设置大小标题(类Setext)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分割线"><span class="nav-number">3.</span> <span class="nav-text">分割线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用"><span class="nav-number">4.</span> <span class="nav-text">引用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文字引用"><span class="nav-number">4.1.</span> <span class="nav-text">文字引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用>引用文字"><span class="nav-number">4.1.1.</span> <span class="nav-text">使用>引用文字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用hexo插件Block_Quote"><span class="nav-number">4.1.2.</span> <span class="nav-text">使用hexo插件Block Quote</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#醒目引文Pullquote"><span class="nav-number">4.1.3.</span> <span class="nav-text">醒目引文Pullquote</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码引用"><span class="nav-number">4.2.</span> <span class="nav-text">代码引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#`(反引号)引用一小段代码"><span class="nav-number">4.2.1.</span> <span class="nav-text">`(反引号)引用一小段代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用缩进来引用代码段"><span class="nav-number">4.2.2.</span> <span class="nav-text">利用缩进来引用代码段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用hexo支持的插件codeblock"><span class="nav-number">4.2.3.</span> <span class="nav-text">使用hexo支持的插件codeblock</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用3个或以上的反引号来引用代码块"><span class="nav-number">4.2.4.</span> <span class="nav-text">使用3个或以上的反引号来引用代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用gist"><span class="nav-number">4.2.5.</span> <span class="nav-text">引用gist</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用source中的代码文件（Include_code)"><span class="nav-number">4.2.6.</span> <span class="nav-text">引用source中的代码文件（Include code)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用网页"><span class="nav-number">4.3.</span> <span class="nav-text">引用网页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片引用"><span class="nav-number">4.4.</span> <span class="nav-text">图片引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用标准MD语法引用图片"><span class="nav-number">4.4.1.</span> <span class="nav-text">使用标准MD语法引用图片</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#行内式"><span class="nav-number">4.4.1.1.</span> <span class="nav-text">行内式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考式"><span class="nav-number">4.4.1.2.</span> <span class="nav-text">参考式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Image插件"><span class="nav-number">4.4.2.</span> <span class="nav-text">使用Image插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用本地图片资源"><span class="nav-number">4.4.3.</span> <span class="nav-text">引用本地图片资源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接"><span class="nav-number">4.5.</span> <span class="nav-text">链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#行内式-1"><span class="nav-number">4.5.1.</span> <span class="nav-text">行内式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考式-1"><span class="nav-number">4.5.2.</span> <span class="nav-text">参考式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自动链接"><span class="nav-number">4.5.3.</span> <span class="nav-text">自动链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Link插件"><span class="nav-number">4.5.4.</span> <span class="nav-text">Link插件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视频引用"><span class="nav-number">4.6.</span> <span class="nav-text">视频引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#YouTube"><span class="nav-number">4.6.1.</span> <span class="nav-text">YouTube</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vimeo"><span class="nav-number">4.6.2.</span> <span class="nav-text">vimeo</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#强调"><span class="nav-number">5.</span> <span class="nav-text">强调</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列表"><span class="nav-number">6.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#有序列表"><span class="nav-number">6.1.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无序列表"><span class="nav-number">6.2.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表嵌套"><span class="nav-number">6.3.</span> <span class="nav-text">列表嵌套</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反斜线转义"><span class="nav-number">7.</span> <span class="nav-text">反斜线转义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OVER"><span class="nav-number">8.</span> <span class="nav-text">OVER</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CXY</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
+
+  
+
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
     }
-  });
-});
-</script>
 
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var ai = $('.article-content>iframe'),
-      ae = $('.article-content>embed'),
-      t  = $('#toc'),
-      ta = $('#toc.toc-aside'),
-      o  = $('.openaside'),
-      c  = $('.closeaside');
-  if(ai.length>0){
-    ai.wrap('<div class="video-container" />');
-  };
-  if(ae.length>0){
-   ae.wrap('<div class="video-container" />');
-  };
-  c.click(function(){
-    ta.css('display', 'block').addClass('fadeIn');
-  });
-  o.click(function(){
-    ta.css('display', 'none');
-  });
-  $(window).scroll(function(){
-    ta.css("top",Math.max(140,320-$(this).scrollTop()));
-  });
-});
-</script>
-
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var $this = $('.share'),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina'),
-      description = $this.attr('description');
-  var html = [
-  '<div class="hoverqrcode clearfix"></div>',
-  '<a class="overlay" id="qrcode"></a>',
-  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
-  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
-  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
-  '<span title="Share to"></span>'
-  ].join('');
-  $this.append(html);
-
-  $('.hoverqrcode').hide();
-
-  var myWidth = 0;
-  function updatehoverqrcode(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-    var qrsize = myWidth > 1024 ? 200:100;
-    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
-    var p = $('.article-share-qrcode').position();
-    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
-                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
-                          .qrcode(options);
-  };
-  $(window).resize(function(){
-    $('.hoverqrcode').hide();
-  });
-  $('.article-share-qrcode').click(function(){
-    updatehoverqrcode();
-    $('.hoverqrcode').toggle();
-  });
-  $('.article-share-qrcode').hover(function(){}, function(){
-      $('.hoverqrcode').hide();
-  });
-});   
-</script>
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      var alt = this.alt;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-  if($.fancybox){
-    $('.fancybox').fancybox();
-  }
-}); 
-</script>
-
-
-
-<!-- Analytics Begin -->
-
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-65939202-1', 'Cinus.me');  
-ga('send', 'pageview');
-</script>
-
-
-
-
-
-<!-- Analytics End -->
-
-<!-- Totop Begin -->
-
-	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
-	</div>
-	<script src="/js/totop.js"></script>
-
-<!-- Totop End -->
-
-<!-- MathJax Begin -->
-<!-- mathjax config similar to math.stackexchange -->
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
     }
-  });
-</script>
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
       }
     });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
 </script>
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
     });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
 </script>
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 
 
-<!-- MathJax End -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
 
-<!-- Tiny_search Begin -->
+  
 
-<!-- Tiny_search End -->
+  
+  
 
-  </body>
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
 </html>

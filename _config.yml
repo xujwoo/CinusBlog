@@ -62,11 +62,19 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: http://hexo.io/plugins/
-theme: jacman 
-stylus:
-        compress:true
+theme: next 
 
+social:
+        GitHub: https://github.com/ChenXiyu
+        Twitter: https://twitter.com/CinusXy
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type:
+
+feed:
+        type: atom
+        path: atom.xml
+        limit: 20
+
+since: 2015
