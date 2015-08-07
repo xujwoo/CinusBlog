@@ -33,7 +33,7 @@ default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
-render_drafts: false
+render_drafts: true
 post_asset_folder: true
 relative_link: false
 future: true
@@ -41,7 +41,7 @@ highlight:
   enable: true
   line_number: true
   auto_detect: true
-  tab_replace:
+  tab_replace: true
 
 # Category & Tag
 default_category: uncategorized
@@ -78,3 +78,17 @@ feed:
         limit: 20
 
 since: 2015
+# title
+links_title: Links
+# links
+links:
+        依云's Blog: http://lilydjwg.is-programmer.com/
+        紫凯茗檬: http://wangkai.club/
+        Linux Toy: https://linuxtoy.org/
+        Cool Shell: http://cooshell.cn/
+
+duoshuo_shortname: cinus
+google_analytics: UA-65939202-1
+duoshuo_hotartical: true
+swiftype_key: Zu6QuaTAujSrBDxSrgqV
+jiathis: true

@@ -1,254 +1,27 @@
-<!doctype html>
-<html class="theme-next use-motion theme-next-mist">
-<head>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
   
-
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
-
-
-
-  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
-
-
-
-
-  <meta name="keywords" content="Markdown," />
-
-
-
-  <link rel="alternate" href="/atom.xml" title="Cinus" type="application/atom+xml" />
-
-
-
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
-
-
-<meta name="description" content="整理一下Markdown的语法，用这玩意儿写blog有点意思。
-Markdown介绍Markdown是一种轻量级标记语言,它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。它避免了我直接写html文档。这是我很喜欢的，而且hexo的markdown解释其生成的html其显示效果还是很不错的。github的README支持markdown还有很多写作网站">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Markdown语法">
-<meta property="og:url" content="http://Cinus.me/2015/08/06/Markdown语法/index.html">
-<meta property="og:site_name" content="Cinus">
-<meta property="og:description" content="整理一下Markdown的语法，用这玩意儿写blog有点意思。
-Markdown介绍Markdown是一种轻量级标记语言,它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。它避免了我直接写html文档。这是我很喜欢的，而且hexo的markdown解释其生成的html其显示效果还是很不错的。github的README支持markdown还有很多写作网站">
-<meta property="og:image" content="http://Cinus.me/2015/08/06/Markdown语法/1.png">
-<meta property="og:image" content="http://Cinus.me/2015/08/06/Markdown语法/2.png">
-<meta property="og:image" content="http://Cinus.me/2015/08/06/Markdown语法/3.png">
-<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/5/57/SADF-44Parachute-Gecko-001.jpg">
-<meta property="og:image" content="https://c1.staticflickr.com/9/8199/8161648094_2b436fa1a0_b.jpg">
-<meta property="og:image" content="https://grahamlesliemccallum.files.wordpress.com/2013/09/sadf-buffel-anti-mine-troop-carrier-sadf-military.jpg">
-<meta property="og:image" content="http://Cinus.me/2015/08/06/Markdown语法/testImg.jpg">
-<meta property="og:updated_time" content="2015-08-07T14:04:12.367Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown语法">
-<meta name="twitter:description" content="整理一下Markdown的语法，用这玩意儿写blog有点意思。
-Markdown介绍Markdown是一种轻量级标记语言,它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。它避免了我直接写html文档。这是我很喜欢的，而且hexo的markdown解释其生成的html其显示效果还是很不错的。github的README支持markdown还有很多写作网站">
-
-
-<script type="text/javascript" id="hexo.configuration">
-  var CONFIG = {
-    scheme: 'Mist',
-    sidebar: 'post'
-  };
-</script>
-
-  <title> Markdown语法 | Cinus </title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
-
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
+  <title><![CDATA[Cinus]]></title>
+  <subtitle><![CDATA[CXY's Blog]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://Cinus.me//"/>
+  <updated>2015-08-07T14:04:12.367Z</updated>
+  <id>http://Cinus.me//</id>
   
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-65939202-1', 'auto');
-  ga('send', 'pageview');
-</script>
-
-
-
-
-  <div class="container one-column page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><h1 class="site-meta">
-  <span class="logo-line-before"><i></i></span>
-  <a href="/" class="brand" rel="start">
-      <span class="logo">
-        <i class="icon-next-logo"></i>
-      </span>
-      <span class="site-title">Cinus</span>
-  </a>
-  <span class="logo-line-after"><i></i></span>
-</h1>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu menu-left">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            <i class="menu-item-icon icon-next-home"></i> <br />
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            <i class="menu-item-icon icon-next-categories"></i> <br />
-            Categories
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            <i class="menu-item-icon icon-next-about"></i> <br />
-            About
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            <i class="menu-item-icon icon-next-archives"></i> <br />
-            Archives
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            <i class="menu-item-icon icon-next-tags"></i> <br />
-            Tags
-          </a>
-        </li>
-      
-
-      
-      
-    </ul>
-  
-
-  
-    <div class="site-search">
-      
-  
-  <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
-
-<script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-  _st('install', 'Zu6QuaTAujSrBDxSrgqV','2.0.0');
-</script>
-
-
-
-    </div>
-  
-</nav>
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div id="content" class="content"> 
-
-  <div id="posts" class="posts-expand">
+  <author>
+    <name><![CDATA[CXY]]></name>
     
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              Markdown语法
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2015-08-06T20:41:05+08:00" content="2015-08-06">
-            2015-08-06
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/08/06/Markdown语法/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/06/Markdown语法/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        <span itemprop="articleBody"><p>整理一下Markdown的语法，用这玩意儿写blog有点意思。</p>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Markdown语法]]></title>
+    <link href="http://Cinus.me/2015/08/06/Markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>http://Cinus.me/2015/08/06/Markdown语法/</id>
+    <published>2015-08-06T12:41:05.000Z</published>
+    <updated>2015-08-07T14:04:12.367Z</updated>
+    <content type="html"><![CDATA[<p>整理一下Markdown的语法，用这玩意儿写blog有点意思。</p>
 <h1 id="Markdown介绍"><strong><a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank" rel="external">Markdown介绍</a></strong></h1><p><strong>Markdown</strong>是一种轻量级标记语言,它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。<br>它避免了我直接写html文档。这是我很喜欢的，而且hexo的markdown解释其生成的html其显示效果还是很不错的。<br><a href="https://github.com" target="_blank" rel="external">github</a>的README支持markdown还有很多写作网站也支持markdown，例如<a href="http://www.jianshu.com/" target="_blank" rel="external">简书</a>等。<br>现在markdown用处非常多，光用来写博客就值得我学习它了。</p>
 <h1 id="标题"><strong>标题</strong></h1><h2 id="使用#为文章设置多级标题(类Atx)">使用<strong>#</strong>为文章设置多级标题(类<a href="http://www.aaronsw.com/2002/atx/" target="_blank" rel="external">Atx</a>)</h2><figure class="highlight vala"><figcaption><span>Head_example1.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># 一级标题  </span></span><br><span class="line"><span class="preprocessor">## 二级标题  </span></span><br><span class="line"><span class="preprocessor">### 三级标题</span></span><br><span class="line"><span class="preprocessor">#### 四级标题</span></span><br></pre></td></tr></table></figure>
 <p>依次类推,最多6个#代表6级标题,其效果如下图所示：<br><img src="/2015/08/06/Markdown语法/1.png" alt="使用#为文章设置多级标题" title="使用#为文章设置多级标题"></p>
@@ -379,475 +152,139 @@ Markdown介绍Markdown是一种轻量级标记语言,它允许人们“使用易
 </blockquote>
 <h1 id="OVER">OVER</h1><p>Markdown语法整理得差不多了，如果还有补充或者有错误欢迎与我联系</p>
 <p><a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x78;&#x79;&#67;&#x69;&#x6e;&#117;&#x73;&#64;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x78;&#x79;&#67;&#x69;&#x6e;&#117;&#x73;&#64;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a></p>
-</span>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Markdown/" rel="tag">#Markdown</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/08/06/健身日记/" rel="next">健身日记</a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-        <!-- JiaThis Button BEGIN -->
-<div class="jiathis_style">
-  <a class="jiathis_button_tsina"></a>
-  <a class="jiathis_button_tqq"></a>
-  <a class="jiathis_button_weixin"></a>
-  <a class="jiathis_button_cqq"></a>
-  <a class="jiathis_button_douban"></a>
-  <a class="jiathis_button_renren"></a>
-  <a class="jiathis_button_qzone"></a>
-  <a class="jiathis_button_kaixin001"></a>
-  <a class="jiathis_button_copy"></a>
-  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
-  <a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript" >
-  var jiathis_config={
-    hideMore:false
-  }
-</script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-<!-- JiaThis Button END -->
-
-      
-    </div>
-  </div>
-
- </div>
-
-        
-            <!-- 多说热评文章-->
-            <p>热评文章</p>
-            <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
-        
-
-        
-          <div class="comments" id="comments">
-            
-              <div class="ds-thread" data-thread-key="2015/08/06/Markdown语法/"
-                   data-title="Markdown语法" data-url="http://Cinus.me/2015/08/06/Markdown语法/">
-              </div>
-            
-          </div>
-        
-      </div>
-
-      
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table Of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
-
-      <section class="site-overview">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/author.jpg" alt="CXY" itemprop="image"/>
-          <p class="site-author-name" itemprop="name">CXY</p>
-        </div>
-        <p class="site-description motion-element" itemprop="description">This is my world</p>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">posts</span>
-            </a>
-          </div>
-
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">categories</span>
-              </a>
-          </div>
-
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">6</span>
-              <span class="site-state-item-name">tags</span>
-              </a>
-          </div>
-
-        </nav>
-
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="menu-item-icon icon-next-feed"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/ChenXiyu" target="_blank">GitHub</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://twitter.com/CinusXy" target="_blank">Twitter</a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">Links</p>
-            
-              <span class="links-of-author-item">
-              <a href="http://lilydjwg.is-programmer.com/" target="_blank">依云's Blog</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="http://wangkai.club/" target="_blank">紫凯茗檬</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="https://linuxtoy.org/" target="_blank">Linux Toy</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="http://cooshell.cn/" target="_blank">Cool Shell</a>
-              </span>
-            
-          
-        </div>
-
-      </section>
-
-      
-        <section class="post-toc-wrap sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator"></div>
-          <div class="post-toc">
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Markdown介绍"><span class="nav-number">1.</span> <span class="nav-text">Markdown介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标题"><span class="nav-number">2.</span> <span class="nav-text">标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用#为文章设置多级标题(类Atx)"><span class="nav-number">2.1.</span> <span class="nav-text">使用#为文章设置多级标题(类Atx)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用=和-为文章设置大小标题(类Setext)"><span class="nav-number">2.2.</span> <span class="nav-text">使用=和-为文章设置大小标题(类Setext)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分割线"><span class="nav-number">3.</span> <span class="nav-text">分割线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用"><span class="nav-number">4.</span> <span class="nav-text">引用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文字引用"><span class="nav-number">4.1.</span> <span class="nav-text">文字引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用>引用文字"><span class="nav-number">4.1.1.</span> <span class="nav-text">使用>引用文字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用hexo插件Block_Quote"><span class="nav-number">4.1.2.</span> <span class="nav-text">使用hexo插件Block Quote</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#醒目引文Pullquote"><span class="nav-number">4.1.3.</span> <span class="nav-text">醒目引文Pullquote</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码引用"><span class="nav-number">4.2.</span> <span class="nav-text">代码引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#`(反引号)引用一小段代码"><span class="nav-number">4.2.1.</span> <span class="nav-text">`(反引号)引用一小段代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用缩进来引用代码段"><span class="nav-number">4.2.2.</span> <span class="nav-text">利用缩进来引用代码段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用hexo支持的插件codeblock"><span class="nav-number">4.2.3.</span> <span class="nav-text">使用hexo支持的插件codeblock</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用3个或以上的反引号来引用代码块"><span class="nav-number">4.2.4.</span> <span class="nav-text">使用3个或以上的反引号来引用代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用gist"><span class="nav-number">4.2.5.</span> <span class="nav-text">引用gist</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用source中的代码文件（Include_code)"><span class="nav-number">4.2.6.</span> <span class="nav-text">引用source中的代码文件（Include code)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用网页"><span class="nav-number">4.3.</span> <span class="nav-text">引用网页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片引用"><span class="nav-number">4.4.</span> <span class="nav-text">图片引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用标准MD语法引用图片"><span class="nav-number">4.4.1.</span> <span class="nav-text">使用标准MD语法引用图片</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#行内式"><span class="nav-number">4.4.1.1.</span> <span class="nav-text">行内式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考式"><span class="nav-number">4.4.1.2.</span> <span class="nav-text">参考式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Image插件"><span class="nav-number">4.4.2.</span> <span class="nav-text">使用Image插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用本地图片资源"><span class="nav-number">4.4.3.</span> <span class="nav-text">引用本地图片资源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接"><span class="nav-number">4.5.</span> <span class="nav-text">链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#行内式-1"><span class="nav-number">4.5.1.</span> <span class="nav-text">行内式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考式-1"><span class="nav-number">4.5.2.</span> <span class="nav-text">参考式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自动链接"><span class="nav-number">4.5.3.</span> <span class="nav-text">自动链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Link插件"><span class="nav-number">4.5.4.</span> <span class="nav-text">Link插件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视频引用"><span class="nav-number">4.6.</span> <span class="nav-text">视频引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#YouTube"><span class="nav-number">4.6.1.</span> <span class="nav-text">YouTube</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vimeo"><span class="nav-number">4.6.2.</span> <span class="nav-text">vimeo</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#强调"><span class="nav-number">5.</span> <span class="nav-text">强调</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列表"><span class="nav-number">6.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#有序列表"><span class="nav-number">6.1.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无序列表"><span class="nav-number">6.2.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表嵌套"><span class="nav-number">6.3.</span> <span class="nav-text">列表嵌套</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反斜线转义"><span class="nav-number">7.</span> <span class="nav-text">反斜线转义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OVER"><span class="nav-number">8.</span> <span class="nav-text">OVER</span></a></li></ol></div>
-            
-          </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
-        </section>
-      
-
-    </div>
-  </aside>
-
-
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner"> <div class="copyright" >
-  
-  &copy; &nbsp; 
-  <span itemprop="copyrightYear">2015</span>
-  <span class="with-love">
-    <i class="icon-next-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">CXY</span>
-</div>
-
-<div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
-</div>
-
-<div class="theme-info">
-  Theme -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
-
-
- </div>
-    </footer>
-
-    <div class="back-to-top"></div>
-  </div>
-
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  
-  
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>整理一下Markdown的语法，用这玩意儿写blog有点意思。</p>
+<h1 id="Markdown介绍"><strong><a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank" rel="ext]]>
+    </summary>
     
-
-  
+      <category term="Markdown" scheme="http://Cinus.me/tags/Markdown/"/>
     
+  </entry>
   
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"cinus"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
+  <entry>
+    <title><![CDATA[健身日记]]></title>
+    <link href="http://Cinus.me/2015/08/06/%E5%81%A5%E8%BA%AB%E6%97%A5%E8%AE%B0/"/>
+    <id>http://Cinus.me/2015/08/06/健身日记/</id>
+    <published>2015-08-06T12:23:26.000Z</published>
+    <updated>2015-08-07T14:05:46.282Z</updated>
+    <content type="html"><![CDATA[<h1 id="健身心得">健身心得</h1><h1 id="健身日志">健身日志</h1><hr>
+<p><em><strong>2015-08-07</strong></em><br>标准俯卧撑：<br>深蹲跳：</p>
+<hr>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="健身心得">健身心得</h1><h1 id="健身日志">健身日志</h1><hr>
+<p><em><strong>2015-08-07</strong></em><br>标准俯卧撑：<br>深蹲跳：</p>
+<hr>
+]]>
+    </summary>
     
-     
-  	<script src="/js/ua-parser.min.js"></script>
-  	<script src="/js/hook-duoshuo.js"></script>
-  
-
+      <category term="健身" scheme="http://Cinus.me/tags/%E5%81%A5%E8%BA%AB/"/>
     
+      <category term="日记" scheme="http://Cinus.me/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
+  <entry>
+    <title><![CDATA[使用Hexo搭建博客]]></title>
+    <link href="http://Cinus.me/2015/08/03/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://Cinus.me/2015/08/03/使用hexo搭建博客/</id>
+    <published>2015-08-03T14:59:25.000Z</published>
+    <updated>2015-08-06T17:31:17.655Z</updated>
+    <content type="html"><![CDATA[<p>在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.<br>我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。<br>现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。</p>
+<h1 id="整体思路">整体思路</h1><p>在本机使用hexo生成网站，使用git hook 推送到vps上，直接使用nginx来部署网站。<br>这个做法避免了在vps上安装nodejs和hexo(vps 性能堪忧)，至于缺点，暂时没找到…</p>
+<h1 id="本机配置（linux）">本机配置（linux）</h1><p>详细使用请访问<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo</a></p>
+<h2 id="安装node-js">安装<a href="https://nodejs.org/" target="_blank" rel="external">node.js</a></h2><h3 id="For_ArchLinus:">For ArchLinus:</h3><pre><code>$ sudo pacman -S <span class="built_in">npm</span> nodejs
+</code></pre><h3 id="For_Debian:">For Debian:</h3><pre><code>$ sudo apt-<span class="keyword">get</span> install nodejs
+</code></pre><h2 id="安装hexo">安装hexo</h2><pre><code><span class="variable">$ </span>npm install hexo-cli -g
+<span class="variable">$ </span>mkdir blog <span class="comment">#创建一个目录作为博客的目录</span>
+<span class="variable">$ </span>cd blog
+<span class="variable">$ </span>hexo init  <span class="comment">#使用hexo初始化该目录</span>
+<span class="variable">$ </span>npm install <span class="comment">#安装必要的依赖</span>
+</code></pre><p>此时的hexo算是安装好了，你也可以按照下面的方法来测试一下：</p>
+<pre><code><span class="variable">$ </span>cd blog
+<span class="variable">$ </span>hexo g
+<span class="variable">$ </span>hexo s
+</code></pre><p>接下来在浏览器中输入<a href="http://localhost:4000" target="_blank" rel="external">localhost:4000</a>看看你博客的雏形:)</p>
+<h2 id="本机git配置">本机git配置</h2><h3 id="git安装">git安装</h3><p>使用git的前置条件是安装了git，可以使用这个命令看看你有没有安装git</p>
+<pre><code>$ git <span class="property">version</span>
+</code></pre><p>如果输出git的版本信息，表示git是安装了的。如果出现：</p>
+<pre><code>git：<span class="command"><span class="keyword">command</span> <span class="title">not</span> <span class="title">found</span></span>
+</code></pre><p>表示git未安装，你需要安装git：</p>
+<h4 id="For_ArchLinux">For ArchLinux</h4><pre><code><span class="variable">$ </span>sudo pacman -<span class="constant">S </span>git
+</code></pre><h4 id="For_Debian">For Debian</h4><pre><code>$ sudo apt-<span class="keyword">get</span> install git-core
+</code></pre><h4 id="For_Centos">For Centos</h4><pre><code>$ sudo yum <span class="keyword">install</span> git-core
+</code></pre><p>再次执行:</p>
+<pre><code>$ git <span class="property">version</span>
+</code></pre><p>看到版本信息就ok了。</p>
+<h3 id="git简单配置">git简单配置</h3><p>设置用户名：</p>
+<pre><code>$ git config --globle user<span class="class">.name</span> YourGitName
+</code></pre><p>设置用户邮箱:</p>
+<pre><code>$ git config --globle user<span class="class">.email</span> YourEmail
+</code></pre><p>基本配置完成，可以使用:</p>
+<pre><code>$ git config <span class="comment">--list</span>
+</code></pre><p>查看配置信息。</p>
+<h3 id="使用git来控制blog版本">使用git来控制blog版本</h3><pre><code><span class="char">$ </span>cd ~/blog
+<span class="char">$ </span>git init
+<span class="char">$ </span>git add .
+<span class="char">$ </span>git commit -m <span class="comment">"Initial commit"</span>
+</code></pre><h3 id="为该blog仓库设置远程仓库">为该blog仓库设置远程仓库</h3><p>在设置vps后进行配置。</p>
+<h1 id="vps配置">vps配置</h1><p>ssh 设置啊，登录操作啊这些就不说了，默认大家知道这些基本操作的，或者以后专门写写。</p>
+<p>vps的配置主要有两个方面：</p>
+<ul>
+<li>nginx配置</li>
+<li>git配置</li>
+</ul>
+<p>都非常的简单。</p>
+<h2 id="nginx配置">nginx配置</h2><h3 id="nginx安装">nginx安装</h3><h4 id="For_Debian：">For Debian：</h4><pre><code>$ sudo apt-<span class="keyword">get</span> install nginx
+</code></pre><h4 id="For_Centos：">For Centos：</h4><pre><code>$ sudo yum <span class="keyword">install</span> nginx
+</code></pre><h3 id="nginx配置-1">nginx配置</h3><h4 id="将nginx的根目录改为/var/www/html/public">将nginx的根目录改为/var/www/html/public</h4><pre><code>$ vim <span class="regexp">/etc/</span>nginx<span class="regexp">/sites-available/</span><span class="keyword">default</span>
+</code></pre><p>将</p>
+<pre><code>root /<span class="keyword">var</span>/www/html;
+</code></pre><p>改为</p>
+<pre><code>root <span class="regexp">/var/</span>www<span class="regexp">/html/</span><span class="keyword">public</span>;
+</code></pre><p>我没有做更多的设置，以后有配置上的改动，我将补上来。</p>
+<h4 id="启动nginx">启动nginx</h4><p>注意：我的vps使用的是systemd，以下两个操作都是在systemd系统上才有效。</p>
+<pre><code>$ sudo systemctl <span class="built_in">start</span> nginx
+</code></pre><h4 id="设置nginx开机启动">设置nginx开机启动</h4><pre><code>$ sudo systemctl <span class="built_in">enable</span> nginx
+</code></pre><h2 id="git设置">git设置</h2><h3 id="git安装-1">git安装</h3><p>前置条件是安装了git，可以使用这个命令看看你有没有安装git</p>
+<pre><code>$ git <span class="property">version</span>
+</code></pre><p>如果输出git的版本信息，表示git是安装了的。如果出现：</p>
+<pre><code>git：<span class="command"><span class="keyword">command</span> <span class="title">not</span> <span class="title">found</span></span>
+</code></pre><p>表示git未安装，你需要安装git：</p>
+<h4 id="For_ArchLinus">For ArchLinus</h4><pre><code><span class="variable">$ </span>sudo pacman -<span class="constant">S </span>git
+</code></pre><h4 id="For_Debian-1">For Debian</h4><pre><code>$ sudo apt-<span class="keyword">get</span> install git-core
+</code></pre><h4 id="For_Centos-1">For Centos</h4><pre><code>$ sudo yum <span class="keyword">install</span> git-core
+</code></pre><p>接下来是配置git hook，git hook 的使用我还不是太熟悉，但是按照这个步骤下来是没有问题的。</p>
+<h3 id="git_hook_设置">git hook 设置</h3><p>在本地创建一个目录，用于同步仓库。</p>
+<pre><code><span class="preprocessor"># cd ~</span>
+<span class="preprocessor"># mkdir -p repos/Cinus.me.git &amp;&amp; cd repos/Cinus.me.git //Cinus.me替换成你想要的名称</span>
+<span class="preprocessor"># git init --bare</span>
+<span class="preprocessor"># cd hooks</span>
+<span class="preprocessor"># touch post-receive</span>
+<span class="preprocessor"># vim post-receive</span>
+</code></pre><p>输入一下内容:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/bin/bash -l</span></span><br><span class="line">GIT_REPO=<span class="variable">$HOME</span>/repos/Cinus.me.git</span><br><span class="line">TMP_GIT_CLONE=<span class="variable">$HOME</span>/tmp/git/Cinus.me</span><br><span class="line">PUBLIC_WWW=/var/www/html/public</span><br><span class="line"></span><br><span class="line">rm -rf <span class="variable">$&#123;TMP_GIT_CLONE&#125;</span></span><br><span class="line">git <span class="built_in">clone</span> <span class="variable">$GIT_REPO</span> <span class="variable">$TMP_GIT_CLONE</span></span><br><span class="line">rm -rf <span class="variable">$&#123;PUBLIC_WWW&#125;</span>/*</span><br><span class="line">cp -rf <span class="variable">$&#123;TMP_GIT_CLONE&#125;</span>/public <span class="variable">$&#123;PUBLIC_WWW&#125;</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+<p>保存退出，为post-receive添加执行权限</p>
+<pre><code># chmod <span class="keyword">u</span>+x <span class="keyword">post</span>-receive
+</code></pre><h1 id="本机配置">本机配置</h1><p>接上面本机配置最后，为本地blog仓库设置远程仓库到vps</p>
+<pre><code>$ git remote add Cinus<span class="class">.me</span> ssh:<span class="comment">//root@YourVpsIp:YourSSHPort/root/repos/Cinus.me.git</span>
+$ git push Cinus<span class="class">.me</span> master
+</code></pre><p>此时使用域名或ip访问你的vps应该就能看到你的blog的雏形了。</p>
+<h1 id="后话">后话</h1><p>我采用的方式是在本地写好博客，使用hexo g生成网站文件，然后把整个项目push到vps上，vps上的git hooks 在运行post-receive这个脚本将public目录下的文件复制到/var/www/html/public下，也就是nginx的根目录。<br>现在还有图片等资源未规划，以上的post-receive脚本可能需要更改。<br>有什么问题或本博客有错误的地方欢迎与我联系<br><a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#120;&#121;&#x43;&#105;&#110;&#117;&#115;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#109;">&#120;&#121;&#x43;&#105;&#110;&#117;&#115;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#109;</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.<br>我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和]]>
+    </summary>
+    
+      <category term="Linux" scheme="http://Cinus.me/tags/Linux/"/>
+    
+      <category term="hexo" scheme="http://Cinus.me/tags/hexo/"/>
+    
+      <category term="架站" scheme="http://Cinus.me/tags/%E6%9E%B6%E7%AB%99/"/>
+    
+      <category term="技术" scheme="http://Cinus.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
-  
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
-
-
-
-
-  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
-
-
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 0.4 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
-  });
-</script>
-
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    var $tocContent = $('.post-toc-content');
-    if (isDesktop() && CONFIG.sidebar === 'post') {
-      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-        displaySidebar();
-      }
-    }
-  });
-</script>
-
-
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      if (CONFIG.sidebar === 'always') {
-        displaySidebar();
-      }
-      if (isMobile()) {
-        FastClick.attach(document.body);
-      }
-    });
-  </script>
-
-  
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/lazyload.js"></script>
-  <script type="text/javascript">
-    $(function () {
-      $("#posts").find('img').lazyload({
-        placeholder: "/images/loading.gif",
-        effect: "fadeIn"
-      });
-    });
-  </script>
-</body>
-</html>
+</feed>
