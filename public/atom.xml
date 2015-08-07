@@ -17,16 +17,16 @@
   
   <entry>
     <title><![CDATA[Markdown语法]]></title>
-    <link href="http://Cinus.me/2015/08/06/Markdown%E8%AF%AD%E6%B3%95/"/>
-    <id>http://Cinus.me/2015/08/06/Markdown语法/</id>
+    <link href="http://Cinus.me/Markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>http://Cinus.me/Markdown语法/</id>
     <published>2015-08-06T12:41:05.000Z</published>
     <updated>2015-08-07T16:02:40.247Z</updated>
     <content type="html"><![CDATA[<p>整理一下Markdown的语法，用这玩意儿写blog有点意思。</p>
 <h1 id="Markdown介绍"><strong><a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank" rel="external">Markdown介绍</a></strong></h1><p><strong>Markdown</strong>是一种轻量级标记语言,它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。<br>它避免了我直接写html文档。这是我很喜欢的，而且hexo的markdown解释其生成的html其显示效果还是很不错的。<br><a href="https://github.com" target="_blank" rel="external">github</a>的README支持markdown还有很多写作网站也支持markdown，例如<a href="http://www.jianshu.com/" target="_blank" rel="external">简书</a>等。<br>现在markdown用处非常多，光用来写博客就值得我学习它了。</p>
 <h1 id="标题"><strong>标题</strong></h1><h2 id="使用#为文章设置多级标题(类Atx)">使用<strong>#</strong>为文章设置多级标题(类<a href="http://www.aaronsw.com/2002/atx/" target="_blank" rel="external">Atx</a>)</h2><figure class="highlight vala"><figcaption><span>Head_example1.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># 一级标题  </span></span><br><span class="line"><span class="preprocessor">## 二级标题  </span></span><br><span class="line"><span class="preprocessor">### 三级标题</span></span><br><span class="line"><span class="preprocessor">#### 四级标题</span></span><br></pre></td></tr></table></figure>
-<p>依次类推,最多6个#代表6级标题,其效果如下图所示：<br><img src="/2015/08/06/Markdown语法/1.png" alt="使用#为文章设置多级标题" title="使用#为文章设置多级标题"></p>
-<h2 id="使用=和-为文章设置大小标题(类Setext)">使用<strong>=</strong>和<strong>-</strong>为文章设置大小标题(类<a href="http://docutils.sourceforge.net/mirror/setext.html" target="_blank" rel="external">Setext</a>)</h2><p>利用<strong>=</strong>（最高阶标题）和<strong>-</strong>（第二阶标题）来标识标题：<br><figure class="highlight asciidoc"><figcaption><span>Head_example2.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="header">This is an H1</span><br><span class="line">=============</span></span><br><span class="line"><span class="header">this is an H2</span><br><span class="line">-------------</span></span><br></pre></td></tr></table></figure><br>任何数量的=和-效果都一样，其效果为：<br><img src="/2015/08/06/Markdown语法/2.png" alt="使用=和-为文章设置大小标题" title="使用=和-为文章设置大小标题"></p>
-<h1 id="分割线"><strong>分割线</strong></h1><p>使用三个以上的<strong>星号</strong>,<strong>减号</strong>,<strong>下划线</strong>来建立分割线，行内不要写其他东西，<strong>星号</strong>或<strong>减号</strong>间可以加入空格。<br><figure class="highlight gherkin"><figcaption><span>分割线example.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line">_____</span><br><span class="line">-----</span><br><span class="line"><span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span></span><br><span class="line">- - - -</span><br></pre></td></tr></table></figure><br>效果为：<br><img src="/2015/08/06/Markdown语法/3.png" alt="分割线示例" title="分割线示例"></p>
+<p>依次类推,最多6个#代表6级标题,其效果如下图所示：<br><img src="/Markdown语法/1.png" alt="使用#为文章设置多级标题" title="使用#为文章设置多级标题"></p>
+<h2 id="使用=和-为文章设置大小标题(类Setext)">使用<strong>=</strong>和<strong>-</strong>为文章设置大小标题(类<a href="http://docutils.sourceforge.net/mirror/setext.html" target="_blank" rel="external">Setext</a>)</h2><p>利用<strong>=</strong>（最高阶标题）和<strong>-</strong>（第二阶标题）来标识标题：<br><figure class="highlight asciidoc"><figcaption><span>Head_example2.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="header">This is an H1</span><br><span class="line">=============</span></span><br><span class="line"><span class="header">this is an H2</span><br><span class="line">-------------</span></span><br></pre></td></tr></table></figure><br>任何数量的=和-效果都一样，其效果为：<br><img src="/Markdown语法/2.png" alt="使用=和-为文章设置大小标题" title="使用=和-为文章设置大小标题"></p>
+<h1 id="分割线"><strong>分割线</strong></h1><p>使用三个以上的<strong>星号</strong>,<strong>减号</strong>,<strong>下划线</strong>来建立分割线，行内不要写其他东西，<strong>星号</strong>或<strong>减号</strong>间可以加入空格。<br><figure class="highlight gherkin"><figcaption><span>分割线example.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line">_____</span><br><span class="line">-----</span><br><span class="line"><span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span></span><br><span class="line">- - - -</span><br></pre></td></tr></table></figure><br>效果为：<br><img src="/Markdown语法/3.png" alt="分割线示例" title="分割线示例"></p>
 <h1 id="引用"><strong>引用</strong></h1><h2 id="文字引用">文字引用</h2><h3 id="使用&gt;引用文字">使用<strong>&gt;</strong>引用文字</h3><p>该引用方法是借鉴与email中的引用方式，在需要引用的行或段前加上&gt;可以建立引用区块来引用该行的文字,引用可以嵌套。<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;hello  </span><br><span class="line">world</span><br><span class="line"><span class="prompt">&gt;&gt;</span>hello world</span><br></pre></td></tr></table></figure></p>
 <p>产生的效果为：</p>
 <blockquote>
@@ -83,7 +83,7 @@
 <p>改为：<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
 <p>这样，使用<code>hexo new post postName</code>的时候就会在_post下生成一个与postName同名的目录，可以将你需要使用的资源文件放在这个目录下，在文章中调用。<br>调用语法：<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">&#123;% asset_img imgName <span class="collection">[title]</span> %&#125;</span></span><br></pre></td></tr></table></figure></p>
 <p>实例:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img <span class="built_in">test</span>Img.jpg <span class="built_in">test</span>Title %&#125;</span><br></pre></td></tr></table></figure></p>
-<p>效果:<br><img src="/2015/08/06/Markdown语法/testImg.jpg" alt="testTitle" title="testTitle"><br><code>注意</code>:要将图片资源放入文章对应的文件夹中。</p>
+<p>效果:<br><img src="/Markdown语法/testImg.jpg" alt="testTitle" title="testTitle"><br><code>注意</code>:要将图片资源放入文章对应的文件夹中。</p>
 <h2 id="链接">链接</h2><p>和图片引用类似，链接的引用也支持行内式，和参考式。对于电子邮件等还支持自动链接，hexo还支持link插件。</p>
 <h3 id="行内式-1">行内式</h3><p>语法为：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="link_label">link's name</span>](<span class="link_url">URL "title"</span>)</span><br></pre></td></tr></table></figure></p>
 <p>示例：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="link_label">Cinus's Blog</span>](<span class="link_url">http://Cinus.me/ "hello Blog" </span>)</span><br></pre></td></tr></table></figure></p>
@@ -96,7 +96,7 @@
 <p><a href="/about/">about me</a></p>
 <h3 id="自动链接">自动链接</h3><p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。例如：<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;xyCinus@gmail.com&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p><code>注意前一行为空</code>,将会产生：</p>
-<p><a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#120;&#121;&#67;&#105;&#x6e;&#117;&#115;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#120;&#121;&#67;&#105;&#x6e;&#117;&#115;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p><a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#120;&#121;&#67;&#105;&#110;&#x75;&#115;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;">&#120;&#121;&#67;&#105;&#110;&#x75;&#115;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;</a></p>
 <h3 id="Link插件"><a href="https://hexo.io/zh-cn/docs/tag-plugins.html#Link" target="_blank" rel="external">Link</a>插件</h3><p>在文章中插入链接，并自动给外部链接添加 target=”_blank” 属性<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">&#123;% link text url <span class="collection">[external]</span> <span class="collection">[title]</span> %&#125;</span></span><br></pre></td></tr></table></figure></p>
 <p>示例<br><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="expression">&#123;% <span class="variable">link</span> <span class="variable">test</span>_<span class="variable">link</span> <span class="variable">http</span>:/<span class="end-block">/Cinus.me</span><span class="end-block">/ Cinus </span>%&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
 <a href="http://Cinus.me/" title="testLink">Cinus</a>
@@ -151,7 +151,7 @@
 <p>\   反斜线<br>`   反引号<br>*   星号<br>_   底线<br>{}  花括号<br>[]  方括号<br>()  括弧<br>#   井字号<br>+   加号<br>-   减号<br>.   英文句点<br>!   惊叹号</p>
 </blockquote>
 <h1 id="OVER">OVER</h1><p>Markdown语法整理得差不多了，如果还有补充或者有错误欢迎与我联系</p>
-<p><a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x78;&#121;&#x43;&#105;&#x6e;&#x75;&#115;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#x78;&#121;&#x43;&#105;&#x6e;&#x75;&#115;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p><a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#120;&#x79;&#67;&#x69;&#110;&#117;&#x73;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">&#120;&#x79;&#67;&#x69;&#110;&#117;&#x73;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>整理一下Markdown的语法，用这玩意儿写blog有点意思。</p>
@@ -166,8 +166,8 @@
   
   <entry>
     <title><![CDATA[健身日记]]></title>
-    <link href="http://Cinus.me/2015/08/06/%E5%81%A5%E8%BA%AB%E6%97%A5%E8%AE%B0/"/>
-    <id>http://Cinus.me/2015/08/06/健身日记/</id>
+    <link href="http://Cinus.me/%E5%81%A5%E8%BA%AB%E6%97%A5%E8%AE%B0/"/>
+    <id>http://Cinus.me/健身日记/</id>
     <published>2015-08-06T12:23:26.000Z</published>
     <updated>2015-08-07T14:05:46.282Z</updated>
     <content type="html"><![CDATA[<h1 id="健身心得">健身心得</h1><h1 id="健身日志">健身日志</h1><hr>
@@ -188,9 +188,9 @@
   </entry>
   
   <entry>
-    <title><![CDATA[使用hexo搭建博客]]></title>
-    <link href="http://Cinus.me/2015/08/03/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://Cinus.me/2015/08/03/使用hexo搭建博客/</id>
+    <title><![CDATA[使用Hexo搭建博客]]></title>
+    <link href="http://Cinus.me/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://Cinus.me/使用hexo搭建博客/</id>
     <published>2015-08-03T14:59:25.000Z</published>
     <updated>2015-08-06T17:31:17.655Z</updated>
     <content type="html"><![CDATA[<p>在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.<br>我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。<br>现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。</p>
@@ -273,7 +273,7 @@
 <pre><code>$ git remote add Cinus<span class="class">.me</span> ssh:<span class="comment">//root@YourVpsIp:YourSSHPort/root/repos/Cinus.me.git</span>
 $ git push Cinus<span class="class">.me</span> master
 </code></pre><p>此时使用域名或ip访问你的vps应该就能看到你的blog的雏形了。</p>
-<h1 id="后话">后话</h1><p>我采用的方式是在本地写好博客，使用hexo g生成网站文件，然后把整个项目push到vps上，vps上的git hooks 在运行post-receive这个脚本将public目录下的文件复制到/var/www/html/public下，也就是nginx的根目录。<br>现在还有图片等资源未规划，以上的post-receive脚本可能需要更改。<br>有什么问题或本博客有错误的地方欢迎与我联系<br><a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#120;&#x79;&#x43;&#x69;&#x6e;&#x75;&#x73;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#x6d;">&#120;&#x79;&#x43;&#x69;&#x6e;&#x75;&#x73;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#x6d;</a></p>
+<h1 id="后话">后话</h1><p>我采用的方式是在本地写好博客，使用hexo g生成网站文件，然后把整个项目push到vps上，vps上的git hooks 在运行post-receive这个脚本将public目录下的文件复制到/var/www/html/public下，也就是nginx的根目录。<br>现在还有图片等资源未规划，以上的post-receive脚本可能需要更改。<br>有什么问题或本博客有错误的地方欢迎与我联系<br><a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#120;&#121;&#67;&#x69;&#x6e;&#x75;&#x73;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;">&#120;&#121;&#67;&#x69;&#x6e;&#x75;&#x73;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.<br>我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和]]>

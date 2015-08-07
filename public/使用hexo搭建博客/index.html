@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="theme-next use-motion theme-next-mist">
+<html class="theme-next use-motion ">
 <head>
   
 
@@ -42,26 +42,26 @@
 <meta name="description" content="在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
 整体">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用hexo搭建博客">
-<meta property="og:url" content="http://Cinus.me/2015/08/03/使用hexo搭建博客/index.html">
+<meta property="og:title" content="使用Hexo搭建博客">
+<meta property="og:url" content="http://Cinus.me/使用hexo搭建博客/index.html">
 <meta property="og:site_name" content="Cinus">
 <meta property="og:description" content="在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
 整体">
 <meta property="og:updated_time" content="2015-08-06T17:31:17.655Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用hexo搭建博客">
+<meta name="twitter:title" content="使用Hexo搭建博客">
 <meta name="twitter:description" content="在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
 整体">
 
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    scheme: 'Mist',
+    scheme: '',
     sidebar: 'post'
   };
 </script>
 
-  <title> 使用hexo搭建博客 | Cinus </title>
+  <title> 使用Hexo搭建博客 | Cinus </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
@@ -160,6 +160,13 @@
 
       
       
+        <li class="menu-item menu-item-search">
+          <a href="#" class="st-search-show-outputs">
+            <i class="menu-item-icon icon-next-search"></i> <br />
+            Search
+          </a>
+        </li>
+      
     </ul>
   
 
@@ -167,10 +174,6 @@
     <div class="site-search">
       
   
-  <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -206,7 +209,7 @@
           
           
             
-              使用hexo搭建博客
+              使用Hexo搭建博客
             
           
         </h1>
@@ -241,8 +244,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/08/03/使用hexo搭建博客/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/03/使用hexo搭建博客/" itemprop="commentsCount"></span>
+              <a href="/使用hexo搭建博客/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="使用hexo搭建博客/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -336,7 +339,7 @@
 <pre><code>$ git remote add Cinus<span class="class">.me</span> ssh:<span class="comment">//root@YourVpsIp:YourSSHPort/root/repos/Cinus.me.git</span>
 $ git push Cinus<span class="class">.me</span> master
 </code></pre><p>此时使用域名或ip访问你的vps应该就能看到你的blog的雏形了。</p>
-<h1 id="后话">后话</h1><p>我采用的方式是在本地写好博客，使用hexo g生成网站文件，然后把整个项目push到vps上，vps上的git hooks 在运行post-receive这个脚本将public目录下的文件复制到/var/www/html/public下，也就是nginx的根目录。<br>现在还有图片等资源未规划，以上的post-receive脚本可能需要更改。<br>有什么问题或本博客有错误的地方欢迎与我联系<br><a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#120;&#x79;&#x43;&#x69;&#x6e;&#x75;&#x73;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#x6d;">&#120;&#x79;&#x43;&#x69;&#x6e;&#x75;&#x73;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#x6d;</a></p>
+<h1 id="后话">后话</h1><p>我采用的方式是在本地写好博客，使用hexo g生成网站文件，然后把整个项目push到vps上，vps上的git hooks 在运行post-receive这个脚本将public目录下的文件复制到/var/www/html/public下，也就是nginx的根目录。<br>现在还有图片等资源未规划，以上的post-receive脚本可能需要更改。<br>有什么问题或本博客有错误的地方欢迎与我联系<br><a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#120;&#121;&#67;&#x69;&#x6e;&#x75;&#x73;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;">&#120;&#121;&#67;&#x69;&#x6e;&#x75;&#x73;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;</a></p>
 </span>
       
     </div>
@@ -358,7 +361,7 @@ $ git push Cinus<span class="class">.me</span> master
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/08/06/健身日记/" rel="prev">健身日记</a>
+              <a href="/健身日记/" rel="prev">健身日记</a>
             
           </div>
 
@@ -414,8 +417,8 @@ $ git push Cinus<span class="class">.me</span> master
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/08/03/使用hexo搭建博客/"
-                   data-title="使用hexo搭建博客" data-url="http://Cinus.me/2015/08/03/使用hexo搭建博客/">
+              <div class="ds-thread" data-thread-key="使用hexo搭建博客/"
+                   data-title="使用Hexo搭建博客" data-url="http://Cinus.me/使用hexo搭建博客/">
               </div>
             
           </div>
@@ -496,6 +499,14 @@ $ git push Cinus<span class="class">.me</span> master
                 <a href="https://twitter.com/CinusXy" target="_blank">Twitter</a>
               </span>
             
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/xiyu.chen.31" target="_blank">Facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/chen-xi-yu-43" target="_blank">ZhiHu</a>
+              </span>
+            
           
         </div>
 
@@ -520,6 +531,14 @@ $ git push Cinus<span class="class">.me</span> master
             
               <span class="links-of-author-item">
               <a href="http://cooshell.cn/" target="_blank">Cool Shell</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.vimer.cn/" target="_blank">Vimer</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://arch.acgtyrant.com/" target="_blank">Tyrant's Arch Linux</a>
               </span>
             
           
@@ -564,7 +583,7 @@ $ git push Cinus<span class="class">.me</span> master
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT
   </a>
 </div>
 
@@ -797,6 +816,27 @@ $ git push Cinus<span class="class">.me</span> master
   </script>
 
   
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
   
   
