@@ -13,11 +13,11 @@ categories:
 我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。  
 现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
 
-# 整体思路
+# **整体思路**
 在本机使用hexo生成网站，使用git hook 推送到vps上，直接使用nginx来部署网站。
 这个做法避免了在vps上安装nodejs和hexo(vps 性能堪忧)，至于缺点，暂时没找到...
 
-# 本机配置（linux）
+# **本机配置（linux）**
 
 详细使用请访问[hexo](https://hexo.io/zh-cn/)
 
@@ -84,7 +84,7 @@ categories:
 	$ git commit -m "Initial commit"
 ### 为该blog仓库设置远程仓库
 在设置vps后进行配置。
-# vps配置
+# **vps配置**
 ssh 设置啊，登录操作啊这些就不说了，默认大家知道这些基本操作的，或者以后专门写写。
 
 vps的配置主要有两个方面：
@@ -148,10 +148,9 @@ vps的配置主要有两个方面：
     # cd hooks
     # touch post-receive
     # vim post-receive
-输入一下内容:
-
-```bash
-#!/bin/bash -l
+输入以下内容:
+```
+ #!/bin/bash -l
 GIT_REPO=$HOME/repos/Cinus.me.git
 TMP_GIT_CLONE=$HOME/tmp/git/Cinus.me
 PUBLIC_WWW=/var/www/html/public
@@ -162,16 +161,16 @@ rm -rf ${PUBLIC_WWW}/*
 cp -rf ${TMP_GIT_CLONE}/public ${PUBLIC_WWW}
 exit
 ```
-保存退出，为post-receive添加执行权限
+保存退出，为`post-receive`添加执行权限
 
     # chmod u+x post-receive
-# 本机配置
+# **本机配置**
 接上面本机配置最后，为本地blog仓库设置远程仓库到vps
 
     $ git remote add Cinus.me ssh://root@YourVpsIp:YourSSHPort/root/repos/Cinus.me.git
     $ git push Cinus.me master
 此时使用域名或ip访问你的vps应该就能看到你的blog的雏形了。
-# 后话 
+# **后话** 
 我采用的方式是在本地写好博客，使用hexo g生成网站文件，然后把整个项目push到vps上，vps上的git hooks 在运行post-receive这个脚本将public目录下的文件复制到/var/www/html/public下，也就是nginx的根目录。
 现在还有图片等资源未规划，以上的post-receive脚本可能需要更改。
 有什么问题或本博客有错误的地方欢迎与我联系

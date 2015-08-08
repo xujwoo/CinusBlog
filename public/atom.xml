@@ -5,7 +5,7 @@
   <subtitle><![CDATA[CXY's Blog]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://Cinus.me//"/>
-  <updated>2015-08-07T16:02:40.247Z</updated>
+  <updated>2015-08-08T03:56:10.548Z</updated>
   <id>http://Cinus.me//</id>
   
   <author>
@@ -16,14 +16,203 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[ShellScripts--数学计算]]></title>
+    <link href="http://Cinus.me/ShellScripts-%E6%95%B0%E5%AD%A6%E8%AE%A1%E7%AE%97/"/>
+    <id>http://Cinus.me/ShellScripts-数学计算/</id>
+    <published>2015-08-08T03:56:10.000Z</published>
+    <updated>2015-08-08T03:56:10.548Z</updated>
+    <content type="html"><![CDATA[<p>在shell Script中，有好几种进行数学运算的方法，虽然有几个效果差不多，在编写程序的时候使用一种方法就够了，但是我们可能还需要学习别人的程序啊，在阅读别人的程序的时候不能不认识这些东西吧。所以，留个笔记。</p>
+<h1 id="expr_命令">expr 命令</h1><p>expr 允许在命令行上处理数学表达式，但是略显拙劣。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ expr <span class="number">1</span> + <span class="number">5</span>    <span class="preprocessor">#注意在表达式中要有空格，如果写成<span class="number">1</span>+<span class="number">5</span>那么结果就不是我们想要的了。</span></span><br></pre></td></tr></table></figure></p>
+<p>expr命令能够识别一些不同的数学和字符串操作符：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作符</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">arg1\arg2</td>
+<td style="text-align:left">如果没有参数是NULL或者零，返回arg1;否则返回arg2</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 &amp; arg2</td>
+<td style="text-align:left">如果没有参数是null或者零，返回arg1 ， 否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 &lt; arg2</td>
+<td style="text-align:left">如果arg1 小于 arg2 返回1 ，否则返回0;</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 &lt;= arg2</td>
+<td style="text-align:left">arg1 小于或者等于 arg2 返回1 ， 否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 = arg2</td>
+<td style="text-align:left">arg1 等于arg2 返回1 ，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 != arg2</td>
+<td style="text-align:left">arg1 不等于arg2 返回1，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 &gt;= arg2</td>
+<td style="text-align:left">arg1 大于等于arg2 返回1，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 &gt; arg2</td>
+<td style="text-align:left">arg1 大于arg2 返回1 ， 否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 + arg2</td>
+<td style="text-align:left">返回两参数算数和</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 - arg2</td>
+<td style="text-align:left">返回算数差</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 * arg2</td>
+<td style="text-align:left">返回算术乘积</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 / arg2</td>
+<td style="text-align:left">返回算术商</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 % arg2</td>
+<td style="text-align:left">返回两数相除的余数</td>
+</tr>
+<tr>
+<td style="text-align:left">string : regexp</td>
+<td style="text-align:left">如果regexp匹配到了string中的某个模式，则返回该模式</td>
+</tr>
+<tr>
+<td style="text-align:left">match string ：regexp</td>
+<td style="text-align:left">如果regexp匹配到了string中的某个模式，则返回该模式</td>
+</tr>
+<tr>
+<td style="text-align:left">substr STRING POS LENGTH</td>
+<td style="text-align:left">返回起始位置为POS 长度为LENGTH个字符的子串</td>
+</tr>
+<tr>
+<td style="text-align:left">index STRING CHARS</td>
+<td style="text-align:left">返回在STRING中找到的CHARS的位置，否则为0</td>
+</tr>
+<tr>
+<td style="text-align:left">length STRING</td>
+<td style="text-align:left">返回字符串STRING的长度</td>
+</tr>
+<tr>
+<td style="text-align:left">+ TOKEN</td>
+<td style="text-align:left">将TOKEN解释成字符串，即使是一个关键字</td>
+</tr>
+<tr>
+<td style="text-align:left">(EXPRESSION)</td>
+<td style="text-align:left">返回EXPRESSION的值</td>
+</tr>
+</tbody>
+</table>
+<p><code>以上\代表|</code>.注意：在使用expr命令时可能要使用’\’转义或者’’转义<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">expr <span class="number">2</span> * <span class="number">5</span>  <span class="preprocessor"># ==&gt; expr: 语法错误 </span></span><br><span class="line">xpr <span class="number">2</span> \* <span class="number">5</span>  <span class="preprocessor"># 或者 expr <span class="number">2</span> <span class="string">'*'</span> <span class="number">5</span> ==&gt;<span class="number">10</span></span></span><br></pre></td></tr></table></figure></p>
+<h1 id="美元符号+方括号">美元符号+方括号</h1><p><code>$[OPERATION]</code><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var1=$[<span class="number">1</span>+<span class="number">5</span>]; <span class="preprocessor"># ==&gt; var1=<span class="number">6</span></span></span><br><span class="line">var2=$[$var1*<span class="number">3</span>]; <span class="preprocessor">#  ==&gt;  var2=<span class="number">18</span>;</span></span><br></pre></td></tr></table></figure></p>
+<p>这个比前面的要方便多了…<br>缺点：只能进行整数运算,这是bash shell的原因，据说Z shell 支持浮点运算。我还没有验证过。</p>
+<h1 id="美元符号+双括号">美元符号+双括号</h1><p><code>$((OPERATION))</code>与$[]使用方法相同<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var=$((<span class="number">1</span>+<span class="number">3</span>)); <span class="preprocessor"># ==&gt; var=<span class="number">4</span></span></span><br></pre></td></tr></table></figure></p>
+<h1 id="双括号">双括号</h1><p><code>(( expression ))</code>双圆括号允许将高级数学表达式放入比较，也支持数学计算。这里的expression可以是任意的数学赋值或者比较表达式，能够是比较表达式，也就是说可以当作test命令使用，在if while for until 结构中都可以用作条件判别语句</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">expression</th>
+<th style="text-align:left">meanning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">val++</td>
+<td style="text-align:left">（后）自增</td>
+</tr>
+<tr>
+<td style="text-align:left">val–</td>
+<td style="text-align:left">（后）自减</td>
+</tr>
+<tr>
+<td style="text-align:left">++val</td>
+<td style="text-align:left">（前）自增</td>
+</tr>
+<tr>
+<td style="text-align:left">–val</td>
+<td style="text-align:left">（前）自减</td>
+</tr>
+<tr>
+<td style="text-align:left">！</td>
+<td style="text-align:left">逻辑求反</td>
+</tr>
+<tr>
+<td style="text-align:left">~</td>
+<td style="text-align:left">位求反</td>
+</tr>
+<tr>
+<td style="text-align:left">**</td>
+<td style="text-align:left">幂运算</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;&lt;</td>
+<td style="text-align:left">左移位</td>
+</tr>
+<tr>
+<td style="text-align:left">&gt;&gt;</td>
+<td style="text-align:left">右移位</td>
+</tr>
+<tr>
+<td style="text-align:left">&amp;</td>
+<td style="text-align:left">位与</td>
+</tr>
+<tr>
+<td style="text-align:left">/</td>
+<td style="text-align:left">位或</td>
+</tr>
+<tr>
+<td style="text-align:left">&amp;&amp;</td>
+<td style="text-align:left">逻辑与</td>
+</tr>
+<tr>
+<td style="text-align:left">//</td>
+<td style="text-align:left">逻辑或</td>
+</tr>
+</tbody>
+</table>
+<p><code>以上/和//表示|和||</code><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var1=<span class="number">10</span>; ((var2=$var1**<span class="number">3</span>)); <span class="preprocessor"># ==&gt;该句的意思是 var2=<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>=<span class="number">1000</span>,(<span class="number">10</span>的立方)</span></span><br><span class="line"><span class="keyword">if</span> (($var1**<span class="number">2</span>&gt;<span class="number">90</span>)) ; then echo <span class="string">"ok"</span> ; fi  <span class="preprocessor"># ==&gt;当var1的平方大于<span class="number">90</span>时输出 ok。</span></span><br></pre></td></tr></table></figure></p>
+<p>这个东西很强大，而且在脚本中使用很直观，当见到(())时，我们就知道，这里出现了数值计算。</p>
+<h1 id="let_命令">let 命令</h1><p>与(())类似;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">let</span> <span class="string">"<span class="variable">$var</span>+=1"</span></span><br><span class="line">$ <span class="built_in">let</span> <span class="string">"var=<span class="variable">$var</span>+1"</span>;</span><br></pre></td></tr></table></figure></p>
+<h1 id="bc计算器（大boss）解决浮点运算的常用方案">bc计算器（大boss）解决浮点运算的常用方案</h1><h2 id="在命令行使用bc">在命令行使用bc</h2><p>bc 是我们学习linux时最先学习的几个命令。直接在命令行输入bc可以进入bc计算器的交互界面，可以在里面定义变量，计算表达式等操作。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ bc</span><br><span class="line">&gt;<span class="number">2</span>+<span class="number">5</span></span><br><span class="line">&gt;<span class="number">7</span></span><br></pre></td></tr></table></figure></p>
+<p>bc计算器的浮点运算由一个叫做scale的变量控制，实际上，scale的值就是小数点后的位数，而bc默认的scale=0,所以在计算的时候需要修改scale，比如scale=4，保留小数点后四位。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ bc</span><br><span class="line">&gt; <span class="number">3.44</span>/<span class="number">5</span></span><br><span class="line">&gt; <span class="number">0</span></span><br><span class="line">&gt; scale=<span class="number">4</span></span><br><span class="line">&gt; <span class="number">3.44</span>/<span class="number">5</span></span><br><span class="line">&gt; <span class="number">.6880</span></span><br></pre></td></tr></table></figure></p>
+<p>使用-q参数可以将进入bc后输出的版权说明给屏蔽掉。使用quit退出bc<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">bc</span><br><span class="line"></span>&gt; quit</span><br></pre></td></tr></table></figure></p>
+<h2 id="在shellscripts中使用bc">在shellscripts中使用bc</h2><p>bc可以接受标准输入，而这个标准输入我们可以通过管道或者重定向来提供给它。bc接受标准输入后，计算输入的表达式，输出到标准输出中，我们可以通过$(commamd)或者是`command`来获取它的输出。</p>
+<h3 id="用法一">用法一</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">variable=$( echo <span class="string">"options; expression "</span> | bc) ;</span><br><span class="line"></span><br><span class="line"><span class="variable"><span class="keyword">var</span></span>=$(echo <span class="string">"scale=4; 3.44/5;"</span> | bc) ; # ==&gt; <span class="variable"><span class="keyword">var</span></span>=<span class="number">.6880</span></span><br></pre></td></tr></table></figure>
+<h3 id="用法二">用法二</h3><p>使用内联(inline)输入重定向<strong>&lt;&lt;</strong><br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">variable=$(bc &lt;&lt; EOF</span><br><span class="line">          options;</span><br><span class="line">          statements;</span><br><span class="line">          expressions;</span><br><span class="line">          EOF)</span><br><span class="line"></span><br><span class="line">var=$(bc &lt;&lt; EOF</span><br><span class="line">          scale=<span class="number">4</span>;</span><br><span class="line">          var1=<span class="number">20</span>;</span><br><span class="line">          var2=<span class="number">3.1415926</span>;</span><br><span class="line">          a1=(<span class="variable">$var1</span> * <span class="variable">$var2</span>);</span><br><span class="line">          b1 = (<span class="variable">$var1</span> / <span class="variable">$var2</span>);</span><br><span class="line">          a1 + b1;</span><br><span class="line">          EOF)</span><br></pre></td></tr></table></figure></p>
+<p>常见用法就这么多，还有文件重定向等用法也是差不多的。</p>
+<h1 id="联系我">联系我</h1><p><a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x78;&#x79;&#x43;&#x69;&#110;&#117;&#x73;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x78;&#x79;&#x43;&#x69;&#110;&#117;&#x73;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在shell Script中，有好几种进行数学运算的方法，虽然有几个效果差不多，在编写程序的时候使用一种方法就够了，但是我们可能还需要学习别人的程序啊，在阅读别人的程序的时候不能不认识这些东西吧。所以，留个笔记。</p>
+<h1 id="expr_命令">expr 命令</]]>
+    </summary>
+    
+      <category term="ShellScripts" scheme="http://Cinus.me/tags/ShellScripts/"/>
+    
+      <category term="coding" scheme="http://Cinus.me/categories/coding/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Markdown语法]]></title>
     <link href="http://Cinus.me/Markdown%E8%AF%AD%E6%B3%95/"/>
     <id>http://Cinus.me/Markdown语法/</id>
     <published>2015-08-06T12:41:05.000Z</published>
-    <updated>2015-08-07T16:02:40.247Z</updated>
+    <updated>2015-08-08T03:31:25.998Z</updated>
     <content type="html"><![CDATA[<p>整理一下Markdown的语法，用这玩意儿写blog有点意思。</p>
 <h1 id="Markdown介绍"><strong><a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank" rel="external">Markdown介绍</a></strong></h1><p><strong>Markdown</strong>是一种轻量级标记语言,它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。<br>它避免了我直接写html文档。这是我很喜欢的，而且hexo的markdown解释其生成的html其显示效果还是很不错的。<br><a href="https://github.com" target="_blank" rel="external">github</a>的README支持markdown还有很多写作网站也支持markdown，例如<a href="http://www.jianshu.com/" target="_blank" rel="external">简书</a>等。<br>现在markdown用处非常多，光用来写博客就值得我学习它了。</p>
-<h1 id="标题"><strong>标题</strong></h1><h2 id="使用#为文章设置多级标题(类Atx)">使用<strong>#</strong>为文章设置多级标题(类<a href="http://www.aaronsw.com/2002/atx/" target="_blank" rel="external">Atx</a>)</h2><figure class="highlight vala"><figcaption><span>Head_example1.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># 一级标题  </span></span><br><span class="line"><span class="preprocessor">## 二级标题  </span></span><br><span class="line"><span class="preprocessor">### 三级标题</span></span><br><span class="line"><span class="preprocessor">#### 四级标题</span></span><br></pre></td></tr></table></figure>
+<h1 id="标题"><strong>标题</strong></h1><h2 id="使用#为文章设置多级标题(类Atx)">使用<strong>#</strong>为文章设置多级标题(类<a href="http://www.aaronsw.com/2002/atx/" target="_blank" rel="external">Atx</a>)</h2><figure class="highlight 1c"><figcaption><span>Head_example1.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\<span class="preprocessor"># 一级标题  </span></span><br><span class="line">\<span class="preprocessor">## 二级标题  </span></span><br><span class="line">\<span class="preprocessor">### 三级标题</span></span><br><span class="line">\<span class="preprocessor">#### 四级标题</span></span><br></pre></td></tr></table></figure>
 <p>依次类推,最多6个#代表6级标题,其效果如下图所示：<br><img src="/Markdown语法/1.png" alt="使用#为文章设置多级标题" title="使用#为文章设置多级标题"></p>
 <h2 id="使用=和-为文章设置大小标题(类Setext)">使用<strong>=</strong>和<strong>-</strong>为文章设置大小标题(类<a href="http://docutils.sourceforge.net/mirror/setext.html" target="_blank" rel="external">Setext</a>)</h2><p>利用<strong>=</strong>（最高阶标题）和<strong>-</strong>（第二阶标题）来标识标题：<br><figure class="highlight asciidoc"><figcaption><span>Head_example2.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="header">This is an H1</span><br><span class="line">=============</span></span><br><span class="line"><span class="header">this is an H2</span><br><span class="line">-------------</span></span><br></pre></td></tr></table></figure><br>任何数量的=和-效果都一样，其效果为：<br><img src="/Markdown语法/2.png" alt="使用=和-为文章设置大小标题" title="使用=和-为文章设置大小标题"></p>
 <h1 id="分割线"><strong>分割线</strong></h1><p>使用三个以上的<strong>星号</strong>,<strong>减号</strong>,<strong>下划线</strong>来建立分割线，行内不要写其他东西，<strong>星号</strong>或<strong>减号</strong>间可以加入空格。<br><figure class="highlight gherkin"><figcaption><span>分割线example.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line">_____</span><br><span class="line">-----</span><br><span class="line"><span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span></span><br><span class="line">- - - -</span><br></pre></td></tr></table></figure><br>效果为：<br><img src="/Markdown语法/3.png" alt="分割线示例" title="分割线示例"></p>
@@ -55,10 +244,10 @@
 }
 </code></pre><p><code>注意</code>:代码的顶上一行要是空行，不然不是这种效果。</p>
 <h3 id="使用hexo支持的插件codeblock">使用hexo支持的插件<a href="https://hexo.io/zh-cn/docs/tag-plugins.html#Code_Block" target="_blank" rel="external">codeblock</a></h3><p>通用语法为：<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template_tag">&#123;% codeblock [title] [lang:<span class="keyword">language</span>] [<span class="keyword">url</span>] [link text] %&#125;</span><span class="xml"></span><br><span class="line">code snippet</span><br><span class="line"></span><span class="template_tag">&#123;% endcodeblock %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
-<p>示例:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock example.sh lang:bash http://cinus.me/ <span class="string">"Cinus's link"</span> %&#125;</span><br><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"hello world"</span></span><br><span class="line"><span class="built_in">exit</span> <span class="number">0</span>;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>示例:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock example.sh lang:bash http://cinus.me/ <span class="string">"Cinus's link"</span> %&#125;</span><br><span class="line"> <span class="comment">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"hello world"</span></span><br><span class="line"><span class="built_in">exit</span> <span class="number">0</span>;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure></p>
 <p>显示结果为：<br><figure class="highlight bash"><figcaption><span>example.sh</span><a href="http://cinus.me/">Cinus's link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"hello world"</span></span><br><span class="line"><span class="built_in">exit</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure></p>
-<h3 id="使用3个或以上的反引号来引用代码块">使用3个或以上的反引号来引用代码块</h3><p>hexo 解析后的效果和使用缩进来引用代码块的效果一样<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">true<span class="built_in">printf</span>(<span class="string">"hello"</span>);</span><br><span class="line">true<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">```</span><br></pre></td></tr></table></figure></p>
-<p>显示为：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">true<span class="built_in">printf</span>(<span class="string">"hello"</span>);</span><br><span class="line">true<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="使用3个或以上的反引号来引用代码块">使用3个或以上的反引号来引用代码块</h3><p>hexo 解析后的效果和使用缩进来引用代码块的效果一样<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"> <span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">true<span class="built_in">printf</span>(<span class="string">"hello"</span>);</span><br><span class="line">true<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">```</span><br></pre></td></tr></table></figure></p>
+<p>显示为：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> <span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">true<span class="built_in">printf</span>(<span class="string">"hello"</span>);</span><br><span class="line">true<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="引用gist">引用<a href="https://gist.github.com" target="_blank" rel="external">gist</a></h3><p>通用语法为：<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">&#123;% gist gist_id <span class="collection">[filename]</span> %&#125;</span></span><br></pre></td></tr></table></figure></p>
 <p>示例:</p>
 <figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="var_expand">% gist ChenXiyu/51daf79a8de15adcfb19  testfile.cpp %</span>&#125;</span><br></pre></td></tr></table></figure>
@@ -96,7 +285,7 @@
 <p><a href="/about/">about me</a></p>
 <h3 id="自动链接">自动链接</h3><p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。例如：<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;xyCinus@gmail.com&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p><code>注意前一行为空</code>,将会产生：</p>
-<p><a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#x78;&#121;&#x43;&#105;&#x6e;&#x75;&#x73;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#x78;&#121;&#x43;&#105;&#x6e;&#x75;&#x73;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<p><a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#120;&#121;&#x43;&#105;&#110;&#x75;&#x73;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;">&#120;&#121;&#x43;&#105;&#110;&#x75;&#x73;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;</a></p>
 <h3 id="Link插件"><a href="https://hexo.io/zh-cn/docs/tag-plugins.html#Link" target="_blank" rel="external">Link</a>插件</h3><p>在文章中插入链接，并自动给外部链接添加 target=”_blank” 属性<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">&#123;% link text url <span class="collection">[external]</span> <span class="collection">[title]</span> %&#125;</span></span><br></pre></td></tr></table></figure></p>
 <p>示例<br><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="expression">&#123;% <span class="variable">link</span> <span class="variable">test</span>_<span class="variable">link</span> <span class="variable">http</span>:/<span class="end-block">/Cinus.me</span><span class="end-block">/ Cinus </span>%&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
 <a href="http://Cinus.me/" title="testLink">Cinus</a>
@@ -106,9 +295,9 @@
 <h3 id="vimeo">vimeo</h3><p>插入vimeo视频<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="preprocessor">%</span> vimeo vimeoid <span class="preprocessor">%</span>&#125;</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="preprocessor">%</span> vimeo <span class="number">130279788</span> <span class="preprocessor">%</span>&#125;</span><br></pre></td></tr></table></figure>
 <div class="video-container"><iframe src="//player.vimeo.com/video/130279788" frameborder="0" allowfullscreen></iframe></div>
-<h1 id="强调">强调</h1><p>Markdown 使用星号（*）和底线（_）作为标记强调字词的符号<br>使用一个星号或者下划线包围的文字将被显示成斜体，使用两个星号或者下划线包围的文字将显示成粗体。<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">*</span>你好<span class="keyword">*</span></span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span>你好<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line">_hello_</span><br><span class="line">__hello__</span><br><span class="line"><span class="keyword">*</span>__hello world__<span class="keyword">*</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="强调"><strong>强调</strong></h1><p>Markdown 使用星号（*）和底线（_）作为标记强调字词的符号<br>使用一个星号或者下划线包围的文字将被显示成斜体，使用两个星号或者下划线包围的文字将显示成粗体。<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">*</span>你好<span class="keyword">*</span></span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span>你好<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line">_hello_</span><br><span class="line">__hello__</span><br><span class="line"><span class="keyword">*</span>__hello world__<span class="keyword">*</span></span><br></pre></td></tr></table></figure></p>
 <p><em>你好</em><br><strong>你好</strong><br><em>hello</em><br><strong>hello</strong><br><em><strong>hello world</strong></em></p>
-<h1 id="列表">列表</h1><p>MarkDown 支持有序列表和无需列表。</p>
+<h1 id="列表"><strong>列表</strong></h1><p>MarkDown 支持有序列表和无需列表。</p>
 <h2 id="有序列表">有序列表</h2><p>使用数字加一个英文句点，不管数字是不是有序的，最后生成的列表都是按1,2,3…数字排列的。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3.</span> Bird</span><br><span class="line"><span class="number">2.</span> McHale</span><br><span class="line"><span class="number">4.</span> Parish</span><br></pre></td></tr></table></figure></p>
 <ol>
 <li>Bird</li>
@@ -146,12 +335,48 @@
 </ul>
 </li>
 </ul>
-<h1 id="反斜线转义">反斜线转义</h1><p>Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号,使用\加特殊字符可以将其转义为正常字符输出。Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<h1 id="反斜线转义"><strong>反斜线转义</strong></h1><p>Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号,使用\加特殊字符可以将其转义为正常字符输出。Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
 <blockquote>
 <p>\   反斜线<br>`   反引号<br>*   星号<br>_   底线<br>{}  花括号<br>[]  方括号<br>()  括弧<br>#   井字号<br>+   加号<br>-   减号<br>.   英文句点<br>!   惊叹号</p>
 </blockquote>
-<h1 id="OVER">OVER</h1><p>Markdown语法整理得差不多了，如果还有补充或者有错误欢迎与我联系</p>
-<p><a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#x78;&#121;&#67;&#105;&#x6e;&#117;&#115;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x78;&#121;&#67;&#105;&#x6e;&#117;&#115;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a></p>
+<h1 id="表格"><strong>表格</strong></h1><p>hexo的Markdown解释器还支持表格，貌似标准markdown不支持表格。<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">|表头|表项|表项|</span><br><span class="line">|<span class="symbol">:----|</span><span class="symbol">:-----</span><span class="symbol">:|-----</span><span class="symbol">:|</span></span><br><span class="line">|test|hello|world|</span><br><span class="line">|test2|hello|world|</span><br></pre></td></tr></table></figure></p>
+<p>效果为：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">表头</th>
+<th style="text-align:center">表项</th>
+<th style="text-align:right">表项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">test</td>
+<td style="text-align:center">hello</td>
+<td style="text-align:right">world</td>
+</tr>
+<tr>
+<td style="text-align:left">test2</td>
+<td style="text-align:center">hello</td>
+<td style="text-align:right">world</td>
+</tr>
+</tbody>
+</table>
+<p><code>注意：</code></p>
+<ul>
+<li>对齐<ul>
+<li>“:——“代表左对齐，如上第一列</li>
+<li>“:——“代表居中对齐，如上第二列</li>
+<li>“——:”代表右对齐，如上第三列</li>
+</ul>
+</li>
+<li>对其符号有且仅有一行，且在头部的下方.</li>
+<li>必须有头部</li>
+<li>必须有对齐符号。</li>
+<li>如果表格显示失败，别忘记保持表格上一行为空行</li>
+</ul>
+<h1 id="OVER"><strong>OVER</strong></h1><p>Markdown语法整理得差不多了，如果还有补充或者有错误欢迎与我联系</p>
+<p><a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#120;&#121;&#x43;&#105;&#110;&#117;&#x73;&#x40;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#109;">&#120;&#121;&#x43;&#105;&#110;&#117;&#x73;&#x40;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#109;</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>整理一下Markdown的语法，用这玩意儿写blog有点意思。</p>
@@ -169,10 +394,10 @@
     <link href="http://Cinus.me/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://Cinus.me/使用hexo搭建博客/</id>
     <published>2015-08-03T14:59:25.000Z</published>
-    <updated>2015-08-06T17:31:17.655Z</updated>
+    <updated>2015-08-08T02:35:56.962Z</updated>
     <content type="html"><![CDATA[<p>在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.<br>我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。<br>现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。</p>
-<h1 id="整体思路">整体思路</h1><p>在本机使用hexo生成网站，使用git hook 推送到vps上，直接使用nginx来部署网站。<br>这个做法避免了在vps上安装nodejs和hexo(vps 性能堪忧)，至于缺点，暂时没找到…</p>
-<h1 id="本机配置（linux）">本机配置（linux）</h1><p>详细使用请访问<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo</a></p>
+<h1 id="整体思路"><strong>整体思路</strong></h1><p>在本机使用hexo生成网站，使用git hook 推送到vps上，直接使用nginx来部署网站。<br>这个做法避免了在vps上安装nodejs和hexo(vps 性能堪忧)，至于缺点，暂时没找到…</p>
+<h1 id="本机配置（linux）"><strong>本机配置（linux）</strong></h1><p>详细使用请访问<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo</a></p>
 <h2 id="安装node-js">安装<a href="https://nodejs.org/" target="_blank" rel="external">node.js</a></h2><h3 id="For_ArchLinus:">For ArchLinus:</h3><pre><code>$ sudo pacman -S <span class="built_in">npm</span> nodejs
 </code></pre><h3 id="For_Debian:">For Debian:</h3><pre><code>$ sudo apt-<span class="keyword">get</span> install nodejs
 </code></pre><h2 id="安装hexo">安装hexo</h2><pre><code><span class="variable">$ </span>npm install hexo-cli -g
@@ -208,7 +433,7 @@
 <span class="char">$ </span>git add .
 <span class="char">$ </span>git commit -m <span class="comment">"Initial commit"</span>
 </code></pre><h3 id="为该blog仓库设置远程仓库">为该blog仓库设置远程仓库</h3><p>在设置vps后进行配置。</p>
-<h1 id="vps配置">vps配置</h1><p>ssh 设置啊，登录操作啊这些就不说了，默认大家知道这些基本操作的，或者以后专门写写。</p>
+<h1 id="vps配置"><strong>vps配置</strong></h1><p>ssh 设置啊，登录操作啊这些就不说了，默认大家知道这些基本操作的，或者以后专门写写。</p>
 <p>vps的配置主要有两个方面：</p>
 <ul>
 <li>nginx配置</li>
@@ -242,15 +467,14 @@
 <span class="preprocessor"># cd hooks</span>
 <span class="preprocessor"># touch post-receive</span>
 <span class="preprocessor"># vim post-receive</span>
-</code></pre><p>输入一下内容:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/bin/bash -l</span></span><br><span class="line">GIT_REPO=<span class="variable">$HOME</span>/repos/Cinus.me.git</span><br><span class="line">TMP_GIT_CLONE=<span class="variable">$HOME</span>/tmp/git/Cinus.me</span><br><span class="line">PUBLIC_WWW=/var/www/html/public</span><br><span class="line"></span><br><span class="line">rm -rf <span class="variable">$&#123;TMP_GIT_CLONE&#125;</span></span><br><span class="line">git <span class="built_in">clone</span> <span class="variable">$GIT_REPO</span> <span class="variable">$TMP_GIT_CLONE</span></span><br><span class="line">rm -rf <span class="variable">$&#123;PUBLIC_WWW&#125;</span>/*</span><br><span class="line">cp -rf <span class="variable">$&#123;TMP_GIT_CLONE&#125;</span>/public <span class="variable">$&#123;PUBLIC_WWW&#125;</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-<p>保存退出，为post-receive添加执行权限</p>
+</code></pre><p>输入以下内容:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">#!/bin/bash -l</span></span><br><span class="line">GIT_REPO=<span class="variable">$HOME</span>/repos/Cinus.me.git</span><br><span class="line">TMP_GIT_CLONE=<span class="variable">$HOME</span>/tmp/git/Cinus.me</span><br><span class="line">PUBLIC_WWW=/var/www/html/public</span><br><span class="line"></span><br><span class="line">rm -rf <span class="variable">$&#123;TMP_GIT_CLONE&#125;</span></span><br><span class="line">git <span class="built_in">clone</span> <span class="variable">$GIT_REPO</span> <span class="variable">$TMP_GIT_CLONE</span></span><br><span class="line">rm -rf <span class="variable">$&#123;PUBLIC_WWW&#125;</span>/*</span><br><span class="line">cp -rf <span class="variable">$&#123;TMP_GIT_CLONE&#125;</span>/public <span class="variable">$&#123;PUBLIC_WWW&#125;</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure></p>
+<p>保存退出，为<code>post-receive</code>添加执行权限</p>
 <pre><code># chmod <span class="keyword">u</span>+x <span class="keyword">post</span>-receive
-</code></pre><h1 id="本机配置">本机配置</h1><p>接上面本机配置最后，为本地blog仓库设置远程仓库到vps</p>
+</code></pre><h1 id="本机配置"><strong>本机配置</strong></h1><p>接上面本机配置最后，为本地blog仓库设置远程仓库到vps</p>
 <pre><code>$ git remote add Cinus<span class="class">.me</span> ssh:<span class="comment">//root@YourVpsIp:YourSSHPort/root/repos/Cinus.me.git</span>
 $ git push Cinus<span class="class">.me</span> master
 </code></pre><p>此时使用域名或ip访问你的vps应该就能看到你的blog的雏形了。</p>
-<h1 id="后话">后话</h1><p>我采用的方式是在本地写好博客，使用hexo g生成网站文件，然后把整个项目push到vps上，vps上的git hooks 在运行post-receive这个脚本将public目录下的文件复制到/var/www/html/public下，也就是nginx的根目录。<br>现在还有图片等资源未规划，以上的post-receive脚本可能需要更改。<br>有什么问题或本博客有错误的地方欢迎与我联系<br><a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#120;&#x79;&#x43;&#x69;&#110;&#117;&#x73;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">&#120;&#x79;&#x43;&#x69;&#110;&#117;&#x73;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;</a></p>
+<h1 id="后话"><strong>后话</strong></h1><p>我采用的方式是在本地写好博客，使用hexo g生成网站文件，然后把整个项目push到vps上，vps上的git hooks 在运行post-receive这个脚本将public目录下的文件复制到/var/www/html/public下，也就是nginx的根目录。<br>现在还有图片等资源未规划，以上的post-receive脚本可能需要更改。<br>有什么问题或本博客有错误的地方欢迎与我联系<br><a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#x78;&#x79;&#67;&#105;&#x6e;&#x75;&#x73;&#x40;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#111;&#109;">&#x78;&#x79;&#67;&#105;&#x6e;&#x75;&#x73;&#x40;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#111;&#109;</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.<br>我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和]]>

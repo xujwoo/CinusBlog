@@ -62,7 +62,7 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: http://hexo.io/plugins/
-theme: next 
+theme: next
 
 social:
         GitHub: https://github.com/ChenXiyu

@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Linux,hexo,架站," />
+  <meta name="keywords" content="ShellScripts," />
 
 
 
@@ -39,19 +39,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
-整体">
+<meta name="description" content="在shell Script中，有好几种进行数学运算的方法，虽然有几个效果差不多，在编写程序的时候使用一种方法就够了，但是我们可能还需要学习别人的程序啊，在阅读别人的程序的时候不能不认识这些东西吧。所以，留个笔记。
+expr 命令expr 允许在命令行上处理数学表达式，但是略显拙劣。1$ expr 1 + 5    #注意在表达式中要有空格，如果写成1+5那么结果就不是我们想要的了。
+expr命令能">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Hexo搭建博客">
-<meta property="og:url" content="http://Cinus.me/使用hexo搭建博客/index.html">
+<meta property="og:title" content="ShellScripts--数学计算">
+<meta property="og:url" content="http://Cinus.me/ShellScripts-数学计算/index.html">
 <meta property="og:site_name" content="Cinus">
-<meta property="og:description" content="在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
-整体">
-<meta property="og:updated_time" content="2015-08-08T02:35:56.962Z">
+<meta property="og:description" content="在shell Script中，有好几种进行数学运算的方法，虽然有几个效果差不多，在编写程序的时候使用一种方法就够了，但是我们可能还需要学习别人的程序啊，在阅读别人的程序的时候不能不认识这些东西吧。所以，留个笔记。
+expr 命令expr 允许在命令行上处理数学表达式，但是略显拙劣。1$ expr 1 + 5    #注意在表达式中要有空格，如果写成1+5那么结果就不是我们想要的了。
+expr命令能">
+<meta property="og:updated_time" content="2015-08-08T03:56:10.548Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Hexo搭建博客">
-<meta name="twitter:description" content="在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
-整体">
+<meta name="twitter:title" content="ShellScripts--数学计算">
+<meta name="twitter:description" content="在shell Script中，有好几种进行数学运算的方法，虽然有几个效果差不多，在编写程序的时候使用一种方法就够了，但是我们可能还需要学习别人的程序啊，在阅读别人的程序的时候不能不认识这些东西吧。所以，留个笔记。
+expr 命令expr 允许在命令行上处理数学表达式，但是略显拙劣。1$ expr 1 + 5    #注意在表达式中要有空格，如果写成1+5那么结果就不是我们想要的了。
+expr命令能">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -61,7 +64,7 @@
   };
 </script>
 
-  <title> 使用Hexo搭建博客 | Cinus </title>
+  <title> ShellScripts--数学计算 | Cinus </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
@@ -209,7 +212,7 @@
           
           
             
-              使用Hexo搭建博客
+              ShellScripts--数学计算
             
           
         </h1>
@@ -218,8 +221,8 @@
       <div class="post-meta">
         <span class="post-time">
           Posted on
-          <time itemprop="dateCreated" datetime="2015-08-03T22:59:25+08:00" content="2015-08-03">
-            2015-08-03
+          <time itemprop="dateCreated" datetime="2015-08-08T11:56:10+08:00" content="2015-08-08">
+            2015-08-08
           </time>
         </span>
 
@@ -228,8 +231,8 @@
             &nbsp; | &nbsp; In
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/技术/" itemprop="url" rel="index">
-                  <span itemprop="name">技术</span>
+                <a href="/categories/coding/" itemprop="url" rel="index">
+                  <span itemprop="name">coding</span>
                 </a>
               </span>
 
@@ -244,8 +247,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/使用hexo搭建博客/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="使用hexo搭建博客/" itemprop="commentsCount"></span>
+              <a href="/ShellScripts-数学计算/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="ShellScripts-数学计算/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -259,86 +262,177 @@
       
 
       
-        <span itemprop="articleBody"><p>在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.<br>我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。<br>现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。</p>
-<h1 id="整体思路"><strong>整体思路</strong></h1><p>在本机使用hexo生成网站，使用git hook 推送到vps上，直接使用nginx来部署网站。<br>这个做法避免了在vps上安装nodejs和hexo(vps 性能堪忧)，至于缺点，暂时没找到…</p>
-<h1 id="本机配置（linux）"><strong>本机配置（linux）</strong></h1><p>详细使用请访问<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo</a></p>
-<h2 id="安装node-js">安装<a href="https://nodejs.org/" target="_blank" rel="external">node.js</a></h2><h3 id="For_ArchLinus:">For ArchLinus:</h3><pre><code>$ sudo pacman -S <span class="built_in">npm</span> nodejs
-</code></pre><h3 id="For_Debian:">For Debian:</h3><pre><code>$ sudo apt-<span class="keyword">get</span> install nodejs
-</code></pre><h2 id="安装hexo">安装hexo</h2><pre><code><span class="variable">$ </span>npm install hexo-cli -g
-<span class="variable">$ </span>mkdir blog <span class="comment">#创建一个目录作为博客的目录</span>
-<span class="variable">$ </span>cd blog
-<span class="variable">$ </span>hexo init  <span class="comment">#使用hexo初始化该目录</span>
-<span class="variable">$ </span>npm install <span class="comment">#安装必要的依赖</span>
-</code></pre><p>此时的hexo算是安装好了，你也可以按照下面的方法来测试一下：</p>
-<pre><code><span class="variable">$ </span>cd blog
-<span class="variable">$ </span>hexo g
-<span class="variable">$ </span>hexo s
-</code></pre><p>接下来在浏览器中输入<a href="http://localhost:4000" target="_blank" rel="external">localhost:4000</a>看看你博客的雏形:)</p>
-<h2 id="本机git配置">本机git配置</h2><h3 id="git安装">git安装</h3><p>使用git的前置条件是安装了git，可以使用这个命令看看你有没有安装git</p>
-<pre><code>$ git <span class="property">version</span>
-</code></pre><p>如果输出git的版本信息，表示git是安装了的。如果出现：</p>
-<pre><code>git：<span class="command"><span class="keyword">command</span> <span class="title">not</span> <span class="title">found</span></span>
-</code></pre><p>表示git未安装，你需要安装git：</p>
-<h4 id="For_ArchLinux">For ArchLinux</h4><pre><code><span class="variable">$ </span>sudo pacman -<span class="constant">S </span>git
-</code></pre><h4 id="For_Debian">For Debian</h4><pre><code>$ sudo apt-<span class="keyword">get</span> install git-core
-</code></pre><h4 id="For_Centos">For Centos</h4><pre><code>$ sudo yum <span class="keyword">install</span> git-core
-</code></pre><p>再次执行:</p>
-<pre><code>$ git <span class="property">version</span>
-</code></pre><p>看到版本信息就ok了。</p>
-<h3 id="git简单配置">git简单配置</h3><p>设置用户名：</p>
-<pre><code>$ git config --globle user<span class="class">.name</span> YourGitName
-</code></pre><p>设置用户邮箱:</p>
-<pre><code>$ git config --globle user<span class="class">.email</span> YourEmail
-</code></pre><p>基本配置完成，可以使用:</p>
-<pre><code>$ git config <span class="comment">--list</span>
-</code></pre><p>查看配置信息。</p>
-<h3 id="使用git来控制blog版本">使用git来控制blog版本</h3><pre><code><span class="char">$ </span>cd ~/blog
-<span class="char">$ </span>git init
-<span class="char">$ </span>git add .
-<span class="char">$ </span>git commit -m <span class="comment">"Initial commit"</span>
-</code></pre><h3 id="为该blog仓库设置远程仓库">为该blog仓库设置远程仓库</h3><p>在设置vps后进行配置。</p>
-<h1 id="vps配置"><strong>vps配置</strong></h1><p>ssh 设置啊，登录操作啊这些就不说了，默认大家知道这些基本操作的，或者以后专门写写。</p>
-<p>vps的配置主要有两个方面：</p>
-<ul>
-<li>nginx配置</li>
-<li>git配置</li>
-</ul>
-<p>都非常的简单。</p>
-<h2 id="nginx配置">nginx配置</h2><h3 id="nginx安装">nginx安装</h3><h4 id="For_Debian：">For Debian：</h4><pre><code>$ sudo apt-<span class="keyword">get</span> install nginx
-</code></pre><h4 id="For_Centos：">For Centos：</h4><pre><code>$ sudo yum <span class="keyword">install</span> nginx
-</code></pre><h3 id="nginx配置-1">nginx配置</h3><h4 id="将nginx的根目录改为/var/www/html/public">将nginx的根目录改为/var/www/html/public</h4><pre><code>$ vim <span class="regexp">/etc/</span>nginx<span class="regexp">/sites-available/</span><span class="keyword">default</span>
-</code></pre><p>将</p>
-<pre><code>root /<span class="keyword">var</span>/www/html;
-</code></pre><p>改为</p>
-<pre><code>root <span class="regexp">/var/</span>www<span class="regexp">/html/</span><span class="keyword">public</span>;
-</code></pre><p>我没有做更多的设置，以后有配置上的改动，我将补上来。</p>
-<h4 id="启动nginx">启动nginx</h4><p>注意：我的vps使用的是systemd，以下两个操作都是在systemd系统上才有效。</p>
-<pre><code>$ sudo systemctl <span class="built_in">start</span> nginx
-</code></pre><h4 id="设置nginx开机启动">设置nginx开机启动</h4><pre><code>$ sudo systemctl <span class="built_in">enable</span> nginx
-</code></pre><h2 id="git设置">git设置</h2><h3 id="git安装-1">git安装</h3><p>前置条件是安装了git，可以使用这个命令看看你有没有安装git</p>
-<pre><code>$ git <span class="property">version</span>
-</code></pre><p>如果输出git的版本信息，表示git是安装了的。如果出现：</p>
-<pre><code>git：<span class="command"><span class="keyword">command</span> <span class="title">not</span> <span class="title">found</span></span>
-</code></pre><p>表示git未安装，你需要安装git：</p>
-<h4 id="For_ArchLinus">For ArchLinus</h4><pre><code><span class="variable">$ </span>sudo pacman -<span class="constant">S </span>git
-</code></pre><h4 id="For_Debian-1">For Debian</h4><pre><code>$ sudo apt-<span class="keyword">get</span> install git-core
-</code></pre><h4 id="For_Centos-1">For Centos</h4><pre><code>$ sudo yum <span class="keyword">install</span> git-core
-</code></pre><p>接下来是配置git hook，git hook 的使用我还不是太熟悉，但是按照这个步骤下来是没有问题的。</p>
-<h3 id="git_hook_设置">git hook 设置</h3><p>在本地创建一个目录，用于同步仓库。</p>
-<pre><code><span class="preprocessor"># cd ~</span>
-<span class="preprocessor"># mkdir -p repos/Cinus.me.git &amp;&amp; cd repos/Cinus.me.git //Cinus.me替换成你想要的名称</span>
-<span class="preprocessor"># git init --bare</span>
-<span class="preprocessor"># cd hooks</span>
-<span class="preprocessor"># touch post-receive</span>
-<span class="preprocessor"># vim post-receive</span>
-</code></pre><p>输入以下内容:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">#!/bin/bash -l</span></span><br><span class="line">GIT_REPO=<span class="variable">$HOME</span>/repos/Cinus.me.git</span><br><span class="line">TMP_GIT_CLONE=<span class="variable">$HOME</span>/tmp/git/Cinus.me</span><br><span class="line">PUBLIC_WWW=/var/www/html/public</span><br><span class="line"></span><br><span class="line">rm -rf <span class="variable">$&#123;TMP_GIT_CLONE&#125;</span></span><br><span class="line">git <span class="built_in">clone</span> <span class="variable">$GIT_REPO</span> <span class="variable">$TMP_GIT_CLONE</span></span><br><span class="line">rm -rf <span class="variable">$&#123;PUBLIC_WWW&#125;</span>/*</span><br><span class="line">cp -rf <span class="variable">$&#123;TMP_GIT_CLONE&#125;</span>/public <span class="variable">$&#123;PUBLIC_WWW&#125;</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure></p>
-<p>保存退出，为<code>post-receive</code>添加执行权限</p>
-<pre><code># chmod <span class="keyword">u</span>+x <span class="keyword">post</span>-receive
-</code></pre><h1 id="本机配置"><strong>本机配置</strong></h1><p>接上面本机配置最后，为本地blog仓库设置远程仓库到vps</p>
-<pre><code>$ git remote add Cinus<span class="class">.me</span> ssh:<span class="comment">//root@YourVpsIp:YourSSHPort/root/repos/Cinus.me.git</span>
-$ git push Cinus<span class="class">.me</span> master
-</code></pre><p>此时使用域名或ip访问你的vps应该就能看到你的blog的雏形了。</p>
-<h1 id="后话"><strong>后话</strong></h1><p>我采用的方式是在本地写好博客，使用hexo g生成网站文件，然后把整个项目push到vps上，vps上的git hooks 在运行post-receive这个脚本将public目录下的文件复制到/var/www/html/public下，也就是nginx的根目录。<br>现在还有图片等资源未规划，以上的post-receive脚本可能需要更改。<br>有什么问题或本博客有错误的地方欢迎与我联系<br><a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#x78;&#x79;&#67;&#105;&#x6e;&#x75;&#x73;&#x40;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#111;&#109;">&#x78;&#x79;&#67;&#105;&#x6e;&#x75;&#x73;&#x40;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#111;&#109;</a></p>
+        <span itemprop="articleBody"><p>在shell Script中，有好几种进行数学运算的方法，虽然有几个效果差不多，在编写程序的时候使用一种方法就够了，但是我们可能还需要学习别人的程序啊，在阅读别人的程序的时候不能不认识这些东西吧。所以，留个笔记。</p>
+<h1 id="expr_命令">expr 命令</h1><p>expr 允许在命令行上处理数学表达式，但是略显拙劣。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ expr <span class="number">1</span> + <span class="number">5</span>    <span class="preprocessor">#注意在表达式中要有空格，如果写成<span class="number">1</span>+<span class="number">5</span>那么结果就不是我们想要的了。</span></span><br></pre></td></tr></table></figure></p>
+<p>expr命令能够识别一些不同的数学和字符串操作符：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作符</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">arg1\arg2</td>
+<td style="text-align:left">如果没有参数是NULL或者零，返回arg1;否则返回arg2</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 &amp; arg2</td>
+<td style="text-align:left">如果没有参数是null或者零，返回arg1 ， 否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 &lt; arg2</td>
+<td style="text-align:left">如果arg1 小于 arg2 返回1 ，否则返回0;</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 &lt;= arg2</td>
+<td style="text-align:left">arg1 小于或者等于 arg2 返回1 ， 否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 = arg2</td>
+<td style="text-align:left">arg1 等于arg2 返回1 ，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 != arg2</td>
+<td style="text-align:left">arg1 不等于arg2 返回1，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 &gt;= arg2</td>
+<td style="text-align:left">arg1 大于等于arg2 返回1，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 &gt; arg2</td>
+<td style="text-align:left">arg1 大于arg2 返回1 ， 否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 + arg2</td>
+<td style="text-align:left">返回两参数算数和</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 - arg2</td>
+<td style="text-align:left">返回算数差</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 * arg2</td>
+<td style="text-align:left">返回算术乘积</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 / arg2</td>
+<td style="text-align:left">返回算术商</td>
+</tr>
+<tr>
+<td style="text-align:left">arg1 % arg2</td>
+<td style="text-align:left">返回两数相除的余数</td>
+</tr>
+<tr>
+<td style="text-align:left">string : regexp</td>
+<td style="text-align:left">如果regexp匹配到了string中的某个模式，则返回该模式</td>
+</tr>
+<tr>
+<td style="text-align:left">match string ：regexp</td>
+<td style="text-align:left">如果regexp匹配到了string中的某个模式，则返回该模式</td>
+</tr>
+<tr>
+<td style="text-align:left">substr STRING POS LENGTH</td>
+<td style="text-align:left">返回起始位置为POS 长度为LENGTH个字符的子串</td>
+</tr>
+<tr>
+<td style="text-align:left">index STRING CHARS</td>
+<td style="text-align:left">返回在STRING中找到的CHARS的位置，否则为0</td>
+</tr>
+<tr>
+<td style="text-align:left">length STRING</td>
+<td style="text-align:left">返回字符串STRING的长度</td>
+</tr>
+<tr>
+<td style="text-align:left">+ TOKEN</td>
+<td style="text-align:left">将TOKEN解释成字符串，即使是一个关键字</td>
+</tr>
+<tr>
+<td style="text-align:left">(EXPRESSION)</td>
+<td style="text-align:left">返回EXPRESSION的值</td>
+</tr>
+</tbody>
+</table>
+<p><code>以上\代表|</code>.注意：在使用expr命令时可能要使用’\’转义或者’’转义<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">expr <span class="number">2</span> * <span class="number">5</span>  <span class="preprocessor"># ==&gt; expr: 语法错误 </span></span><br><span class="line">xpr <span class="number">2</span> \* <span class="number">5</span>  <span class="preprocessor"># 或者 expr <span class="number">2</span> <span class="string">'*'</span> <span class="number">5</span> ==&gt;<span class="number">10</span></span></span><br></pre></td></tr></table></figure></p>
+<h1 id="美元符号+方括号">美元符号+方括号</h1><p><code>$[OPERATION]</code><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var1=$[<span class="number">1</span>+<span class="number">5</span>]; <span class="preprocessor"># ==&gt; var1=<span class="number">6</span></span></span><br><span class="line">var2=$[$var1*<span class="number">3</span>]; <span class="preprocessor">#  ==&gt;  var2=<span class="number">18</span>;</span></span><br></pre></td></tr></table></figure></p>
+<p>这个比前面的要方便多了…<br>缺点：只能进行整数运算,这是bash shell的原因，据说Z shell 支持浮点运算。我还没有验证过。</p>
+<h1 id="美元符号+双括号">美元符号+双括号</h1><p><code>$((OPERATION))</code>与$[]使用方法相同<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var=$((<span class="number">1</span>+<span class="number">3</span>)); <span class="preprocessor"># ==&gt; var=<span class="number">4</span></span></span><br></pre></td></tr></table></figure></p>
+<h1 id="双括号">双括号</h1><p><code>(( expression ))</code>双圆括号允许将高级数学表达式放入比较，也支持数学计算。这里的expression可以是任意的数学赋值或者比较表达式，能够是比较表达式，也就是说可以当作test命令使用，在if while for until 结构中都可以用作条件判别语句</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">expression</th>
+<th style="text-align:left">meanning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">val++</td>
+<td style="text-align:left">（后）自增</td>
+</tr>
+<tr>
+<td style="text-align:left">val–</td>
+<td style="text-align:left">（后）自减</td>
+</tr>
+<tr>
+<td style="text-align:left">++val</td>
+<td style="text-align:left">（前）自增</td>
+</tr>
+<tr>
+<td style="text-align:left">–val</td>
+<td style="text-align:left">（前）自减</td>
+</tr>
+<tr>
+<td style="text-align:left">！</td>
+<td style="text-align:left">逻辑求反</td>
+</tr>
+<tr>
+<td style="text-align:left">~</td>
+<td style="text-align:left">位求反</td>
+</tr>
+<tr>
+<td style="text-align:left">**</td>
+<td style="text-align:left">幂运算</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;&lt;</td>
+<td style="text-align:left">左移位</td>
+</tr>
+<tr>
+<td style="text-align:left">&gt;&gt;</td>
+<td style="text-align:left">右移位</td>
+</tr>
+<tr>
+<td style="text-align:left">&amp;</td>
+<td style="text-align:left">位与</td>
+</tr>
+<tr>
+<td style="text-align:left">/</td>
+<td style="text-align:left">位或</td>
+</tr>
+<tr>
+<td style="text-align:left">&amp;&amp;</td>
+<td style="text-align:left">逻辑与</td>
+</tr>
+<tr>
+<td style="text-align:left">//</td>
+<td style="text-align:left">逻辑或</td>
+</tr>
+</tbody>
+</table>
+<p><code>以上/和//表示|和||</code><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var1=<span class="number">10</span>; ((var2=$var1**<span class="number">3</span>)); <span class="preprocessor"># ==&gt;该句的意思是 var2=<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>=<span class="number">1000</span>,(<span class="number">10</span>的立方)</span></span><br><span class="line"><span class="keyword">if</span> (($var1**<span class="number">2</span>&gt;<span class="number">90</span>)) ; then echo <span class="string">"ok"</span> ; fi  <span class="preprocessor"># ==&gt;当var1的平方大于<span class="number">90</span>时输出 ok。</span></span><br></pre></td></tr></table></figure></p>
+<p>这个东西很强大，而且在脚本中使用很直观，当见到(())时，我们就知道，这里出现了数值计算。</p>
+<h1 id="let_命令">let 命令</h1><p>与(())类似;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">let</span> <span class="string">"<span class="variable">$var</span>+=1"</span></span><br><span class="line">$ <span class="built_in">let</span> <span class="string">"var=<span class="variable">$var</span>+1"</span>;</span><br></pre></td></tr></table></figure></p>
+<h1 id="bc计算器（大boss）解决浮点运算的常用方案">bc计算器（大boss）解决浮点运算的常用方案</h1><h2 id="在命令行使用bc">在命令行使用bc</h2><p>bc 是我们学习linux时最先学习的几个命令。直接在命令行输入bc可以进入bc计算器的交互界面，可以在里面定义变量，计算表达式等操作。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ bc</span><br><span class="line">&gt;<span class="number">2</span>+<span class="number">5</span></span><br><span class="line">&gt;<span class="number">7</span></span><br></pre></td></tr></table></figure></p>
+<p>bc计算器的浮点运算由一个叫做scale的变量控制，实际上，scale的值就是小数点后的位数，而bc默认的scale=0,所以在计算的时候需要修改scale，比如scale=4，保留小数点后四位。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ bc</span><br><span class="line">&gt; <span class="number">3.44</span>/<span class="number">5</span></span><br><span class="line">&gt; <span class="number">0</span></span><br><span class="line">&gt; scale=<span class="number">4</span></span><br><span class="line">&gt; <span class="number">3.44</span>/<span class="number">5</span></span><br><span class="line">&gt; <span class="number">.6880</span></span><br></pre></td></tr></table></figure></p>
+<p>使用-q参数可以将进入bc后输出的版权说明给屏蔽掉。使用quit退出bc<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">bc</span><br><span class="line"></span>&gt; quit</span><br></pre></td></tr></table></figure></p>
+<h2 id="在shellscripts中使用bc">在shellscripts中使用bc</h2><p>bc可以接受标准输入，而这个标准输入我们可以通过管道或者重定向来提供给它。bc接受标准输入后，计算输入的表达式，输出到标准输出中，我们可以通过$(commamd)或者是`command`来获取它的输出。</p>
+<h3 id="用法一">用法一</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">variable=$( echo <span class="string">"options; expression "</span> | bc) ;</span><br><span class="line"></span><br><span class="line"><span class="variable"><span class="keyword">var</span></span>=$(echo <span class="string">"scale=4; 3.44/5;"</span> | bc) ; # ==&gt; <span class="variable"><span class="keyword">var</span></span>=<span class="number">.6880</span></span><br></pre></td></tr></table></figure>
+<h3 id="用法二">用法二</h3><p>使用内联(inline)输入重定向<strong>&lt;&lt;</strong><br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">variable=$(bc &lt;&lt; EOF</span><br><span class="line">          options;</span><br><span class="line">          statements;</span><br><span class="line">          expressions;</span><br><span class="line">          EOF)</span><br><span class="line"></span><br><span class="line">var=$(bc &lt;&lt; EOF</span><br><span class="line">          scale=<span class="number">4</span>;</span><br><span class="line">          var1=<span class="number">20</span>;</span><br><span class="line">          var2=<span class="number">3.1415926</span>;</span><br><span class="line">          a1=(<span class="variable">$var1</span> * <span class="variable">$var2</span>);</span><br><span class="line">          b1 = (<span class="variable">$var1</span> / <span class="variable">$var2</span>);</span><br><span class="line">          a1 + b1;</span><br><span class="line">          EOF)</span><br></pre></td></tr></table></figure></p>
+<p>常见用法就这么多，还有文件重定向等用法也是差不多的。</p>
+<h1 id="联系我">联系我</h1><p><a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x78;&#x79;&#x43;&#x69;&#110;&#117;&#x73;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x78;&#x79;&#x43;&#x69;&#110;&#117;&#x73;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 </span>
       
     </div>
@@ -347,11 +441,7 @@ $ git push Cinus<span class="class">.me</span> master
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag">#Linux</a>
-          
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
-          
-            <a href="/tags/架站/" rel="tag">#架站</a>
+            <a href="/tags/ShellScripts/" rel="tag">#ShellScripts</a>
           
         </div>
       
@@ -360,11 +450,11 @@ $ git push Cinus<span class="class">.me</span> master
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Markdown语法/" rel="prev">Markdown语法</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/Markdown语法/" rel="next">Markdown语法</a>
             
           </div>
         </div>
@@ -416,8 +506,8 @@ $ git push Cinus<span class="class">.me</span> master
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="使用hexo搭建博客/"
-                   data-title="使用Hexo搭建博客" data-url="http://Cinus.me/使用hexo搭建博客/">
+              <div class="ds-thread" data-thread-key="ShellScripts-数学计算/"
+                   data-title="ShellScripts--数学计算" data-url="http://Cinus.me/ShellScripts-数学计算/">
               </div>
             
           </div>
@@ -551,7 +641,7 @@ $ git push Cinus<span class="class">.me</span> master
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#整体思路"><span class="nav-number">1.</span> <span class="nav-text">整体思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本机配置（linux）"><span class="nav-number">2.</span> <span class="nav-text">本机配置（linux）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装node-js"><span class="nav-number">2.1.</span> <span class="nav-text">安装node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#For_ArchLinus:"><span class="nav-number">2.1.1.</span> <span class="nav-text">For ArchLinus:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#For_Debian:"><span class="nav-number">2.1.2.</span> <span class="nav-text">For Debian:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">2.2.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本机git配置"><span class="nav-number">2.3.</span> <span class="nav-text">本机git配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git安装"><span class="nav-number">2.3.1.</span> <span class="nav-text">git安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#For_ArchLinux"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">For ArchLinux</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Debian"><span class="nav-number">2.3.1.2.</span> <span class="nav-text">For Debian</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Centos"><span class="nav-number">2.3.1.3.</span> <span class="nav-text">For Centos</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git简单配置"><span class="nav-number">2.3.2.</span> <span class="nav-text">git简单配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用git来控制blog版本"><span class="nav-number">2.3.3.</span> <span class="nav-text">使用git来控制blog版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为该blog仓库设置远程仓库"><span class="nav-number">2.3.4.</span> <span class="nav-text">为该blog仓库设置远程仓库</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vps配置"><span class="nav-number">3.</span> <span class="nav-text">vps配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#nginx配置"><span class="nav-number">3.1.</span> <span class="nav-text">nginx配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx安装"><span class="nav-number">3.1.1.</span> <span class="nav-text">nginx安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Debian："><span class="nav-number">3.1.1.1.</span> <span class="nav-text">For Debian：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Centos："><span class="nav-number">3.1.1.2.</span> <span class="nav-text">For Centos：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx配置-1"><span class="nav-number">3.1.2.</span> <span class="nav-text">nginx配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#将nginx的根目录改为/var/www/html/public"><span class="nav-number">3.1.2.1.</span> <span class="nav-text">将nginx的根目录改为/var/www/html/public</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启动nginx"><span class="nav-number">3.1.2.2.</span> <span class="nav-text">启动nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置nginx开机启动"><span class="nav-number">3.1.2.3.</span> <span class="nav-text">设置nginx开机启动</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git设置"><span class="nav-number">3.2.</span> <span class="nav-text">git设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git安装-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">git安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#For_ArchLinus"><span class="nav-number">3.2.1.1.</span> <span class="nav-text">For ArchLinus</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Debian-1"><span class="nav-number">3.2.1.2.</span> <span class="nav-text">For Debian</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For_Centos-1"><span class="nav-number">3.2.1.3.</span> <span class="nav-text">For Centos</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git_hook_设置"><span class="nav-number">3.2.2.</span> <span class="nav-text">git hook 设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本机配置"><span class="nav-number">4.</span> <span class="nav-text">本机配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后话"><span class="nav-number">5.</span> <span class="nav-text">后话</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#expr_命令"><span class="nav-number">1.</span> <span class="nav-text">expr 命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#美元符号+方括号"><span class="nav-number">2.</span> <span class="nav-text">美元符号+方括号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#美元符号+双括号"><span class="nav-number">3.</span> <span class="nav-text">美元符号+双括号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#双括号"><span class="nav-number">4.</span> <span class="nav-text">双括号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#let_命令"><span class="nav-number">5.</span> <span class="nav-text">let 命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bc计算器（大boss）解决浮点运算的常用方案"><span class="nav-number">6.</span> <span class="nav-text">bc计算器（大boss）解决浮点运算的常用方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在命令行使用bc"><span class="nav-number">6.1.</span> <span class="nav-text">在命令行使用bc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在shellscripts中使用bc"><span class="nav-number">6.2.</span> <span class="nav-text">在shellscripts中使用bc</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用法一"><span class="nav-number">6.2.1.</span> <span class="nav-text">用法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用法二"><span class="nav-number">6.2.2.</span> <span class="nav-text">用法二</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#联系我"><span class="nav-number">7.</span> <span class="nav-text">联系我</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
