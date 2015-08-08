@@ -432,7 +432,7 @@ expr命令能">
 <h3 id="用法一">用法一</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">variable=$( echo <span class="string">"options; expression "</span> | bc) ;</span><br><span class="line"></span><br><span class="line"><span class="variable"><span class="keyword">var</span></span>=$(echo <span class="string">"scale=4; 3.44/5;"</span> | bc) ; # ==&gt; <span class="variable"><span class="keyword">var</span></span>=<span class="number">.6880</span></span><br></pre></td></tr></table></figure>
 <h3 id="用法二">用法二</h3><p>使用内联(inline)输入重定向<strong>&lt;&lt;</strong><br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">variable=$(bc &lt;&lt; EOF</span><br><span class="line">          options;</span><br><span class="line">          statements;</span><br><span class="line">          expressions;</span><br><span class="line">          EOF)</span><br><span class="line"></span><br><span class="line">var=$(bc &lt;&lt; EOF</span><br><span class="line">          scale=<span class="number">4</span>;</span><br><span class="line">          var1=<span class="number">20</span>;</span><br><span class="line">          var2=<span class="number">3.1415926</span>;</span><br><span class="line">          a1=(<span class="variable">$var1</span> * <span class="variable">$var2</span>);</span><br><span class="line">          b1 = (<span class="variable">$var1</span> / <span class="variable">$var2</span>);</span><br><span class="line">          a1 + b1;</span><br><span class="line">          EOF)</span><br></pre></td></tr></table></figure></p>
 <p>常见用法就这么多，还有文件重定向等用法也是差不多的。</p>
-<h1 id="联系我">联系我</h1><p><a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x78;&#x79;&#x43;&#x69;&#110;&#117;&#x73;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x78;&#x79;&#x43;&#x69;&#110;&#117;&#x73;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<h1 id="联系我">联系我</h1><p><a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#x78;&#x79;&#67;&#x69;&#x6e;&#117;&#x73;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x78;&#x79;&#67;&#x69;&#x6e;&#117;&#x73;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a></p>
 </span>
       
     </div>
@@ -497,10 +497,6 @@ expr命令能">
 
  </div>
 
-        
-            <!-- 多说热评文章-->
-            <p>热评文章</p>
-            <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
         
 
         
