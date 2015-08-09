@@ -1,8 +1,9 @@
 title: ShellScripts--数学计算
 tags:
   - ShellScripts
-categories:
   - coding
+categories:
+  - Shell
 date: 2015-08-08 11:56:10
 ---
 

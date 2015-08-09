@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="Linux,hexo,架站," />
+  <meta name="keywords" content="Linux,git,hexo," />
 
 
 
@@ -49,7 +49,7 @@
 <meta property="og:site_name" content="Cinus">
 <meta property="og:description" content="在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
 整体">
-<meta property="og:updated_time" content="2015-08-08T06:02:06.853Z">
+<meta property="og:updated_time" content="2015-08-09T09:02:23.232Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Hexo搭建博客">
 <meta name="twitter:description" content="在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps上的部署，vps的域名购买和dns设置这里都不会涉及。现在就记录一下我的搭建的过程，我走了许多弯路，最后选择了一下做法。
@@ -230,8 +230,8 @@
             &nbsp; | &nbsp; In
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/技术/" itemprop="url" rel="index">
-                  <span itemprop="name">技术</span>
+                <a href="/categories/博客/" itemprop="url" rel="index">
+                  <span itemprop="name">博客</span>
                 </a>
               </span>
 
@@ -340,7 +340,7 @@
 <pre><code>$ git remote add Cinus<span class="class">.me</span> ssh:<span class="comment">//root@YourVpsIp:YourSSHPort/root/repos/Cinus.me.git</span>
 $ git push Cinus<span class="class">.me</span> master
 </code></pre><p>此时使用域名或ip访问你的vps应该就能看到你的blog的雏形了。</p>
-<h1 id="后话"><strong>后话</strong></h1><p>我采用的方式是在本地写好博客，使用hexo g生成网站文件，然后把整个项目push到vps上，vps上的git hooks 在运行post-receive这个脚本将public目录下的文件复制到/var/www/html/public下，也就是nginx的根目录。<br>现在还有图片等资源未规划，以上的post-receive脚本可能需要更改。<br>有什么问题或本博客有错误的地方欢迎与我联系<br><a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#120;&#x79;&#67;&#105;&#x6e;&#117;&#x73;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">&#120;&#x79;&#67;&#105;&#x6e;&#117;&#x73;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;</a></p>
+<h1 id="后话"><strong>后话</strong></h1><p>我采用的方式是在本地写好博客，使用hexo g生成网站文件，然后把整个项目push到vps上，vps上的git hooks 在运行post-receive这个脚本将public目录下的文件复制到/var/www/html/public下，也就是nginx的根目录。<br>现在还有图片等资源未规划，以上的post-receive脚本可能需要更改。<br>有什么问题或本博客有错误的地方欢迎与我联系<br><a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#120;&#x79;&#67;&#105;&#110;&#x75;&#115;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#120;&#x79;&#67;&#105;&#110;&#x75;&#115;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 </span>
       
     </div>
@@ -351,9 +351,9 @@ $ git push Cinus<span class="class">.me</span> master
           
             <a href="/tags/Linux/" rel="tag">#Linux</a>
           
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
+            <a href="/tags/git/" rel="tag">#git</a>
           
-            <a href="/tags/架站/" rel="tag">#架站</a>
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
           
         </div>
       
@@ -455,21 +455,21 @@ $ git push Cinus<span class="class">.me</span> master
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>

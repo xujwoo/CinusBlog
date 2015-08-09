@@ -3,9 +3,9 @@ date: 2015-08-03 22:59:25
 tags: 
 - hexo
 - Linux
-- 架站
+- git
 categories:
-- 技术
+- 博客
 
 ---
 
