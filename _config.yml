@@ -86,6 +86,7 @@ since: 2015
 links_title: Links
 # links
 links:
+        MyGithubPage: http://chenxiyu.github.io/
         依云's Blog: http://lilydjwg.is-programmer.com/
         紫凯茗檬: http://wangkai.club/
         Linux Toy: https://linuxtoy.org/
@@ -97,5 +98,5 @@ duoshuo_shortname: cinus
 google_analytics: UA-65939202-1
 #tinysou_key: 7a283dc50ad106c80c17
 swiftype_key: Zu6QuaTAujSrBDxSrgqV
-jiathis: true
+#jiathis: true
 google_site_verification: pRNsBW4T_Lr63DaKgR7HTLKswgClgTax5YfZ5kAVxzY
