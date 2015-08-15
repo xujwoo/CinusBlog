@@ -74,7 +74,14 @@ social:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+- type: git
+  repo: git@github.com:ChenXiyu/ChenXiyu.github.io.git
+  branch: master
+  message: 
+- type: git
+  repo: ssh://root@128.199.130.1:202///root/repos/Blog.git
+  branch: master
+  message:
 
 feed:
         type: atom
