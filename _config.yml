@@ -33,7 +33,7 @@ default_layout: post
 titlecase: true # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
-render_drafts: true
+render_drafts: false
 post_asset_folder: true
 relative_link: false
 future: true
@@ -64,7 +64,7 @@ pagination_dir: page
 ## Plugins: http://hexo.io/plugins/
 sitemap:
         path: sitemap.xml
-theme: next
+theme: jacman
 
 social:
         GitHub: https://github.com/ChenXiyu
@@ -97,7 +97,7 @@ links:
 #duoshuo_shortname: cinus
 google_analytics: UA-65939202-1
 #tinysou_key: 7a283dc50ad106c80c17
-swiftype_key: Zu6QuaTAujSrBDxSrgqV
+#swiftype_key: Zu6QuaTAujSrBDxSrgqV
 #jiathis: true
 google_site_verification: pRNsBW4T_Lr63DaKgR7HTLKswgClgTax5YfZ5kAVxzY
 disqus_shortname: Chenxiyu
