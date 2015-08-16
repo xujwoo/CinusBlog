@@ -4,8 +4,8 @@
 
 # Site
 title: Cinus
-subtitle: CXY's Blog
-description: 记录成长的脚印
+subtitle: 
+description: 
 author: CXY
 language: default
 timezone:
@@ -81,6 +81,10 @@ deploy:
 - type: git
   repo: ssh://root@128.199.130.1:202///root/repos/Blog.git
   branch: master
+  message:
+- type: git
+  repo: git@gitcafe.com:ChenXiyu/Chenxiyu.git
+  branck: master
   message:
 
 feed:

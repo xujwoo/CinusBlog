@@ -19,9 +19,9 @@ git reset 有三个主要的选项：\--soft,\--mixed,\--hard
 
 |选项|HEAD|索引|工作目录|
 |:---------:|:-----------:|:------------:|:-----------:|
-|--soft|T|F|F|
-|--mixed|T|T|F|
-|--hard|T|T|T|
+|\--soft|T|F|F|
+|\--mixed|T|T|F|
+|\--hard|T|T|T|
 git reset 将把原始的HEAD值放到`ORIG_HEAD`中
 ## 常见用法
 * 恢复索引
