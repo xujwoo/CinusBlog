@@ -5,8 +5,8 @@
 # Site
 title: Cinus
 subtitle: 
-description: 
-author: CXY
+description: "Life is complex: it has both real and imaginary parts." 
+author: Cinus
 language: default
 timezone:
 
@@ -64,7 +64,7 @@ pagination_dir: page
 ## Plugins: http://hexo.io/plugins/
 sitemap:
         path: sitemap.xml
-theme: jacman
+theme: yilia
 
 social:
         GitHub: https://github.com/ChenXiyu
@@ -79,7 +79,7 @@ deploy:
   branch: master
   message: 
 - type: git
-  repo: ssh://root@128.199.130.1:202///root/repos/Blog.git
+  repo: ssh://root@128.199.103.248:202///root/repos/Blog.git
   branch: master
   message:
 - type: git
@@ -97,6 +97,7 @@ since: 2015
 links_title: Links
 # links
 links:
+        Divergery: http://divergery.blog.51cto.com/
         MyGithubPage: http://chenxiyu.github.io/
         依云's Blog: http://lilydjwg.is-programmer.com/
         紫凯茗檬: http://wangkai.club/
