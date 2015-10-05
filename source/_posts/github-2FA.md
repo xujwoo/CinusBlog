@@ -2,6 +2,8 @@ title: github两步认证丢失后处理方法
 date: 2015-09-29 13:41:52
 tags:
 - github
+categories:
+- Tech
 ---
 当你无法进行两步认证后,你有如下几种方法来登录github
 # recovery-code

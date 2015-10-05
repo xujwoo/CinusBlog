@@ -2,7 +2,7 @@ title: 'Git:更改你的提交'
 tags:
   - git
 categories:
-  - git
+  - Tech
 date: 2015-08-15 18:15:23
 ---
 

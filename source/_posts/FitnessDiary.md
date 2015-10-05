@@ -1,15 +1,7 @@
 title: FitnessDiary
 date: 2015-08-12 23:11:20
----
-_结构_：
-1. [囚徒日志](#囚徒日志)
-    + [2015年](#2015年)
-2. [动力](#动力)
-    + [Frank Medrano](#Frank_Medrano)
-    + [AI Kavadlo](#AI_Kavadlo)
-    + [Dominik SKY](#Dominik_SKY)
-    + [Martial Arts Training](#Martial_Arts_Training)
-3. [干货](#干货)
+categories:
+- FitnessDiary
 ---
 # 囚徒日志
 ## 2015年

@@ -3,7 +3,7 @@ tags:
   - ShellScripts
   - coding
 categories:
-  - Shell
+  - Tech
 date: 2015-08-08 11:56:10
 ---
 
