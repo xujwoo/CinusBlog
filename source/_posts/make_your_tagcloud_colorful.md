@@ -12,6 +12,7 @@ categories:
 ```
 themes/jacman/layout/_widget/tagcloud.ejs
 ```
+<!--more-->
 嗯，看上去是个js文件(原谅我真的没搞过前端),打开它：
 {% codeblock %}
 <% if (site.tags.length){ %>

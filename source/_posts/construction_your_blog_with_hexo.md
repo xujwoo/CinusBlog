@@ -14,6 +14,7 @@ categories:
 # **整体思路**
 在本机使用hexo生成网站，使用git hook 推送到vps上，直接使用nginx来部署网站。
 这个做法避免了在vps上安装nodejs和hexo(vps 性能堪忧)，至于缺点，暂时没找到...
+<!--more-->
 
 # **本机配置（linux）**
 

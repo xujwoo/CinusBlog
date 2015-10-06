@@ -64,7 +64,7 @@ pagination_dir: page
 ## Plugins: http://hexo.io/plugins/
 sitemap:
         path: sitemap.xml
-theme: next
+theme: yilia
 
 social:
         GitHub: https://github.com/ChenXiyu
@@ -79,10 +79,6 @@ deploy:
   repo: git@github.com:ChenXiyu/ChenXiyu.github.io.git
   branch: master
   message: 
-- type: git
-  repo: ssh://root@128.199.103.248:202///root/repos/Blog.git
-  branch: master
-  message:
 - type: git
   repo: git@gitcafe.com:ChenXiyu/Chenxiyu.git
   branck: master
@@ -108,9 +104,9 @@ links:
         Tyrant's Arch Linux: http://arch.acgtyrant.com/
 
 #duoshuo_shortname: cinus
-#google_analytics: UA-65939202-1
+google_analytics: UA-65939202-1
 #tinysou_key: 7a283dc50ad106c80c17
 #swiftype_key: Zu6QuaTAujSrBDxSrgqV
 #jiathis: true
-#google_site_verification: pRNsBW4T_Lr63DaKgR7HTLKswgClgTax5YfZ5kAVxzY
+google_site_verification: pRNsBW4T_Lr63DaKgR7HTLKswgClgTax5YfZ5kAVxzY
 disqus_shortname: Chenxiyu

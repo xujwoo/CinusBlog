@@ -23,6 +23,7 @@ git reset 有三个主要的选项：\--soft,\--mixed,\--hard
 |\--mixed|T|T|F|
 |\--hard|T|T|T|
 git reset 将把原始的HEAD值放到`ORIG_HEAD`中
+<!--more-->
 ## 常见用法
 * 恢复索引
     根据git reset 默认选项为--mixed可以想到一个应用场景：你将某个文件修改了，并且使用git add将其加入到索中了，但是现在你想将索引恢复到原来的状态，这时你就可以使用`git reset HEAD [FILENAME]`来使索引恢复到原来的样子了。

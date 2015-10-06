@@ -22,6 +22,7 @@ categories:
 {% endcodeblock %}
 依次类推,最多6个#代表6级标题,其效果如下图所示：
 {% asset_img 1.png 使用#为文章设置多级标题 %}
+<!--more-->
 ## 使用**=**和**-**为文章设置大小标题(类[Setext](http://docutils.sourceforge.net/mirror/setext.html))
 利用**=**（最高阶标题）和**-**（第二阶标题）来标识标题：
 {% codeblock Head_example2.md %}
