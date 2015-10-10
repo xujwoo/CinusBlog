@@ -6,6 +6,7 @@ tags:
 - git
 categories:
 - Tech
+
 ---
 在网上参考了一些使用hexo来搭建博客的文章，大部分是托管在github page上的，但是我本身有一台vps，所以我打算将blog搭建在自己的vps上，其它人说搭建在vps上有什么什么好处我也没想.  
 我想的是：既然有为什么不用呢？而且我将专注于hexo在本机的配置和在vps(github.io)上的部署，vps的域名购买和dns设置这里都不会涉及。  
