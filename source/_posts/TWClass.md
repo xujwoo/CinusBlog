@@ -11,6 +11,7 @@ categories:
 # 第一课Linux基础
 讲师:颜王
 推荐一个网站[<鸟哥的linux私房菜>](http://vbird.dic.ksu.edu.tw/linux_basic/linux_basic.php),也可以买这本书.
+再推荐一个网站[linux command line](http://billie66.github.io/TLCL/book/)
 ## What is Linux
 参考这个:[linux是什么](http://vbird.dic.ksu.edu.tw/linux_basic/0110whatislinux.php),需要说明的几点是:
 * linux只是一个操作系统内核,与其他[GNU](http://www.gnu.org/)组织开发的工具组合在一起组成GNU/Linux操作系统.
