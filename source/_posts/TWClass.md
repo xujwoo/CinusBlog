@@ -1,4 +1,4 @@
-title: 思沃大讲坛笔记
+title: ThoughtWorks Lecture Room
 date: 2015-10-17 13:18:24
 tags:
 - linux
@@ -8,17 +8,17 @@ categories:
 - Tech
 
 ---
-1. [第一课:linux基础](#linux基础)
-
-# Linux基础
+# 第一课Linux基础
+讲师:颜王
 推荐一个网站[<鸟哥的linux私房菜>](http://vbird.dic.ksu.edu.tw/linux_basic/linux_basic.php),也可以买这本书.
 ## What is Linux
 参考这个:[linux是什么](http://vbird.dic.ksu.edu.tw/linux_basic/0110whatislinux.php),需要说明的几点是:
-* linux只是一个操作系统内核,与其他[GNU]()组织开发的工具组合在一起组成GNU/Linux操作系统.
+* linux只是一个操作系统内核,与其他[GNU](http://www.gnu.org/)组织开发的工具组合在一起组成GNU/Linux操作系统.
 * 自从使用git来管理linux内核的代码以后,不再使用奇偶数来标识内核的稳定版和开发板.
 * linux 是宏内核,linux大部分设备驱动是写在内核里面的,linux提供了以内核模块的方式插入驱动程序.
+
 <!--more-->
-# Basic Shell command
+## Basic Shell command
 1. pwd: print working directory, 打印出当前工作目录.
 2. ls : list 列出内容 
  + -a --all 包含隐藏文件/目录(.开头)
@@ -188,3 +188,61 @@ vim 需要讲的东西太多,这么短的篇幅来讲vim感觉很无力.也许�
 + 多用
 
 有什么遗漏再来补充吧.
+
+# 第二课GIT
+讲师:赵梦茹,邢砚敏
+## git简介
+git,一种分布式版本控制系统,linus对该名字的定义是'The stupid content tracker',但是我更加喜欢这个解释:'Global Information Tracker'. 关于git项目的发起也有一段故事在里面,感兴趣的同学自己去google
+## 分布式与集中式比较
+* 集中式
+    :集中式版本控制系统有一个主服务器,所有历史版本都存放在主服务器上,本机不存放历史提交,所以在本机工作时对网络依赖严重,每次commit或者请求最新/历史版本都得访问服务器.如果主服务器宕机或者与主服务器的网络不通,那么开发工作将无法继续下去.如果主服务器数据丢失那么历史版本将也就此消失.
+* 分布式
+    :分布式版本控制系统可以不存在主服务器,每一个节点都是一个完整的版本库,包含所有的历史版本,可以在本地版本库内做任何操作,分布式也可以有类似于主服务器的Hub,像github和gitcafe,也可以自己搭建私有的Hub.采用分布式版本控制,即使Hub宕机,你依然可以在本地进行开发提交更新,即使Hub的数据丢失,也可以通过某一个节点的本地仓库来恢复数据.
+
+## git 基本使用
+* **git init [Dir]** : 在Dir目录下初始化一个仓库(会在[Dir]中生成一个.git目录,用来存放版本控制数据)
+* **git config** : 用来配置版本库的命令,可以直接输入git config 来查看简单的帮助
+    + `git config [--global|--system] user.email <YourEmail>`
+    + `git config [--global|--system] user.name <YourName>`
+    + `git config [--global|--system] core.editor <nano|vim|emacs>`
+    + --global,--system的区别:主要的区别是作用范围,--global是对一个用户来说的全局,配置加上该参数将把配置写入用户的配置文件:`~/.gitconfig`中.而--system是针对整个系统的全局设置,加上该参数以后将会把配置写入系统的配置文件:`/etc/gitconfig`中,而两个都不加的话则是针对一个repo的,该配置只在该repo中有效,配置将写入:`<Path/to/Repo>/.git/gitconfig`中.其实手动将配置写入以上文件的效果是一样的.关于linux中配置文件的优先级是:个人配置>系统配置,小范围配置>大范围配置,这是怎么来的呢?首先很多人以为系统会做一个判断,如果小范围配置文件存在,那么只执行小范围的配置文件,其实不是这样的,实际是从大范围的配置文件开始执行,执行完毕后执行小范围的配置文件,比如先执行系统配置,再执行个人配置.这样如果小范围(个人)配置与系统配置的值有差异,那么后执行的配置的值将会覆盖先执行的配置的值.比如系统配置执行完毕后email的值是该系统管理员的email,但是我现在是以cxy的身份登录,进入shell后执行了我自己的配置文件,我的配置文件里面有一条就是将email设置为我自己email,那么我的配置文件执行完毕以后,系统管理员的email的配置也将被我覆盖.
+* **git add** 将未追踪/修改/删除的文件状态加入索引区
+    + git有三个区域:工作目录,暂存区,git仓库.工作目录是你当前工作的地方,你可以检出任何一个历史版本到你的工作目录进行开发.暂存区是你执行git add 以后,文件'所在'的地方/状态,下次提交将把暂存区的内容提交到版本库中.git仓库是该项目所有历史版本存放的地方.
+    + 文件在三个'区域'/状态的转换:
+        - 将工作目录文件添加到暂存区域:git add [filename] 
+        - 将暂存区域/git仓库的文件恢复到工作目录:git checkout [提交指纹] [filename]
+        - 将暂存区域的文件提交到git仓库:git commit 
+        - 使用git仓库中的某个提交来替代暂存区文件:git reset 
+* **git status** 查看当前版本库文件的状态/整个版本库的状态
+* **git checkout** 1.用于检出文件. 2.用于检出分支
+    + git checkout [-b] [branch] 检出到branch分支,加上-b参数:如果不存在branch分支,将新建一个分支命名为branch并检出之.
+    + git checkout -- [file] 从暂存区检出文件(丢弃工作区的改动)
+    + git checkout [提交指纹] [file] 中某个提交中检出文件到工作目录中(丢弃工作目录的改动)
+* **git branch** 查看/新建分支
+    + git branch 查看有那些分支.当前分支用`*`标识.
+    + git branch [name] 新建一个分支,命名为name
+    + git show-branch 将包含更多提交与分支的关系信息.
+* **git merge** 合并分支
+    + git merge [branch] 将branch和当前分支进行合并,可能需要手动解决冲突.有3种合并策略.
+* **git rebase** 用来改变一串提交的基础.
+    + git rebase [branch] 将当前分支与branch的共同父节点变到branch的头上(将branch上从共同父节点开始的提交的补丁一个一个打到当前分支的每一个提交上),可能需要手动解决冲突.在多人协作开发时,从远端仓库上pull别人的提交时用的很多.
+* **git pull** 从远端仓库拉取最新提交,并且在本地仓库中进行合并/变基
+    + `git pull [--rebase] origin master`从origin远端仓库中拉取master分支上的新提交,并且与本地仓库中master分支进行合并/变基(取决与是否家--rebase).
+* **git push** 推送本地提交到远端仓库
+    + `git push origin master` push本地的master分支上的新提交到origin上去.注意:本地仓库的需要推送的分支必须包含origin上所有的历史,不然推送将失败,你需要先pull下你没有的历史提交,合并/变基以后在进行push.
+* **git commit** 体检暂存区域的内容到git仓库中
+* **git diff** 比较文件差异
+    + 工作目录中的文件和暂存区文件的差异比较:git diff 
+    + 暂存区文件与git仓库中最新提交中文件差异比较:git diff --cached
+    + 比较任意两个文件:git diff [版本指纹1]:[filename1] [版本指纹2]:[filename2]
+* **git clone** 拷贝一个'远程'版本库
+    + git clone [URL]
+* **git log** 查看历史提交
+    + `git log --oneline --graph` --oneline:一个提交显示为一行, --graph :图形方式显示出分支关系等
+* **git reset** 重置工作目录/暂存区,详情请参考我的另一篇[博客](/Git-Change_your_commit/)
+* **git rm** 删除工作目录下的文件/目录
+    + 实际相当于命令`rm`和`git add`的组合
+    + 这个remove并不是删除版本库里面的东西,git仓库里面的东西理论上是不能被改变的(ReadOnly).这个命令只是删除工作目录下的文件/目录.
+
+## 使用git进行协作
+当你需要推送你的更新到远程的版本库的时候你必须保证,远程版本库的历史提交是你本地历史提交的子集,也就是说远程版本库有的历史,你本地必须全部有,不然你需要先把远程的提交拉下来然后rebase/merge后再进行push.就像课上老师说的实例,小G同学推送了自己的更新到远程版本库中,而现在ellmi同学也要把自己的更新push到远程版本库中,但是ta执行了`git push `以后,git告诉ta你有一些提交需要先pull下来后才能push,于是ellmi同学就把小G的推送pull下来,在本地做了一个merge,现在远程版本库里面有的提交在ellmi的本地仓库中也有了,那么ellmi可以做一次push了.于是ellmi将本地的修改push到远程版本库中了.那么如果现在小G又做了一次修改并提交了,小G想把新的提交push到远端服务器呢?那么ta也得先把ellmi推送上去的提交先pull下来,做一次rebase/merge,然后在push上去.

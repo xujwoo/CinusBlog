@@ -64,12 +64,10 @@ pagination_dir: page
 ## Plugins: http://hexo.io/plugins/
 sitemap:
         path: sitemap.xml
-theme: yilia
+theme: next
 
 social:
         GitHub: https://github.com/ChenXiyu
-        Twitter: https://twitter.com/CinusXy
-        Facebook: https://www.facebook.com/xiyu.chen.31
         ZhiHu: http://www.zhihu.com/people/chen-xi-yu-43
         Gmail: mailto:xyCinus@gmail.com
 # Deployment
