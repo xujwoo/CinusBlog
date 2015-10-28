@@ -247,3 +247,7 @@ git,一种分布式版本控制系统,linus对该名字的定义是'The stupid c
 
 ## 使用git进行协作
 当你需要推送你的更新到远程的版本库的时候你必须保证,远程版本库的历史提交是你本地历史提交的子集,也就是说远程版本库有的历史,你本地必须全部有,不然你需要先把远程的提交拉下来然后rebase/merge后再进行push.就像课上老师说的实例,小G同学推送了自己的更新到远程版本库中,而现在ellmi同学也要把自己的更新push到远程版本库中,但是ta执行了`git push `以后,git告诉ta你有一些提交需要先pull下来后才能push,于是ellmi同学就把小G的推送pull下来,在本地做了一个merge,现在远程版本库里面有的提交在ellmi的本地仓库中也有了,那么ellmi可以做一次push了.于是ellmi将本地的修改push到远程版本库中了.那么如果现在小G又做了一次修改并提交了,小G想把新的提交push到远端服务器呢?那么ta也得先把ellmi推送上去的提交先pull下来,做一次rebase/merge,然后在push上去.
+## 推荐书籍/网站
+[Pro git 2](http://7xl4y6.com1.z0.glb.clouddn.com/Pro%20Git中文版.pdf)
+[猴子都能懂的GIT入门](http://backlogtool.com/git-guide/cn/)
+[Git 版本控制管理](http://www.amazon.cn/gp/product/B00U42VM7Y?keywords=git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%AE%A1%E7%90%86)
