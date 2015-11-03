@@ -8,18 +8,18 @@ categories:
 - Tech
 
 ---
-# 第一课Linux基础
+## 第一课Linux基础
 讲师:颜王
 推荐一个网站[<鸟哥的linux私房菜>](http://vbird.dic.ksu.edu.tw/linux_basic/linux_basic.php),也可以买这本书.
 再推荐一个网站[linux command line](http://billie66.github.io/TLCL/book/)
-## What is Linux
+### What is Linux
 参考这个:[linux是什么](http://vbird.dic.ksu.edu.tw/linux_basic/0110whatislinux.php),需要说明的几点是:
 * linux只是一个操作系统内核,与其他[GNU](http://www.gnu.org/)组织开发的工具组合在一起组成GNU/Linux操作系统.
 * 自从使用git来管理linux内核的代码以后,不再使用奇偶数来标识内核的稳定版和开发板.
 * linux 是宏内核,linux大部分设备驱动是写在内核里面的,linux提供了以内核模块的方式插入驱动程序.
 
 <!--more-->
-## Basic Shell command
+### Basic Shell command
 1. pwd: print working directory, 打印出当前工作目录.
 2. ls : list 列出内容 
  + -a --all 包含隐藏文件/目录(.开头)
@@ -66,7 +66,7 @@ categories:
 18. type 查看命令类型:shell内建命令?命令别名?
 19. **man** 查看命令详细文档
 
-## 管道及重定向
+### 管道及重定向
 文件描述符中0,1,2已经被定义,分别为:标准输入,标准输出,标准错误输出.
 1. (未命名)管道`|`,用于把上一个命令的输出作为下一个命令的输入.
 例如:`cat /etc/passwd | awk -F':' '{print $1" "$2}'`,这个例子中把cat命令的输出作为后一条命令awk的输入.最后是打印了/etc/passwd文件中第一个和第二个字段的内容.
@@ -82,7 +82,7 @@ categories:
 7. `<<` here-document,上面有提及.
 记忆方法: 两个括号的是追加模式,加上2(2是标准错误输出的文件描述符)的是标准错误输出的重定向.here-document 可以先不了解.
 
-## network manager:
+### network manager:
 1. ping : 向目标主机发送icmp包.测试网络状况.参数可以是ip地址,也可以是域名
 例如:`ping www.baidu.com`
 2. telnet: 一个远古时期用来访问远程机器的工具.不够安全.参数是ip地址加端口号.
@@ -99,7 +99,7 @@ categories:
 7. netstat:查看网络状态工具.现在使用`ss`更多.
 8. lsof:列出打开的文件.可以用来看套接字文件是否打开.
 
-## 文本处理
+### 文本处理
 1. grep :用于查找匹配正则表达式的文件内容.
  + -i --ignore: 忽略大小写的区别.
  + -n :打印出行号
@@ -135,7 +135,7 @@ categories:
 ```
 例如:`sed 's/root/cxy/g' /etc/passwd` 将/etc/passwd文件中的root替换为cxy,注意:这里不是改变文件内容,只是将处理后的文本内容输出在标准输出上,如果想直接修改文本需要加上参数-i,此时得注意你有写该文件的权限.
 
-## 系统管理
+### 系统管理
 1. sudo: 临时切换用户(组)来执行命令.有些同学的账户不能使用sudo命令,因为没有被授权.最简单的一个方法是:
 执行`visudo`找到`root    ALL=(ALL:ALL) ALL`在下一行加上`{your UserName}     ALL=(ALL:ALL) ALL`,保存退出.如果输入有错误那么将会报错,如果成功退出,表示修改成功
 用法:`sudo command`接下来你需要输入当前用户名的密码,成功后将使用root用户来运行command,在未来5分钟以内执行sudo你将不需要输入密码.该时间可以在配置文件中修改.
@@ -153,7 +153,7 @@ categories:
 6. yum: 红帽系列包管理器
 7. DNF: 红帽公司打算用来替换yum的包管理器.
 
-## Basic vim usage
+### Basic vim usage
 vim 需要讲的东西太多,这么短的篇幅来讲vim感觉很无力.也许你看着这些操作没有什么规律,但是如果你继续往深入学习下去你会发现,一切都是那么合情合理,设计优美
 + 光标移动:`hjkl`
 + 光标跳到文件头:`gg`
@@ -183,24 +183,24 @@ vim 需要讲的东西太多,这么短的篇幅来讲vim感觉很无力.也许�
 + `:q!`强制退出,不保存
 + `:h [keyword]`调出帮助文档
 
-## 建议
+### 建议
 + vim 入门:[鸟哥](http://vbird.dic.ksu.edu.tw/linux_basic/0310vi.php)
 + 不会的命令问`man command`
 + 多用
 
 有什么遗漏再来补充吧.
 
-# 第二课GIT
+## 第二课GIT
 讲师:赵梦茹,邢砚敏
-## git简介
+### git简介
 git,一种分布式版本控制系统,linus对该名字的定义是'The stupid content tracker',但是我更加喜欢这个解释:'Global Information Tracker'. 关于git项目的发起也有一段故事在里面,感兴趣的同学自己去google
-## 分布式与集中式比较
+### 分布式与集中式比较
 * 集中式
     :集中式版本控制系统有一个主服务器,所有历史版本都存放在主服务器上,本机不存放历史提交,所以在本机工作时对网络依赖严重,每次commit或者请求最新/历史版本都得访问服务器.如果主服务器宕机或者与主服务器的网络不通,那么开发工作将无法继续下去.如果主服务器数据丢失那么历史版本将也就此消失.
 * 分布式
     :分布式版本控制系统可以不存在主服务器,每一个节点都是一个完整的版本库,包含所有的历史版本,可以在本地版本库内做任何操作,分布式也可以有类似于主服务器的Hub,像github和gitcafe,也可以自己搭建私有的Hub.采用分布式版本控制,即使Hub宕机,你依然可以在本地进行开发提交更新,即使Hub的数据丢失,也可以通过某一个节点的本地仓库来恢复数据.
 
-## git 基本使用
+### git 基本使用
 * **git init [Dir]** : 在Dir目录下初始化一个仓库(会在[Dir]中生成一个.git目录,用来存放版本控制数据)
 * **git config** : 用来配置版本库的命令,可以直接输入git config 来查看简单的帮助
     + `git config [--global|--system] user.email <YourEmail>`
@@ -245,9 +245,18 @@ git,一种分布式版本控制系统,linus对该名字的定义是'The stupid c
     + 实际相当于命令`rm`和`git add`的组合
     + 这个remove并不是删除版本库里面的东西,git仓库里面的东西理论上是不能被改变的(ReadOnly).这个命令只是删除工作目录下的文件/目录.
 
-## 使用git进行协作
+### 使用git进行协作
 当你需要推送你的更新到远程的版本库的时候你必须保证,远程版本库的历史提交是你本地历史提交的子集,也就是说远程版本库有的历史,你本地必须全部有,不然你需要先把远程的提交拉下来然后rebase/merge后再进行push.就像课上老师说的实例,小G同学推送了自己的更新到远程版本库中,而现在ellmi同学也要把自己的更新push到远程版本库中,但是ta执行了`git push `以后,git告诉ta你有一些提交需要先pull下来后才能push,于是ellmi同学就把小G的推送pull下来,在本地做了一个merge,现在远程版本库里面有的提交在ellmi的本地仓库中也有了,那么ellmi可以做一次push了.于是ellmi将本地的修改push到远程版本库中了.那么如果现在小G又做了一次修改并提交了,小G想把新的提交push到远端服务器呢?那么ta也得先把ellmi推送上去的提交先pull下来,做一次rebase/merge,然后在push上去.
-## 推荐书籍/网站
+### 推荐书籍/网站
 [Pro git 2](http://7xl4y6.com1.z0.glb.clouddn.com/Pro%20Git中文版.pdf)
 [猴子都能懂的GIT入门](http://backlogtool.com/git-guide/cn/)
 [Git 版本控制管理](http://www.amazon.cn/gp/product/B00U42VM7Y?keywords=git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%AE%A1%E7%90%86)
+## 第三课Web
+讲师:HaizhouChen
+前端后端区别
+浏览器架构
+xhtml html
+html 基本结构
+www.3c.org/TR/html5
+W3 school
+

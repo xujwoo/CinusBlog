@@ -14,7 +14,7 @@ categories:
 分别是电池的最大容量和现在的电池电量。看到这里，大家应该有想法了吧。下面我就直接贴上我的代码吧。
 {% codeblock bn.sh %}
 
-#!/bin/bash
+##!/bin/bash
 
 declare -i full
 declare -i now
