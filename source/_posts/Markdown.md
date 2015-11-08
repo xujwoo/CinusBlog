@@ -6,12 +6,13 @@ categories:
 - Tech
 
 ---
-整理一下Markdown的语法，用这玩意儿写blog有点意思。
+整理一下Markdown的语法.
 ## **[Markdown介绍](https://zh.wikipedia.org/wiki/Markdown)**
 **Markdown**是一种轻量级标记语言,它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。
 它避免了我直接写html文档。这是我很喜欢的，而且hexo的markdown解释其生成的html其显示效果还是很不错的。
 [github](https://github.com)的README支持markdown还有很多写作网站也支持markdown，例如[简书](http://www.jianshu.com/)等。
 现在markdown用处非常多，光用来写博客就值得我学习它了。
+<!--more-->
 ## **标题**
 ### 使用**\#**为文章设置多级标题(类[Atx](http://www.aaronsw.com/2002/atx/))
 {% codeblock Head_example1.md %}
@@ -22,7 +23,6 @@ categories:
 {% endcodeblock %}
 依次类推,最多6个#代表6级标题,其效果如下图所示：
 {% asset_img 1.png 使用#为文章设置多级标题 %}
-<!--more-->
 ### 使用**=**和**-**为文章设置大小标题(类[Setext](http://docutils.sourceforge.net/mirror/setext.html))
 利用**=**（最高阶标题）和**-**（第二阶标题）来标识标题：
 {% codeblock Head_example2.md %}

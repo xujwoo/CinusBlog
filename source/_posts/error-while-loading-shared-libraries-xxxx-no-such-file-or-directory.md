@@ -5,6 +5,7 @@ tags:
 - linux
 categories:
 - Tech
+
 ---
 编译完jpeglib和jp2a 运行jp2a 提示`error:while loading shared libraries:jpeglib.so.9 no such file or directory`,jpeglib是刚刚编译好的。
 ``` 
@@ -13,12 +14,12 @@ $locate jpeglib.so.9
 ```
 能找到库文件在/usr/local/lib目录下
 摘录解决办法如下，留作学习用：
+<!--more-->
 一般我们在Linux下执行某些外部程序的时候可能会提示找不到共享库的错误, 比如:`tmux: error while loading shared libraries: libevent-1.4.so.2: cannot open shared object file: No such file or directory`原因一般有两个:
 * 操作系统里确实没有包含该共享库(lib*.so.*文件)或者共享库版本不对, 遇到这种情况那就去网上下载并安装上即可.
 * 已经安装了该共享库, 但执行需要调用该共享库的程序的时候, 程序按照默认共享库路径找不到该共享库文件.所以安装共享库后要注意共享库路径设置问题
 
 解决办法如下:
-<!--more-->
 ## 情景1
 如果共享库文件安装到了/lib或/usr/lib目录下, 那么需执行一下ldconfig命令  
 ldconfig命令的用途, 主要是在默认搜寻目录(/lib和/usr/lib)以及动态库配置文件/etc/ld.so.conf内所列的目录下, 搜索出可共享的动态链接库(格式如lib*.so*), 进而创建出动态装入程序(ld.so)所需的连接和缓存文件. 缓存文件默认为/etc/ld.so.cache, 此文件保存已排好序的动态链接库名字列表.

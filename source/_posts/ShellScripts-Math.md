@@ -1,19 +1,19 @@
 title: ShellScripts--数学计算
-tags:
-  - ShellScripts
-  - coding
-categories:
-  - Tech
 date: 2015-08-08 11:56:10
----
+tags:
+- ShellScripts
+- coding
+categories:
+- Tech
 
+---
 在shell Script中，有好几种进行数学运算的方法，虽然有几个效果差不多，在编写程序的时候使用一种方法就够了，但是我们可能还需要学习别人的程序啊，在阅读别人的程序的时候不能不认识这些东西吧。所以，留个笔记。
+<!--more-->
 ## expr 命令 ##
 expr 允许在命令行上处理数学表达式，但是略显拙劣。
 ```
     $ expr 1 + 5    #注意在表达式中要有空格，如果写成1+5那么结果就不是我们想要的了。
 ```
-<!--more-->
 expr命令能够识别一些不同的数学和字符串操作符：
 
 |操作符|描述|

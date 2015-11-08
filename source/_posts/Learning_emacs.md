@@ -5,6 +5,5 @@ tags:
 categories:
 - Tech
 ---
-## 基本操作思维导图
 自己做的一张思维导图，但是现在又转到vim下去了...作为程序员还是要学习emacs的，先留个脚印吧。
 {% asset_img emacs.png %}

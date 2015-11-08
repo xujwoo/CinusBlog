@@ -6,6 +6,7 @@ tags:
 - note
 categories:
 - Tech
+toc: true
 
 ---
 ## 第一课Linux基础
@@ -259,4 +260,7 @@ xhtml html
 html 基本结构
 www.3c.org/TR/html5
 W3 school
-
+## 响应式
+media
+meta
+clear: both

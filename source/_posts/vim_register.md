@@ -1,9 +1,10 @@
-title: 怎样使用vim的寄存器
+title: vim的寄存器
 date: 2015-10-07 16:39:54
 tags:
 - vim
 categories:
 - Tech
+description: vim寄存器类型及使用笔记
 
 ---
 |类别|符号|描述|
