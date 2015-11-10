@@ -5,6 +5,7 @@ tags:
 - note
 categories:
 - Tech
+- «Practical Vim»
 
 ---
 ## 1. 跳转到当前行的某个字符上

@@ -5,6 +5,7 @@ tags:
 - note
 categories:
 - Tech
+- «Practical Vim»
 
 ---
 vim使用小技巧,鉴于大家都没有时间看长博文,我把它分成短文.
