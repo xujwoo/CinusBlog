@@ -264,3 +264,8 @@ W3 school
 media
 meta
 clear: both
+## 5w1h，这样学习一门技术/语言
+语法，类库，测试框架,构建工具。
+BDD,cucumber
+## BDD
+

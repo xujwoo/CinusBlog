@@ -65,8 +65,9 @@ pagination_dir: page
 sitemap:
         path: sitemap.xml
 #theme: maupassant
-#theme: jacman
-theme: next
+theme: jacman
+#theme: next
+#theme: yilia
 
 social:
         GitHub: https://github.com/ChenXiyu

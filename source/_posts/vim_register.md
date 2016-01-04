@@ -4,7 +4,6 @@ tags:
 - vim
 categories:
 - Tech
-description: vim寄存器类型及使用笔记
 
 ---
 |类别|符号|描述|
