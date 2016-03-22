@@ -6,7 +6,7 @@
 title: CoreDump
 subtitle: 
 description: "Life is complex: it has both real and imaginary parts." 
-author: CLAY
+author: CXY
 language: default
 timezone:
 
@@ -41,7 +41,7 @@ highlight:
   enable: true
   line_number: true
   auto_detect: true
-  tab_replace: 
+  tab_replace: true
 
 # Category & Tag
 default_category: uncategorized
@@ -65,9 +65,12 @@ pagination_dir: page
 sitemap:
         path: sitemap.xml
 #theme: maupassant
-theme: jacman
+#theme: jacman
 #theme: next
 #theme: yilia
+theme: bootstrap-blog
+#theme: very-simple
+#theme: apollo
 
 social:
         GitHub: https://github.com/ChenXiyu
