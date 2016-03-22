@@ -7,6 +7,11 @@ categories:
 date: 2016-01-04 11:18:29
 
 ---
+## Zsh
+宇宙神器:[Z Shell](http://www.zsh.org)
+配合[Oh-My-Zsh](http://ohmyz.sh)食用风味更佳呦
+接下来就是介绍几款插件，来提供我们的工作效率啦。
+ 
 ## Zsh-syntax-highlighting
 推荐一款zsh的插件：[zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting),安装该插件后，在zsh里面输入正确的命令将有绿色高亮该命令，如果命令输入错误，那么该命令将被高亮为红色，也算是能提高我们输入命令的效率把，不用等到输入了回车才发现命令输入不正确。
 <!--more-->
