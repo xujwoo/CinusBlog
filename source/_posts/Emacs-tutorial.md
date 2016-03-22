@@ -10,6 +10,7 @@ categories:
 以前看过emacs的tutorial，没有做笔记，只是做了一张思维导图，后面我会貼出来，
 今天再次看一次tutorial，把基础操作记录一下，而且下决心，所有文本编辑任务使用
 emacs完成，用来练习emacs。先说一下tutorial的打开方法把：
+<!--more-->
 ```
 emacs -nw -Q  #在terminal里面进入emacs
 ```
