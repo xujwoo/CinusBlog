@@ -252,20 +252,3 @@ git,一种分布式版本控制系统,linus对该名字的定义是'The stupid c
 [Pro git 2](http://7xl4y6.com1.z0.glb.clouddn.com/Pro%20Git中文版.pdf)
 [猴子都能懂的GIT入门](http://backlogtool.com/git-guide/cn/)
 [Git 版本控制管理](http://www.amazon.cn/gp/product/B00U42VM7Y?keywords=git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%AE%A1%E7%90%86)
-## 第三课Web
-讲师:HaizhouChen
-前端后端区别
-浏览器架构
-xhtml html
-html 基本结构
-www.3c.org/TR/html5
-W3 school
-## 响应式
-media
-meta
-clear: both
-## 5w1h，这样学习一门技术/语言
-语法，类库，测试框架,构建工具。
-BDD,cucumber
-## BDD
-

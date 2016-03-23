@@ -137,7 +137,6 @@ file:~/xx.or::MyTarget	   跳到MyTarget目标
 ### 多状态工作流
 org-mode允许自定义状态，默认的todo list 只有todo 和 done ，你可以自定义这些状态，而使用方法和todolist一毛一样，自己去看org-mode文档0-0
 
-### 
 ### 标签
 可以给Title加标签，使用`C-c C-q`来给标题加标签，子标题继承父标题的标签
 使用`C-c /` 来查看不同树结构
