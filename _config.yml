@@ -4,15 +4,15 @@
 
 # Site
 title: CXY's Blog
-subtitle: "World is complex: it has both real and imaginary parts. And this is my world"
-description: "Life is complex: it has both real and imaginary parts." 
+subtitle: #"World is complex: it has both real and imaginary parts. And this is my world"
+description: #"Life is complex: it has both real and imaginary parts." 
 author: CXY
 language: default
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://Cinus.me
+url: http://xychen.site
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -66,9 +66,9 @@ sitemap:
         path: sitemap.xml
 #theme: maupassant
 #theme: jacman
-#theme: next
+theme: next
 #theme: yilia
-theme: bootstrap-blog
+#theme: bootstrap-blog
 #theme: very-simple
 #theme: apollo
 
@@ -95,16 +95,17 @@ feed:
 
 since: 2015
 # title
-links_title: Links
+# links_title: Links
 # links
 links:
-        依云's Blog: http://lilydjwg.is-programmer.com/
-        紫凯茗檬: http://wangkai.club/
-        Linux Toy: https://linuxtoy.org/
-        Cool Shell: http://coolshell.cn/
-        Vimer: http://www.vimer.cn/
-        Divergery: http://divergery.blog.51cto.com/
-        Nancy's mi: http://nancymi.me/
+    #        依云's Blog: http://lilydjwg.is-programmer.com/
+    #    紫凯茗檬: http://wangkai.club/
+    #    Linux Toy: https://linuxtoy.org/
+    #    Cool Shell: http://coolshell.cn/
+    #    Vimer: http://www.vimer.cn/
+    #    Divergery: http://divergery.blog.51cto.com/
+    #    Nancy's mi: http://nancymi.me/
+    #    Green9: http://green9.xyz
 
 #duoshuo_shortname: cinus
 google_analytics: UA-65939202-1
