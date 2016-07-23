@@ -66,7 +66,7 @@ sitemap:
         path: sitemap.xml
 #theme: maupassant
 #theme: jacman
-theme: next
+theme: hexo-theme-next
 #theme: yilia
 #theme: bootstrap-blog
 #theme: very-simple
