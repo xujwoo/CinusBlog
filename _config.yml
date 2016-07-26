@@ -83,10 +83,6 @@ deploy:
   repo: git@github.com:ChenXiyu/ChenXiyu.github.io.git
   branch: master
   message: 
-- type: git
-  repo: git@gitcafe.com:ChenXiyu/Chenxiyu.git
-  branck: master
-  message:
 
 feed:
         type: atom
