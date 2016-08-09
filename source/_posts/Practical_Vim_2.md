@@ -1,4 +1,4 @@
-title: Some Tips for vim(2)
+title: «Practical Vim» 2
 date: 2015-10-11 00:05:03
 tags:
 - vim

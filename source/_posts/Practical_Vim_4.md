@@ -1,4 +1,4 @@
-title: Some Tips for Vim(4)
+title: «Practical Vim» 4
 tags:
   - vim
 categories:

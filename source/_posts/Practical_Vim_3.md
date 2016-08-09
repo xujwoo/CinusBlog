@@ -1,4 +1,4 @@
-title: SomeTipsForVim3
+title: «Practical Vim» 3
 tags:
   - vim
   - note
