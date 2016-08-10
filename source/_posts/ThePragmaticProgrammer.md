@@ -2,6 +2,7 @@ title: ThePragmaticProgrammer
 date: 2016-07-26 23:50:55
 tags:
 ---
+# 注重实效的哲学
 * Care About Your Craft.(关心你的技艺)
 * Think! About Your Work.
 * Provide Options, Don't Make Lame Excuses.
@@ -24,5 +25,11 @@ tags:
 * Critically Analyze What You Read and Hear
     + 批判地思考你所读到的和听到的。你需要确保你的资产中的知识是准确的，并且没有受到供应商或媒体炒作的影响。
 * It's Both What You Say and the Way You Say It
-
+# 注重实效的途径
+* DRY--Don't Repeat Yourself
+    + Imposed duplication（强加的重复）, 开发者觉得他们别无选择－－环境似乎要求重复
+    + Inadvertent duplication（无意的重复）, 开发者并没有意识到他们在重复信息
+    + Impatient duplication（无耐心的重复），开发者偷懒，他们重复，因为这样能让他们在当前情况下更加舒适
+    + Interdeveloper duplication（开发者之间的重复），几个人重复了同样的信息
+* Make It Easy to Reuse
 
