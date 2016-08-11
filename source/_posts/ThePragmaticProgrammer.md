@@ -1,8 +1,6 @@
 title: 《程序员修炼之道-－从小工到专家》
 date: 2016-07-26 23:50:55
-tags:
-categorise: 
-- 《程序员修炼之道-－从小工到专家》
+
 ---
 # 注重实效的哲学
 * Care About Your Craft.(关心你的技艺)
