@@ -1,6 +1,8 @@
-title: ThePragmaticProgrammer
+title: 《程序员修炼之道-－从小工到专家》
 date: 2016-07-26 23:50:55
 tags:
+categorise: 
+- 《程序员修炼之道-－从小工到专家》
 ---
 # 注重实效的哲学
 * Care About Your Craft.(关心你的技艺)
@@ -32,4 +34,9 @@ tags:
     + Impatient duplication（无耐心的重复），开发者偷懒，他们重复，因为这样能让他们在当前情况下更加舒适
     + Interdeveloper duplication（开发者之间的重复），几个人重复了同样的信息
 * Make It Easy to Reuse
+* Eliminate Effects Between Unrelated Things
+* 不要依赖你无法控制的事物
+* There Are No Final Decisions
+    + 错误在于假定决策是浇筑在石头上的，同时还没有为可能出现的意外事件做准备
+    + 假定决策是写在沙滩上的，大浪随时可能将它抹去。
 
