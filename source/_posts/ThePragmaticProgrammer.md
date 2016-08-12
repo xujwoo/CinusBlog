@@ -12,6 +12,7 @@ date: 2016-07-26 23:50:55
     + 你能否说出某个窗户是怎么破的？你的反应是什么？如果它是他人的决策导致的，或者是管理部门的指示，你能做什么？
 * Be a Catalyst for Change(做变化的催化剂)
     + 做为催化剂时，你应该考虑你时在煮石头汤还是在煮青蛙？决策是主观的还是客观的。
+<!--more-->
 * Remenber the Big Picture.
 * Make Quality a Requirements Issue.
     + 今天了不起的软件比明天完美的软件更可取。done is better than perfect.
@@ -37,4 +38,4 @@ date: 2016-07-26 23:50:55
 * There Are No Final Decisions
     + 错误在于假定决策是浇筑在石头上的，同时还没有为可能出现的意外事件做准备
     + 假定决策是写在沙滩上的，大浪随时可能将它抹去。
-
+* Use Tracer Bullets to Find the Target
