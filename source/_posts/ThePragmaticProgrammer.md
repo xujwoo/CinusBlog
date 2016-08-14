@@ -39,3 +39,5 @@ date: 2016-07-26 23:50:55
     + 错误在于假定决策是浇筑在石头上的，同时还没有为可能出现的意外事件做准备
     + 假定决策是写在沙滩上的，大浪随时可能将它抹去。
 * Use Tracer Bullets to Find the Target
+* Prototype to Learn
+* Program Close to the Problem domain
